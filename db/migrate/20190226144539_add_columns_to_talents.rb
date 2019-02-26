@@ -5,6 +5,6 @@ class AddColumnsToTalents < ActiveRecord::Migration[5.2]
     add_column :talents, :avatar, :string
     add_column :talents, :experience, :string
     add_column :talents, :url_linkedin, :string
-    add_column :talents, :position_id, :integer
+    add_reference :talents, :position, foreign_key: true
   end
 end
