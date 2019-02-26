@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_26_151840) do
+ActiveRecord::Schema.define(version: 2019_02_26_152350) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,6 +50,15 @@ ActiveRecord::Schema.define(version: 2019_02_26_151840) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "talent_values", force: :cascade do |t|
+    t.bigint "talent_id"
+    t.bigint "value_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["talent_id"], name: "index_talent_values_on_talent_id"
+    t.index ["value_id"], name: "index_talent_values_on_value_id"
+  end
+
   create_table "talents", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -79,5 +88,7 @@ ActiveRecord::Schema.define(version: 2019_02_26_151840) do
   add_foreign_key "events", "companies"
   add_foreign_key "job_offers", "companies"
   add_foreign_key "job_offers", "positions"
+  add_foreign_key "talent_values", "\"values\"", column: "value_id"
+  add_foreign_key "talent_values", "talents"
   add_foreign_key "talents", "positions"
 end
