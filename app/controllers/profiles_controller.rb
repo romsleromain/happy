@@ -9,6 +9,15 @@ class ProfilesController < ApplicationController
   end
 
   def update
-
+    # @profile = current_talent
+    # @profile.update(params[:talent])
   end
+
+
+  private
+
+  def talent_params
+    params.require(:talent).permit(:email, :first_name, :last_name, :position, :experience, :avatar)
+  end
+
 end
