@@ -19,6 +19,10 @@ alan = Company.create(
     Alan is a primary insurer that distributes its own health plans directly to companies and individuals."
   )
 
+url_alan =
+alan.remote_photo_url = url_alan
+alan.save
+
 openclassrooms = Company.create(
     name: "Openclassrooms",
     industry: "education",
