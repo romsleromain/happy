@@ -14,19 +14,75 @@
     text-decoration: none;
     background-color: #F4E8C1;
     color: #000000;
+    font-weight: bold;
     opacity: 1;
   }
 }
 
-.standard:hover {
-
+.btn-color {
+  background-color: #F4E8C1;
+  color:  black;
+  font-family: Avenir;
+  margin: 20px;
+  font-size: 20px;
+  text-align: center;
+  border: 1px solid;
+  padding: 8px 24px;
+  font-weight: 300;
+  opacity: 0,8;
+  transition: opacity 0.3s ease;
+  &:hover {
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    opacity: 1;
+  }
 }
 
 .btn-follow {
-
+  background-color: #F4E8C1;
+  color:  black;
+  font-family: Avenir;
+  margin: 20px;
+  font-size: 20px;
+  text-align: center;
+  border: 1px solid;
+  padding: 8px 24px;
+  font-weight: 300;
+  opacity: 0,8;
+  transition: opacity 0.3s ease;
+  &:hover {
+    text-decoration: none;
+    background-color: #40F99B;
+    color: black;
+    opacity: 1;
+    font-weight: bold;
+  }
 }
 
+
 .btn-followed {
+  background-color: #40F99B;
+  color:  black;
+  font-family: Avenir;
+  margin: 20px;
+  font-size: 20px;
+  text-align: center;
+  border: 1px solid;
+  padding: 8px 24px;
+  font-weight: 300;
+  opacity: 0,8;
+  transition: opacity 0.3s ease;
+  &:hover {
+    text-decoration: none;
+    background-color: #FF1D15;
+    color: black;
+    opacity: 1;
+    font-weight: bold;
+  }
+
+
 
 }
 
