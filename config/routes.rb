@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :profiles, only: [:show, :edit, :update]
 
   get 'connexion', to: 'pages#connexion', as: :connexion
+  get 'sandbox', to: 'pages#sandbox', as: :sandbox
 end
