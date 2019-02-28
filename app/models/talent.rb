@@ -8,4 +8,6 @@ class Talent < ApplicationRecord
   has_many :talent_values
   has_many :values, through: :talent_values
   belongs_to :position, optional: true
+
+  acts_as_follower
 end
