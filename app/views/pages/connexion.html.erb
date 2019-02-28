@@ -1,8 +1,22 @@
 
-<div>
-  <%= link_to "SIGN IN", new_talent_session_path %>
+<div class="main-container">
+
+  <div class="left-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80);">
+  </div>
+
+  <div class="login-container">
+    <div class="login-elements">
+      <h1>FIND YOUR HAPPY PLACE</h1>
+      <h2>HAPPY helps you to find the company sharing your values</h2>
+      <div class="login-buttons">
+          <%= link_to "SIGN IN", new_talent_session_path, class: "btn btn-primary" %>
+          <%= link_to "SIGN UP", new_talent_registration_path, class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+
 </div>
 
-<div>
-  <%= link_to "SIGN UP", new_talent_registration_path %>
-</div>
+
+
+
