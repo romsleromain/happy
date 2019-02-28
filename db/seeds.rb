@@ -8,8 +8,9 @@
 
 
 puts 'Cleaning database...'
-Company.destroy_all
+Talent.destroy_all
 JobOffer.destroy_all
+Company.destroy_all
 Position.destroy_all
 
 puts 'Creating companies...'
@@ -164,6 +165,7 @@ autonomy = Value.create(
 curious = Value.create(
     name: "Curious",
     remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201223/Happy/curious.svg"
+  )
 
 puts 'Creating positions...'
 
