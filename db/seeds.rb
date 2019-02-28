@@ -143,19 +143,20 @@ creativity = Value.create(
     remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201223/Happy/creativity.svg"
   )
 
-curious = Value.create(
-    name: "Curious",
-    remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201223/Happy/curious.svg"
+caring = Value.create(
+    name: "Caring",
+    remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201222/Happy/caring.svg"
   )
+
 
 autonomy = Value.create(
     name: "Autonomy",
     remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201223/Happy/autonomy.svg"
   )
 
-caring = Value.create(
-    name: "Caring",
-    remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201222/Happy/caring.svg"
+curious = Value.create(
+    name: "Curious",
+    remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201223/Happy/curious.svg"
   )
 
 puts 'Finished !'

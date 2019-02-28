@@ -6,3 +6,12 @@
 @import "job-offer-card";
 @import "company-card";
 @import "buttons";
+
+.wrapper {
+  text-align: center;
+  height: 100vh;
+  background-color: $moutarde;
+  h1 {
+    margin: 0;
+  }
+}
