@@ -8,8 +8,9 @@
 
 
 puts 'Cleaning database...'
-Company.destroy_all
+Talent.destroy_all
 JobOffer.destroy_all
+Company.destroy_all
 Position.destroy_all
 
 puts 'Creating companies...'
