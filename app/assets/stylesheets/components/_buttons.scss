@@ -1,19 +1,35 @@
-.standard {
-
+.btn-standard {
+  background-color: white;
+  color:  #000000;
+  font-family: Avenir;
+  margin: 20px;
+  font-size: 20px;
+  text-align: center;
+  border: 1px solid;
+  padding: 8px 24px;
+  font-weight: 300;
+  opacity: 0,8;
+  transition: opacity 0.3s ease;
+  &:hover {
+    text-decoration: none;
+    background-color: #F4E8C1;
+    color: #000000;
+    opacity: 1;
+  }
 }
 
 .standard:hover {
 
 }
 
-.follow {
+.btn-follow {
 
 }
 
-.followed {
+.btn-followed {
 
 }
 
-.unfollow {
+.btn-unfollow {
 
 }
