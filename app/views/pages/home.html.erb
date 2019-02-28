@@ -1,35 +1,23 @@
-<div class="banner">
-  <a href="#all-companies"><img src="https://via.placeholder.com//1000x600"></a>
-</div>
 
-
-<div>
-  <%= link_to "SIGN IN", new_talent_session_path%>
-</div>
-
-
-
-<div>
-  <%= link_to "SIGN UP", new_talent_registration_path%>
-</div>
-
-<div>
-  <%= link_to "LOG OUT", destroy_talent_session_path, method: :delete %>
-</div>
-
-
-
-
-<div id="all-companies">
-  <div>
-    <%= link_to "CONNEXION SPLASH PAGE", connexion_path %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80);">
+  <div class="banner-content">
+    <h1>Find your happy place</h1>
+    <p>HAPPY helps you to find the company sharing your values</p>
+    <a href="#all-companies" class="btn btn-primary btn-lg">SEE ALL COMPANIES</a>
   </div>
+</div>
 
 
-  <ul>
-    <% Company.all.each do |company| %>
-      <li><%= company.name %></li>
-    <% end %>
-  </ul>
+<div class="wrapper">
+  <div class="container" id="all-companies">
+    <ul>
+      <% Company.all.each do |company| %>
+        <li><%= link_to company.name, connexion_path %></li>
+      <% end %>
+    </ul>
+    <div>
+      <%= link_to "CONNEXION SPLASH PAGE", connexion_path %>
+    </div>
+  </div>
 </div>
 
