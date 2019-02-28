@@ -164,6 +164,7 @@ autonomy = Value.create(
 curious = Value.create(
     name: "Curious",
     remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201223/Happy/curious.svg"
+  )
 
 puts 'Creating positions...'
 
