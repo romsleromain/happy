@@ -1,4 +1,8 @@
 
+<div>
+  <%= link_to "SIGN IN", new_talent_session_path %>
+</div>
+
 
 <h1>Happy, find your next move with HAPPY</h1>
 <h2>Happy, find your next move with HAPPY</h2>
@@ -31,4 +35,30 @@
   <i class="fas fa-check"></i>
 </div>
 
+
+<div>
+  <%= link_to "SIGN UP", new_talent_registration_path %>
+</div>
+
+<div>
+  <%= link_to "LOG OUT", destroy_talent_session_path, method: :delete %>
+</div>
+
+
+<div class="banner">
+  <a href="#all-companies"><img src="https://via.placeholder.com//1000x600"></a>
+</div>
+
+<div id="all-companies">
+  <div>
+    <%= link_to "CONNEXION SPLASH PAGE", connexion_path %>
+  </div>
+
+
+  <ul>
+    <% Company.all.each do |company| %>
+      <li><%= company.name %></li>
+    <% end %>
+  </ul>
+</div>
 
