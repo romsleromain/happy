@@ -9,6 +9,12 @@ Company.destroy_all
 Value.destroy_all
 
 
+
+puts 'Cleaning database...'
+Company.destroy_all
+JobOffer.destroy_all
+Position.destroy_all
+
 puts 'Creating companies...'
 alan = Company.create!(
     name: "Alan",
@@ -61,7 +67,7 @@ wynd = Company.create(
   )
 
 mangopay = Company.create(
-    name: "mangopay",
+    name: "Mangopay",
     industry: "fintech",
     category: "Plus de 50 salariés",
     description: "MANGOPAY is an end-to-end payment solution for Marketplaces, Crowdfunding and Fintech platforms.
@@ -80,8 +86,8 @@ foxintelligence = Company.create(
     remote_logo_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201312/Happy/fox.png"
   )
 
-qonto = Company.create(
-    name: "Qont",
+qonto= Company.create(
+    name: "Qonto",
     industry: "fintech",
     category: "start up",
     description: "Qonto is the leading neobank for SME and freelancers.",
@@ -107,8 +113,9 @@ tiller = Company.create(
     remote_logo_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201312/Happy/tiller.png"
   )
 
-payfit = Company.create(
-    name: "payfit",
+
+payfit= Company.create(
+    name: "Payfit",
     industry: "legaltech",
     category: "start up",
     description: "Payfit allows small and medium enterprises to easily and quickly pay their employees.",
@@ -146,6 +153,107 @@ entrepreneurship = Value.create(
     name: "Entrepreneurship",
     remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201223/Happy/entrepreneurship.svg"
   )
+
+puts 'Creating positions...'
+
+  corporate_sales= Position.create!(
+    name: "Corporate sales"
+    )
+
+  developer= Position.create(
+    name: "developer"
+    )
+
+  project_manager= Position.create(
+    name: "Project manager"
+    )
+
+  product_owner= Position.create(
+    name: "Product owner"
+    )
+
+  business_developper= Position.create(
+    name: "Business developper"
+    )
+
+  talent_recruiter= Position.create(
+    name: "Talent recruiter"
+    )
+
+  country_manager= Position.create(
+    name: "Country manager"
+    )
+
+  legal_advisor= Position.create(
+    name: "Legal advisor"
+    )
+
+  datascientist= Position.create(
+    name: "Datascientist"
+    )
+
+  customer_success= Position.create(
+    name: "Customer success"
+    )
+
+  partnership= Position.create(
+    name: "partnership"
+    )
+
+puts 'Creating job offers...'
+
+corporate_sales= JobOffer.create(
+    name: "Corporate sales",
+    description: "You will be a good fit to join the Sales team at Alan if you:
+    - Have significant previous experience in a Sales role
+    - Have strong written & verbal communication skills (English & French)
+    - Are highly organized with exceptional follow-up skills
+    - Have empathy and are passionate about understanding and solving prospects' problems
+    - Have the ability to collaborate in a fast-paced team
+    - Have a desire to learn fast and make an impact from day 1
+
+    Everything else is a plus. We care about having a diversity of experiences and backgrounds in our team.",
+    manager_photo: "",
+    manager_name: "Bertrand Robert",
+    manager_linkedin: "https://www.linkedin.com/in/bertrandrobert/?originalSubdomain=fr",
+    position: corporate_sales,
+    company: alan
+    )
+
+full_stack= JobOffer.create(
+    name: "Full-stack developer Growth",
+    description: "You have 1+ year of experience in web development.
+    You have a solid Foundation of front-end development fundamentals (HTML5/CSS3/JavaScript)
+    You’re proficient in responsive design and smooth web animations
+    You have experience with Git
+    You understand industry best practices (SEO, performance, maintainability…)
+    You are a curious, well organized and open minded developer
+    You are pragmatic and solution-oriented
+    You want to build and work on a website visited by hundred of thousands users and improve it every day
+    Basic knowledge in backend frameworks such as Symfony, Django or Rails and MVC architecture are highly recommended.",
+    manager_photo: "",
+    manager_name: "Alexandre Prot",
+    manager_linkedin: "https://www.linkedin.com/in/aprot/?originalSubdomain=fr",
+    position: developer,
+    company: qonto
+    )
+
+project_manager= JobOffer.create(
+    name: "Project Manager",
+    description: "what we need:
+    Master’s degree or equivalent
+    3+ years of experience in a consulting firm or as a project manager in a startup
+    Proactive problem solver: you are not afraid to find solutions for every problem
+    Ability to synthesize complex information
+    Great rigor in the execution and the follow up of missions
+    Outstanding communication and interpersonal skills: you are a team player
+    You speak both French and English",
+    manager_photo: "",
+    manager_name: "Germain Michou-Tonning",
+    manager_linkedin: "https://www.linkedin.com/in/germain-michou-tonning/",
+    position: project_manager,
+    company: qonto
+    )
 
 creativity = Value.create(
     name: "Creativity",

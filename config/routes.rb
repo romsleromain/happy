@@ -7,4 +7,5 @@ Rails.application.routes.draw do
 
   get 'connexion', to: 'pages#connexion', as: :connexion
   # get 'feed', to: 'pages#feed', as: :feed
+  get 'sandbox', to: 'pages#sandbox', as: :sandbox
 end

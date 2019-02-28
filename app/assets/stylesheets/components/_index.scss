@@ -7,11 +7,14 @@
 @import "job-offer-card";
 @import "company-card";
 @import "buttons";
+@import "cible-effect";
 
 .wrapper {
   text-align: center;
+  // display: flex;
+  // flex-direction: column;
   height: 100vh;
-  background-color: $moutarde;
+  background-color: white;
   h1 {
     margin: 0;
   }
