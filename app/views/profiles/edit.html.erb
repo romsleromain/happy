@@ -14,7 +14,7 @@
     <div class="col-xs-12 col-sm-6 col-sm-offset-3">
       <div class="form-profile-creation">
         <h2>Select 3 core values</h2>
-        <%= simple_form_for (@profile), url: talent_session_path do |f| %>
+        <%= simple_form_for @profile, url: profile_path do |f| %>
           <!-- Inject categories here -->
           <div class="form-group">
             <input type="hidden" name="post[value_ids][]" value="">
@@ -33,7 +33,7 @@
           <!-- Inject categories here -->
           <%= f.input :first_name, placeholder: "Patricio" %>
           <%= f.input :last_name, placeholder: "Perez" %>
-          <%= f.input :position, collection: ["Developper", "Designer"], prompt: "Which position" %>
+          <%= f.association :position, collection: Position.all, prompt: "Which position" %>
           <%= f.input :experience, placeholder: "6 years" %>
           <%= f.input :avatar %>
           <%= f.input :avatar_cache, as: :hidden %>
