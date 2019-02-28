@@ -5,6 +5,7 @@ class Company < ApplicationRecord
   has_many :company_values
 
   validates :logo, presence: true
+  acts_as_followable
 
   mount_uploader :logo, LogoUploader
 end
