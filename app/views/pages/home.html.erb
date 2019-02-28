@@ -1,9 +1,64 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+<div>
+  <%= link_to "SIGN IN", new_talent_session_path %>
+</div>
 
 
-<!-- #TEST seed-->
-<!--     <%= Company.first.name %>
-    <%= cl_image_tag(Company.last.logo.url) %>
-    <%= Value.last.name %>
-    <%= cl_image_tag(Value.last.icone.url) %> -->
+<h1>Happy, find your next move with HAPPY</h1>
+<h2>Happy, find your next move with HAPPY</h2>
+<h3>Happy, find your next move with HAPPY</h3>
+<p>Happy, find your next move with HAPPY</p>
+
+
+<div class=value-card-validate>
+  <%= cl_image_tag(Value.last.icone.url, height: 75, width: 100, crop: :fill) %>
+  <p><%= Value.last.name %></p>
+  <i class="fas fa-check"></i>
+</div>
+
+<br>
+<br>
+
+<div class=value-card>
+  <%= cl_image_tag(Value.last.icone.url, height: 75, width: 100, crop: :fill) %>
+  <p><%= Value.last.name %></p>
+  <i class="fas fa-check"></i>
+</div>
+
+
+<br>
+<br>
+
+<div class=value-card>
+  <%= cl_image_tag(Value.last.icone.url, height: 75, width: 100, crop: :fill) %>
+  <p><%= Value.last.name %></p>
+  <i class="fas fa-check"></i>
+</div>
+
+
+<div>
+  <%= link_to "SIGN UP", new_talent_registration_path %>
+</div>
+
+<div>
+  <%= link_to "LOG OUT", destroy_talent_session_path, method: :delete %>
+</div>
+
+
+<div class="banner">
+  <a href="#all-companies"><img src="https://via.placeholder.com//1000x600"></a>
+</div>
+
+<div id="all-companies">
+  <div>
+    <%= link_to "CONNEXION SPLASH PAGE", connexion_path %>
+  </div>
+
+
+  <ul>
+    <% Company.all.each do |company| %>
+      <li><%= company.name %></li>
+    <% end %>
+  </ul>
+</div>
+

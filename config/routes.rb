@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   devise_for :talents
   root to: 'pages#home'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  resources :profiles, only: [:show, :edit, :update]
+
+  get 'connexion', to: 'pages#connexion', as: :connexion
 end
