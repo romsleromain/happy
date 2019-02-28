@@ -17,6 +17,8 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'carrierwave', '~> 1.2'
 gem 'cloudinary', '~> 1.9.1'
+gem 'sidekiq'
+gem 'sidekiq-failures', '~> 1.0'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'devise'
 gem 'acts_as_follower', github: 'tcocca/acts_as_follower', branch: 'master'

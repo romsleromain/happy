@@ -11,5 +11,9 @@ Rails.application.routes.draw do
   get 'companies/follow/:id', to: 'companies#follow', as: :follow
   get 'companies/unfollow/:id', to: 'companies#unfollow', as: :unfollow
 
+  require "sidekiq/web"
+  authenticate :talent, lambda { |u| u.admin } do
+    mount Sidekiq::Web => '/sidekiq'
+  end
 
 end
