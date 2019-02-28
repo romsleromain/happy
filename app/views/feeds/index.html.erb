@@ -1,0 +1,18 @@
+<div class="container-feedpage">
+  <div class="container-feedcontent">
+    <h1>Your feed</h1>
+    <h3>Discover your followed companies news</h1>
+
+    <% @feed.each do |thing| %>
+    <img src="<%= thing.logo %>">
+    <p><%= thing.latestnews_media %></p>
+    <p><%= thing.latestnews_summary %></p>
+    <% end %> %>
+  </div>
+  <div class="container-companies-managers">
+    <h1>Your companies</h1>
+    <h3>Weekly updates about new companies to follow</h1>
+    <h1>Meet the managers</h1>
+    <h3>Weekly updates about new managers to meet</h1>
+  </div>
+</div>

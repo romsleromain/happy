@@ -5,6 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Company.destroy_all
+Value.destroy_all
+
 
 puts 'Creating companies...'
 alan = Company.create!(
@@ -16,8 +19,12 @@ alan = Company.create!(
     Alan is making health experience simple and modern.
     In 2016, Alan became the first licensed health insurance company in France since 1986.
     Alan is a primary insurer that distributes its own health plans directly to companies and individuals.",
-    remote_logo_url: "http://res.cloudinary.com/romscloud/image/upload/v1551276248/g87w7ge5bt1yohydurml.png"
+    remote_logo_url: "http://res.cloudinary.com/romscloud/image/upload/v1551276248/g87w7ge5bt1yohydurml.png",
+    latestnews: "https://www.maddyness.com/2019/02/18/alan-leve-40-millions-euros/",
+    latestnews_summary: "Maddyness : Alan rises 40 million euros !",
+    latestnews_media: "Article"
     )
+
 
 openclassrooms = Company.create(
     name: "Openclassrooms",
@@ -27,9 +34,11 @@ openclassrooms = Company.create(
     Courses are conducted fully online, through a mix of video resources, online reading, real-life projects and individual mentoring sessions.
     Founded in 2013 by Pierre Dubuc and Mathieu Nebra, OpenClassrooms now has 2.5 million Companys worldwide and offers courses in English, French and Spanish.
     The company's mission is to ‘make education accessible",
-    remote_logo_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201312/Happy/openclassroom.jpg"
-  )
-
+    remote_logo_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201312/Happy/openclassroom.jpg",
+    latestnews: "https://www.linformaticien.com/actualites/id/50296/openclassrooms-l-e-learning-non-elitiste-a-la-conquete-du-monde.aspx",
+    latestnews_summary: "L'informaticien : OpenClassRooms ready to conquer the world with opensource",
+    latestnews_media: "Article"
+    )
 
 good = Company.create(
     name: "Good gout",
