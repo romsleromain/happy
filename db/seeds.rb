@@ -10,6 +10,7 @@
 puts 'Cleaning database...'
 Talent.destroy_all
 JobOffer.destroy_all
+Value.destroy_all
 Company.destroy_all
 Position.destroy_all
 
