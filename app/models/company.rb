@@ -8,4 +8,5 @@ class Company < ApplicationRecord
   acts_as_followable
 
   mount_uploader :logo, LogoUploader
+  mount_uploader :teampicture, TeampictureUploader
 end
