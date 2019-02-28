@@ -7,4 +7,7 @@ class PagesController < ApplicationController
   def connexion
   end
 
+  def feed
+  end
+
 end
