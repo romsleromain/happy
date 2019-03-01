@@ -1,5 +1,5 @@
 class CompaniesController < ApplicationController
-  skip_before_action :authenticate_talent!, only: [:home, :connexion]
+  # skip_before_action :authenticate_talent!, only: [:home, :connexion]
 
   def index
     @companies = Company.all
@@ -20,7 +20,7 @@ class CompaniesController < ApplicationController
   def show
   end
 
-  # private
+  private
 
   # def company_params
   #   params.require(:company).permit(:)

@@ -41,7 +41,15 @@
     <% end %>
   </div>
   <% end %>
+
+  
 </div>
+
+  <p> <%= company.description %> </p>
+  <p> <%= company.rating_score(current_talent) if current_talent %> % </p>
+  <%= cl_image_tag(company.logo.url, height: 60, width: 80, crop: :fill) %>
+<br>
+<% end %>
 
 </div>
 
