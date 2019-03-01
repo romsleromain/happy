@@ -2,13 +2,6 @@
   <div style="padding-top:100px;"></div>
   <h1>Welcome to Happy !</h1>
 
-  <p>
-    email: <%= @profile.email %>
-    <br>
-    id: <%= @profile.id %>
-  </p>
-
-
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-sm-offset-3">
@@ -23,8 +16,12 @@
               <div class="value-choices">
                 <% Value.all.each do |value| %>
                   <input type="checkbox" class="hidden" value="<%= value.id %>" name="talent[value_ids][]" id="talent_value_ids_<%= value.id %>">
-                  <label class="value-choice" for="talent_value_ids_<%= value.id %>">
-                    <%= value.name %>
+                  <label class="value-card cible" for="talent_value_ids_<%= value.id %>">
+                    <div class="effect-left"></div>
+                    <%= cl_image_tag(value.icone.url, height: 75, width: 100, crop: :fill) %>
+                    <p><%= value.name %></p>
+                    <i class="fas fa-check"></i>
+                    <div class="effect-right"></div>
                   </label>
                 <% end %>
                </div>

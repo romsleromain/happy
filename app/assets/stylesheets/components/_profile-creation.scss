@@ -30,9 +30,29 @@
 // Checkboxes design
 .value-choices {
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   flex-wrap: wrap;
   margin: 20px 0;
+}
+
+.value-card {
+  margin: 20px;
+}
+
+
+
+input[type=text]::placeholder{
+  color: rgba(71, 69, 62, 0.2);
+  font-style: italic;
+}
+
+input[type=url]::placeholder{
+  color: rgba(71, 69, 62, 0.2);
+  font-style: italic;
+}
+
+.form-control {
+  color: black;
 }
 
 
