@@ -64,7 +64,14 @@
 
 
 .card-background {
-  height: 189px;
+  height: 200px;
+  background-size: cover;
+  color: white;
+  position: relative;
+}
+
+.card-background-validate {
+  height: 180px;
   background-size: cover;
   color: white;
   position: relative;
