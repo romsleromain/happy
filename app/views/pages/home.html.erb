@@ -10,13 +10,24 @@
 
 <div class="wrapper">
   <div class="container" id="all-companies">
-    <ul>
+    <div class="row">
       <% Company.all.each do |company| %>
-        <li><%= link_to company.name, connexion_path %></li>
+      <div class="col-lg-6">
+          <div class="company-card cible">
+              <div class="effect-left">
+              </div>
+                <div class="card-background"style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('<%= cl_image_path company.teampicture.url, height: 300, width: 400, crop: :fill %>');">
+                <div class="card-btn">
+                  <%= link_to "Follow", connexion_path, class: "btn-follow-company"%>
+                </div>
+                <p class="card-description"><%= company.name %></p>
+                </div>
+              <div class="effect-right">
+              </div>
+          </div>
+          <br>
+      </div>
       <% end %>
-    </ul>
-    <div>
-      <%= link_to "CONNEXION SPLASH PAGE", connexion_path %>
     </div>
   </div>
 </div>
