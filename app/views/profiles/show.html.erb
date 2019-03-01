@@ -1,4 +1,39 @@
-<h1>Show profile </h1>
+<div class="wrapper">
+  <div style="padding-top:100px;"></div>
+  <h1>Your profile is ready!</h1>
+  <div class="container">
+    <div class="basic-infos">
+      <%= cl_image_tag @profile.avatar, width: 150, height: 150, :radius=>"max" %>
+      <div class="basic-infos-text">
+        <h3><%= @profile.first_name%> <%= @profile.last_name%></h3>
+        <p><%= @profile.position.name%> - Experience : <%= @profile.experience%> </p>
+        <a href=<%= @profile.url_linkedin%> target="_blank" >Linkedin Profile</a>
+      </div>
+    </div>
+    <div class="values-list">
+      <% @profile.values.each do |value| %>
+        <!-- <input type="checkbox" class="hidden" value="<%= value.id %>" name="talent[value_ids][]" id="talent_value_ids_<%= value.id %>"> -->
+        <div class="value-card cible">
+          <div class="effect-left"></div>
+          <%= cl_image_tag(value.icone.url, height: 75, width: 100, crop: :fill) %>
+          <p><%= value.name %></p>
+          <i class="fas fa-check"></i>
+          <div class="effect-right"></div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <h2>All your matches</h2>
+  <div class="container">
+    <% @profile.values.each do |value| %>
+
+      <% end %>
+  </div>
+</div>
 
 
-<%=  @profile.avatar %>
+
+
+
+
+

@@ -1,47 +1,51 @@
-<h1>edit</h1>
-<h1>Welcome to Happy !</h1>
-<h3>Let's start with your values</h3>
+<div class="wrapper">
+  <div style="padding-top:100px;"></div>
+  <h1>Welcome to Happy !</h1>
 
-<p>
-  email: <%= @profile.email %>
-  <br>
-  id: <%= @profile.id %>
-</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+        <div class="form-profile-creation">
+          <h2>Let's start with your values</h2>
+          <h3>Select 3 core values</h3>
+          <%= simple_form_for @profile, url: profile_path do |f| %>
+            <!-- Inject categories here -->
+            <div class="form-group">
+              <input type="hidden" name="post[value_ids][]" value="">
 
+              <div class="value-choices">
+                <% Value.all.each do |value| %>
+                  <input type="checkbox" class="hidden" value="<%= value.id %>" name="talent[value_ids][]" id="talent_value_ids_<%= value.id %>">
+                  <label class="value-card cible" for="talent_value_ids_<%= value.id %>">
+                    <div class="effect-left"></div>
+                    <%= cl_image_tag(value.icone.url, height: 75, width: 100, crop: :fill) %>
+                    <p><%= value.name %></p>
+                    <i class="fas fa-check"></i>
+                    <div class="effect-right"></div>
+                  </label>
+                <% end %>
+               </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-      <div class="form-profile-creation">
-        <h2>Select 3 core values</h2>
-        <%= simple_form_for @profile, url: profile_path do |f| %>
-          <!-- Inject categories here -->
-          <div class="form-group">
-            <input type="hidden" name="post[value_ids][]" value="">
-
-            <div class="value-choices">
-              <% Value.all.each do |value| %>
-                <input type="checkbox" class="hidden" value="<%= value.id %>" name="talent[value_ids][]" id="talent_value_ids_<%= value.id %>">
-                <label class="value-choice" for="talent_value_ids_<%= value.id %>">
-                  <%= value.name %>
-                </label>
-              <% end %>
-             </div>
-
-          </div>
-
-          <!-- Inject categories here -->
-          <%= f.input :first_name, placeholder: "Patricio" %>
-          <%= f.input :last_name, placeholder: "Perez" %>
-          <%= f.association :position, collection: Position.all, prompt: "Which position" %>
-          <%= f.input :experience, placeholder: "6 years" %>
-          <%= f.input :avatar %>
-          <%= f.input :avatar_cache, as: :hidden %>
-          <%= f.submit "Save", class: "btn btn-primary"  %>
-        <% end %>
+            </div>
+            <div class="step-2">
+              <h2>Great!</h2>
+              <h3>Now, tell us about you</h3>
+            </div>
+            <!-- Inject categories here -->
+            <%= f.input :first_name, placeholder: "Patricio" %>
+            <%= f.input :last_name, placeholder: "Perez" %>
+            <%= f.association :position, collection: Position.all, prompt: "current position?" %>
+            <%= f.input :url_linkedin, placeholder: "Linkedin profile" %>
+            <%= f.input :experience, placeholder: "6 years" %>
+            <%= f.input :avatar %>
+            <%= f.input :avatar_cache, as: :hidden %>
+            <%= f.submit "Save", class: "btn-standard"  %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
+
 </div>
 
 

@@ -1,0 +1,41 @@
+.form-control {
+  background: none;
+  font-size: 30px;
+  border-style: none;
+  color: rgb(0, 58, 81);
+  .placeholder {
+    color: rgba(20, 20, 20, 0.1);
+  }
+}
+
+
+.other-links {
+  margin-top: 15px;
+  text-align: center;
+  a {
+    color: #333333;
+  }
+}
+
+
+.form-actions {
+  text-align: center;
+  .btn {
+  background-color: white;
+  color:  #000000;
+  font-family: Avenir;
+  font-size: 20px;
+  text-align: center;
+  border: 1px solid;
+  padding: 8px 24px;
+  font-weight: 300;
+  opacity: 0,8;
+  transition: opacity 0.3s ease;
+  &:hover {
+    text-decoration: none;
+    background-color: #F4E8C1;
+    color: #000000;
+    opacity: 1;
+  }
+ }
+}
