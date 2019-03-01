@@ -11,8 +11,10 @@ Value.destroy_all
 
 
 puts 'Cleaning database...'
-Company.destroy_all
+Talent.destroy_all
 JobOffer.destroy_all
+Value.destroy_all
+Company.destroy_all
 Position.destroy_all
 
 puts 'Creating companies...'
@@ -29,6 +31,7 @@ alan = Company.create!(
     latestnews: "https://www.maddyness.com/2019/02/18/alan-leve-40-millions-euros/",
     latestnews_summary: "Maddyness : Alan rises 40 million euros !",
     latestnews_media: "Article"
+    remote_teampicture_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363031/team_image_company/alan_team.jpg"
     )
 
 
@@ -45,6 +48,8 @@ openclassrooms = Company.create(
     latestnews_summary: "L'informaticien : OpenClassRooms ready to conquer the world with opensource",
     latestnews_media: "Article"
     )
+    remote_teampicture_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363032/team_image_company/openclassrooms_team.jpg"
+  )
 
 good = Company.create(
     name: "Good gout",
@@ -52,7 +57,8 @@ good = Company.create(
     category: "start up",
     description: "Good gout is a brand dedicated to babyfood: natural, high-quality products that are rigorously tested and provide a full
     and well-balanced meal",
-    remote_logo_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201312/Happy/gout_good.png"
+    remote_logo_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201312/Happy/gout_good.png",
+    remote_teampicture_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363032/team_image_company/good_gout_team.jpg"
   )
 
 wynd = Company.create(
@@ -63,7 +69,8 @@ wynd = Company.create(
     Our double expertise on the logistic component (moving the stock, deploying new services and customer journeys quickly)
     and cash-in (registering and charging orders according to the different channels) allows retailers to have a coherence of tools and data between
     the digital and the physical world to increase their margins. ",
-    remote_logo_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201312/Happy/wynd.png"
+    remote_logo_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201312/Happy/wynd.png",
+    remote_teampicture_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363033/team_image_company/wynd_team.jpg"
   )
 
 mangopay = Company.create(
@@ -73,7 +80,8 @@ mangopay = Company.create(
     description: "MANGOPAY is an end-to-end payment solution for Marketplaces, Crowdfunding and Fintech platforms.
     Unlike traditional payment solutions, MANGOPAY provides its customers with a developer-friendly API and a white-label
     solution that can be seamlessly integrated in your design. ",
-    remote_logo_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201312/Happy/mangopay.png"
+    remote_logo_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201312/Happy/mangopay.png",
+    remote_teampicture_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363032/team_image_company/team_mangopay.jpg"
   )
 
 foxintelligence = Company.create(
@@ -83,7 +91,8 @@ foxintelligence = Company.create(
     description: "Foxintelligence delivers the best insights on the latest European ecommerce trends, by unlocking intelligence
     from hundreds of merchants and thousands of brands e-receipts. We provide the most reliable insights available for e-commerce
     while helping consumers save both time and money.",
-    remote_logo_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201312/Happy/fox.png"
+    remote_logo_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201312/Happy/fox.png",
+    remote_teampicture_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363032/team_image_company/foxintelligence_team.jpg"
   )
 
 qonto= Company.create(
@@ -91,7 +100,8 @@ qonto= Company.create(
     industry: "fintech",
     category: "start up",
     description: "Qonto is the leading neobank for SME and freelancers.",
-    remote_logo_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201312/Happy/qonto.png"
+    remote_logo_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201312/Happy/qonto.png",
+    remote_teampicture_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363033/team_image_company/team_qonto.jpg"
   )
 
 lime = Company.create(
@@ -102,7 +112,8 @@ lime = Company.create(
     Through the equitable distribution of shared scooters, bikes and transit vehicles,
     we aim to reduce dependence on personal automobiles for short distance transportation and leave future generations
     with a cleaner, healthier planet.",
-    remote_logo_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201312/Happy/lime.png"
+    remote_logo_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201312/Happy/lime.png",
+    remote_teampicture_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363032/team_image_company/lime_team.jpg"
   )
 
 tiller = Company.create(
@@ -110,7 +121,8 @@ tiller = Company.create(
     industry: "tech",
     category: "start up",
     description: "Tiller Systems is a cloud-based iPad point of sale (POS) software company headquartered in Paris, France.",
-    remote_logo_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201312/Happy/tiller.png"
+    remote_logo_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201312/Happy/tiller.png",
+    remote_teampicture_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363032/team_image_company/tiller_team.jpg"
   )
 
 
@@ -119,7 +131,8 @@ payfit= Company.create(
     industry: "legaltech",
     category: "start up",
     description: "Payfit allows small and medium enterprises to easily and quickly pay their employees.",
-    remote_logo_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201312/Happy/payfit.jpg"
+    remote_logo_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201312/Happy/payfit.jpg",
+    remote_teampicture_url: "http://res.cloudinary.com/romscloud/image/upload/v1551373688/team_image_company/payfit_team.jpg"
   )
 
 puts 'Creating values...'
@@ -152,6 +165,27 @@ ecofriendly = Value.create(
 entrepreneurship = Value.create(
     name: "Entrepreneurship",
     remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201223/Happy/entrepreneurship.svg"
+  )
+
+creativity = Value.create(
+    name: "Creativity",
+    remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201223/Happy/creativity.svg"
+  )
+
+caring = Value.create(
+    name: "Caring",
+    remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201222/Happy/caring.svg"
+  )
+
+
+autonomy = Value.create(
+    name: "Autonomy",
+    remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201223/Happy/autonomy.svg"
+  )
+
+curious = Value.create(
+    name: "Curious",
+    remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201223/Happy/curious.svg"
   )
 
 puts 'Creating positions...'
@@ -200,6 +234,7 @@ puts 'Creating positions...'
     name: "partnership"
     )
 
+
 puts 'Creating job offers...'
 
 corporate_sales= JobOffer.create(
@@ -213,7 +248,7 @@ corporate_sales= JobOffer.create(
     - Have a desire to learn fast and make an impact from day 1
 
     Everything else is a plus. We care about having a diversity of experiences and backgrounds in our team.",
-    manager_photo: "",
+    remote_photomanager_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363163/managers_photos/Bertrand_Robert_alan.jpg",
     manager_name: "Bertrand Robert",
     manager_linkedin: "https://www.linkedin.com/in/bertrandrobert/?originalSubdomain=fr",
     position: corporate_sales,
@@ -231,7 +266,7 @@ full_stack= JobOffer.create(
     You are pragmatic and solution-oriented
     You want to build and work on a website visited by hundred of thousands users and improve it every day
     Basic knowledge in backend frameworks such as Symfony, Django or Rails and MVC architecture are highly recommended.",
-    manager_photo: "",
+    remote_photomanager_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363164/managers_photos/Alex_pro_qonto.jpg",
     manager_name: "Alexandre Prot",
     manager_linkedin: "https://www.linkedin.com/in/aprot/?originalSubdomain=fr",
     position: developer,
@@ -248,7 +283,7 @@ project_manager= JobOffer.create(
     Great rigor in the execution and the follow up of missions
     Outstanding communication and interpersonal skills: you are a team player
     You speak both French and English",
-    manager_photo: "",
+    remote_photomanager_url: "http://res.cloudinary.com/romscloud/image/upload/v1551374559/managers_photos/germain_tonning_qonto.jpg",
     manager_name: "Germain Michou-Tonning",
     manager_linkedin: "https://www.linkedin.com/in/germain-michou-tonning/",
     position: project_manager,

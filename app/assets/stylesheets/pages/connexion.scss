@@ -1,0 +1,46 @@
+.main-container {
+  display: flex;
+  background-color: $moutarde;
+  padding-top: 70px;
+
+}
+
+
+.left-banner {
+  flex: 0 0 550px;
+  height: 100vh;
+  position: sticky !important;
+  background-position: center;
+  background-size: cover !important;
+  top: 0;
+}
+
+.login-container {
+  flex: 1 1 auto;
+  margin: 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+}
+
+.login-elements {
+  max-width: 500px;
+  h1 {
+    color: white !important;
+    font-size: 54px;
+    margin-bottom: 40px;
+  }
+  h2 {
+    margin-bottom: 40px;
+  }
+}
+
+.login-buttons {
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  .btn-standard {
+    width: 30%;
+    // flex: 1 1 30%;
+  }
+}
