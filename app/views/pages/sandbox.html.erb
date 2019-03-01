@@ -19,6 +19,9 @@
         <div class="card-logo">
         <%= cl_image_tag(Company.last.logo.url, :width=>75, :height=>75, :radius=>"max", :crop=>"fill") %>
         </div>
+        <div class="card-score">
+          <h3> 66% </h3>
+        </div>
         <p class="card-description"><%= Company.last.name %></p>
         </div>
   <!--       <i class="fas fa-check"></i> -->
@@ -33,6 +36,9 @@
         <div class="card-background"style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('<%= cl_image_path Company.first.teampicture.url, height: 300, width: 400, crop: :fill %>');">
         <div class="card-logo">
         <%= cl_image_tag(Company.first.logo.url, :width=>75, :height=>75, :radius=>"max", :crop=>"fill") %>
+        </div>
+        <div class="card-score">
+          <h3> 66% </h3>
         </div>
         <p class="card-description"><%= Company.first.name %></p>
         </div>
