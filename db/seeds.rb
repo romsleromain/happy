@@ -10,6 +10,7 @@
 puts 'Cleaning database...'
 Talent.destroy_all
 JobOffer.destroy_all
+CompanyValue.destroy_all
 Value.destroy_all
 Company.destroy_all
 Position.destroy_all
@@ -280,26 +281,24 @@ project_manager= JobOffer.create(
     company: qonto
     )
 
-creativity = Value.create(
-    name: "Creativity",
-    remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201223/Happy/creativity.svg"
-  )
+puts 'Creating company_values'
 
-caring = Value.create(
-    name: "Caring",
-    remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201222/Happy/caring.svg"
-  )
+alan_valeur_1 = CompanyValue.create(company_id: alan.id, value_id: curious.id)
+alan_valeur_2 = CompanyValue.create(company_id: alan.id, value_id: autonomy.id)
+alan_valeur_3 = CompanyValue.create(company_id: alan.id, value_id: performance.id)
 
+qonto_valeur_1 = CompanyValue.create(company_id: qonto.id, value_id: performance.id)
+qonto_valeur_2 = CompanyValue.create(company_id: qonto.id, value_id: leadership.id)
+qonto_valeur_3 = CompanyValue.create(company_id: qonto.id, value_id: security.id)
 
-autonomy = Value.create(
-    name: "Autonomy",
-    remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201223/Happy/autonomy.svg"
-  )
+good_valeur_1 = CompanyValue.create(company_id: good.id, value_id: creativity.id)
+good_valeur_2 = CompanyValue.create(company_id: good.id, value_id: caring.id)
+good_valeur_3 = CompanyValue.create(company_id: good.id, value_id: ecofriendly.id)
 
-curious = Value.create(
-    name: "Curious",
-    remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201223/Happy/curious.svg"
-  )
+openclassrooms_valeur_1 = CompanyValue.create(company_id: openclassrooms.id, value_id: creativity.id)
+openclassrooms_valeur_2 = CompanyValue.create(company_id: openclassrooms.id, value_id: curious.id)
+openclassrooms_valeur_3 = CompanyValue.create(company_id: openclassrooms.id, value_id: entrepreneurship.id)
+
 
 puts 'Finished !'
 
