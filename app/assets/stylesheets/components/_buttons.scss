@@ -2,13 +2,17 @@
   background-color: white;
   color:  #000000;
   font-family: Avenir;
-  font-size: 20px;
+  font-size: 16px;
   text-align: center;
   border: 1px solid;
-  padding: 8px 24px;
-  font-weight: 300;
+  padding: 8px 16px;
   opacity: 0,8;
   transition: opacity 0.3s ease;
+  border-radius: 2px;
+  line-height: 24px;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 1px;
   &:hover {
     text-decoration: none;
     background-color: #F4E8C1;
@@ -23,13 +27,17 @@
   color:  black;
   font-family: Avenir;
   margin: 20px;
-  font-size: 20px;
+  font-size: 16px;
   text-align: center;
   border: 1px solid;
-  padding: 8px 24px;
-  font-weight: 300;
+  padding: 8px 16px;
   opacity: 0,8;
   transition: opacity 0.3s ease;
+  border-radius: 2px;
+  line-height: 24px;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 1px;
   &:hover {
     text-decoration: none;
     background-color: white;
@@ -44,13 +52,17 @@
   color:  black;
   font-family: Avenir;
   margin: 20px;
-  font-size: 20px;
+  font-size: 16px;
   text-align: center;
   border: 1px solid;
-  padding: 8px 24px;
-  font-weight: 300;
+  padding: 8px 16px;
   opacity: 0,8;
   transition: opacity 0.3s ease;
+  border-radius: 2px;
+  line-height: 24px;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 1px;
   &:hover {
     text-decoration: none;
     background-color: #40F99B;
@@ -61,18 +73,47 @@
 }
 
 
-.btn-followed {
+.btn-follow {
   background-color: #40F99B;
   color:  black;
   font-family: Avenir;
   margin: 20px;
-  font-size: 20px;
+  font-size: 16px;
   text-align: center;
   border: 1px solid;
-  padding: 8px 24px;
-  font-weight: 300;
+  padding: 8px 16px;
   opacity: 0,8;
   transition: opacity 0.3s ease;
+  border-radius: 2px;
+  line-height: 24px;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 1px;
+  &:hover {
+    text-decoration: none;
+    background-color: #40F99B;
+    color: black;
+    opacity: 1;
+    font-weight: bold;
+  }
+}
+
+.btn-unfollow {
+  background-color: #FF1D15;
+  color:  black;
+  font-family: Avenir;
+  margin: 20px;
+  font-size: 16px;
+  text-align: center;
+  border: 1px solid;
+  padding: 8px 16px;
+  opacity: 0,8;
+  transition: opacity 0.3s ease;
+  border-radius: 2px;
+  line-height: 24px;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 1px;
   &:hover {
     text-decoration: none;
     background-color: #FF1D15;
@@ -80,11 +121,4 @@
     opacity: 1;
     font-weight: bold;
   }
-
-
-
-}
-
-.btn-unfollow {
-
 }
