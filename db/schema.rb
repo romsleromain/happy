@@ -10,6 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+ActiveRecord::Schema.define(version: 2019_02_28_135759) do
+
 ActiveRecord::Schema.define(version: 2019_02_28_171712) do
 
   # These are extensions that must be enabled in order to support this database
@@ -23,6 +25,9 @@ ActiveRecord::Schema.define(version: 2019_02_28_171712) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "latestnews"
+    t.string "latestnews_summary"
+    t.string "latestnews_media"
     t.string "teampicture"
   end
 
