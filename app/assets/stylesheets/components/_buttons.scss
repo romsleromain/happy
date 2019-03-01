@@ -72,6 +72,54 @@
   }
 }
 
+.btn-follow-company {
+  background-color: #F4E8C1;
+  color:  white;
+  font-family: Avenir;
+  margin: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  border: 0px solid;
+  padding: 8px 16px;
+  opacity: 0,8;
+  transition: opacity 0.3s ease;
+  border-radius: 5px;
+  line-height: 24px;
+  cursor: pointer;
+  // border-style: solid;
+  // border-width: 1px;
+  &:hover {
+    text-decoration: none;
+    background-color: #40F99B;
+    color: white;
+    opacity: 1;
+    font-weight: bold;
+  }
+}
+
+.btn-unfollow-company {
+  background-color: #40F99B;
+  color: white;
+  font-family: Avenir;
+  margin: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 3px 13px;
+  opacity: 0,8;
+  transition: opacity 0.3s ease;
+  border-radius: 5px;
+  line-height: 24px;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+    background-color: #CD5C5C;
+    color: white;
+    opacity: 1;
+    font-weight: bold;
+  }
+}
 
 .btn-follow {
   background-color: #40F99B;
