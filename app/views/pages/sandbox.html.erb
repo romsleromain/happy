@@ -9,26 +9,40 @@
 <br>
 <br>
 
-<!--   <%= link_to "SIGN IN", new_talent_session_path, class: "btn-standard"%> -->
+<%#= link_to "Follow", follow_session_path, class: "btn-standard"%>
+
   <%# @companies.each do |company| %>
   <div class="company-card cible">
       <div class="effect-left">
       </div>
         <div class="card-background"style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('<%= cl_image_path Company.last.teampicture.url, height: 300, width: 400, crop: :fill %>');">
         <div class="card-logo">
-        <%= cl_image_tag(Company.last.logo.url, :transformation=>[
-          {:radius=>"max"},
-          {:height=>10},
-          {:width=>10},
-          {:crop=>"circle"}
-          ]) %>
-         <!-- height: 75, width: 100, crop: :thumb, radius: :max) %> -->
+        <%= cl_image_tag(Company.last.logo.url, :width=>75, :height=>75, :radius=>"max", :crop=>"fill") %>
+        </div>
+        <div class="card-score">
+          <h3> 66% </h3>
         </div>
         <p class="card-description"><%= Company.last.name %></p>
         </div>
   <!--       <i class="fas fa-check"></i> -->
       <div class="effect-right">
       </div>
+  </div>
+
+<br>
+<br>
+
+  <div class="company-card-validate cible">
+        <div class="card-background"style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('<%= cl_image_path Company.first.teampicture.url, height: 300, width: 400, crop: :fill %>');">
+        <div class="card-logo">
+        <%= cl_image_tag(Company.first.logo.url, :width=>75, :height=>75, :radius=>"max", :crop=>"fill") %>
+        </div>
+        <div class="card-score">
+          <h3> 66% </h3>
+        </div>
+        <p class="card-description"><%= Company.first.name %></p>
+        </div>
+  <!--       <i class="fas fa-check"></i> -->
   </div>
 <%# end %>
  </div>

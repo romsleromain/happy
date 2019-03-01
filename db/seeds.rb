@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
 puts 'Cleaning database...'
+
 Talent.destroy_all
 JobOffer.destroy_all
 CompanyValue.destroy_all
@@ -16,6 +16,7 @@ Company.destroy_all
 Position.destroy_all
 
 puts 'Creating companies...'
+
 alan = Company.create!(
     name: "Alan",
     industry: "insurance",
