@@ -5,12 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Company.destroy_all
-Value.destroy_all
-
-
 
 puts 'Cleaning database...'
+
 Talent.destroy_all
 JobOffer.destroy_all
 CompanyValue.destroy_all
@@ -19,6 +16,7 @@ Company.destroy_all
 Position.destroy_all
 
 puts 'Creating companies...'
+
 alan = Company.create!(
     name: "Alan",
     industry: "insurance",
@@ -31,7 +29,7 @@ alan = Company.create!(
     remote_logo_url: "http://res.cloudinary.com/romscloud/image/upload/v1551276248/g87w7ge5bt1yohydurml.png",
     latestnews: "https://www.maddyness.com/2019/02/18/alan-leve-40-millions-euros/",
     latestnews_summary: "Maddyness : Alan rises 40 million euros !",
-    latestnews_media: "Article"
+    latestnews_media: "Article",
     remote_teampicture_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363031/team_image_company/alan_team.jpg"
     )
 
@@ -47,8 +45,7 @@ openclassrooms = Company.create(
     remote_logo_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201312/Happy/openclassroom.jpg",
     latestnews: "https://www.linformaticien.com/actualites/id/50296/openclassrooms-l-e-learning-non-elitiste-a-la-conquete-du-monde.aspx",
     latestnews_summary: "L'informaticien : OpenClassRooms ready to conquer the world with opensource",
-    latestnews_media: "Article"
-    )
+    latestnews_media: "Article",
     remote_teampicture_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363032/team_image_company/openclassrooms_team.jpg"
   )
 
