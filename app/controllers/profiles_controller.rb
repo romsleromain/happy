@@ -32,7 +32,7 @@ class ProfilesController < ApplicationController
   private
 
   def talent_params
-    params.require(:talent).permit(:email, :first_name, :last_name, :position_id, :experience, :avatar)
+    params.require(:talent).permit(:email, :first_name, :last_name, :position_id, :url_linkedin, :experience, :avatar)
   end
 
 end
