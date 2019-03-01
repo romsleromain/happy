@@ -23,7 +23,8 @@
       <% end %>
     </div>
   </div>
-  <h2>All your matches</h2>
+  <%= link_to "All your matches", companies_path, class: "btn-standard" %>
+
   <div class="container">
     <% @profile.values.each do |value| %>
 
