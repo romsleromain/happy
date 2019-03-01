@@ -31,7 +31,7 @@ alan = Company.create!(
     latestnews_summary: "Maddyness : Alan rises 40 million euros !",
     latestnews_media: "Article",
     remote_teampicture_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363031/team_image_company/alan_team.jpg"
-    )
+  )
 
 
 openclassrooms = Company.create(
