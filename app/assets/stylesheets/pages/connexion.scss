@@ -1,14 +1,14 @@
 .main-container {
   display: flex;
   background-color: $moutarde;
-  padding-top: 70px;
+  // padding-top: 70px;
 
 }
 
 
 .left-banner {
   flex: 0 0 550px;
-  height: 100vh;
+  height: calc(100vh - (50px));
   position: sticky !important;
   background-position: center;
   background-size: cover !important;
