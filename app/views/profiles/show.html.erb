@@ -23,12 +23,31 @@
       <% end %>
     </div>
   </div>
+
   <%= link_to "All your matches", companies_path, class: "btn-standard" %>
 
   <div class="container">
+    <% company_array = [] %>
     <% @profile.values.each do |value| %>
-
+      <% CompanyValue.all.each do |companyvalue| %>
+        <% if companyvalue.value_id == value.id %>
+        <% company_array << Company.find(companyvalue.company_id).name %>
+        <% end %>
       <% end %>
+    <% end %>
+    <% counts = Hash.new(0) %>
+    <% company_array.each do |company| %>
+      <% counts[company] += 1 %>
+    <% end %>
+    <% counts.each do |x, y|  %>
+      <% if y == 3 %>
+        <p><%= x %> - 100% </p>
+      <% elsif y == 2 %>
+        <p><%= x %> - 66% </p>
+      <% elsif y == 1 %>
+        <p><%= x %> - 33% </p>
+      <% end %>
+    <% end  %>
   </div>
 </div>
 
