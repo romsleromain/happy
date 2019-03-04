@@ -6,15 +6,17 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
 puts 'Cleaning database...'
+TalentValue.destroy_all
 Talent.destroy_all
 JobOffer.destroy_all
+CompanyValue.destroy_all
 Value.destroy_all
 Company.destroy_all
 Position.destroy_all
 
 puts 'Creating companies...'
+
 alan = Company.create!(
     name: "Alan",
     industry: "insurance",
@@ -25,8 +27,12 @@ alan = Company.create!(
     In 2016, Alan became the first licensed health insurance company in France since 1986.
     Alan is a primary insurer that distributes its own health plans directly to companies and individuals.",
     remote_logo_url: "http://res.cloudinary.com/romscloud/image/upload/v1551276248/g87w7ge5bt1yohydurml.png",
+    latestnews: "https://www.maddyness.com/2019/02/18/alan-leve-40-millions-euros/",
+    latestnews_summary: "Maddyness : Alan rises 40 million euros !",
+    latestnews_media: "Article",
     remote_teampicture_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363031/team_image_company/alan_team.jpg"
-    )
+  )
+
 
 openclassrooms = Company.create(
     name: "Openclassrooms",
@@ -37,9 +43,11 @@ openclassrooms = Company.create(
     Founded in 2013 by Pierre Dubuc and Mathieu Nebra, OpenClassrooms now has 2.5 million Companys worldwide and offers courses in English, French and Spanish.
     The company's mission is to ‘make education accessible",
     remote_logo_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201312/Happy/openclassroom.jpg",
+    latestnews: "https://www.linformaticien.com/actualites/id/50296/openclassrooms-l-e-learning-non-elitiste-a-la-conquete-du-monde.aspx",
+    latestnews_summary: "L'informaticien : OpenClassRooms ready to conquer the world with opensource",
+    latestnews_media: "Article",
     remote_teampicture_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363032/team_image_company/openclassrooms_team.jpg"
   )
-
 
 good = Company.create(
     name: "Good gout",
@@ -280,26 +288,24 @@ project_manager= JobOffer.create(
     company: qonto
     )
 
-creativity = Value.create(
-    name: "Creativity",
-    remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201223/Happy/creativity.svg"
-  )
+puts 'Creating company_values'
 
-caring = Value.create(
-    name: "Caring",
-    remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201222/Happy/caring.svg"
-  )
+alan_valeur_1 = CompanyValue.create(company_id: alan.id, value_id: curious.id)
+alan_valeur_2 = CompanyValue.create(company_id: alan.id, value_id: autonomy.id)
+alan_valeur_3 = CompanyValue.create(company_id: alan.id, value_id: performance.id)
 
+qonto_valeur_1 = CompanyValue.create(company_id: qonto.id, value_id: performance.id)
+qonto_valeur_2 = CompanyValue.create(company_id: qonto.id, value_id: leadership.id)
+qonto_valeur_3 = CompanyValue.create(company_id: qonto.id, value_id: security.id)
 
-autonomy = Value.create(
-    name: "Autonomy",
-    remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201223/Happy/autonomy.svg"
-  )
+good_valeur_1 = CompanyValue.create(company_id: good.id, value_id: creativity.id)
+good_valeur_2 = CompanyValue.create(company_id: good.id, value_id: caring.id)
+good_valeur_3 = CompanyValue.create(company_id: good.id, value_id: ecofriendly.id)
 
-curious = Value.create(
-    name: "Curious",
-    remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201223/Happy/curious.svg"
-  )
+openclassrooms_valeur_1 = CompanyValue.create(company_id: openclassrooms.id, value_id: creativity.id)
+openclassrooms_valeur_2 = CompanyValue.create(company_id: openclassrooms.id, value_id: curious.id)
+openclassrooms_valeur_3 = CompanyValue.create(company_id: openclassrooms.id, value_id: entrepreneurship.id)
+
 
 puts 'Finished !'
 

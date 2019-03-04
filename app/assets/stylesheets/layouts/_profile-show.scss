@@ -1,0 +1,22 @@
+.container {
+  padding: 20px;
+}
+
+.basic-infos {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.basic-infos-text {
+  flex: 1 1 auto;
+  max-width: 350px;
+  text-align:left;
+  margin-left: 30px;
+}
+
+.values-list {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}

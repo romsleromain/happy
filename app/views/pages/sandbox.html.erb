@@ -1,14 +1,53 @@
 
-<h1>Happy, find your next move with HAPPY</h1>
-<!-- <h2>Happy, find your next move with HAPPY</h2>
-<h3>Happy, find your next move with HAPPY</h3> -->
-<p>Happy, find your next move with HAPPY</p>
 
 
 <div class="row">
   <div class="col-lg-6 col-md-offset-5">
+<br>
+<br>
+<br>
+<br>
+<br>
 
-    <div class="value-card-validate">
+  <div class="company-card cible">
+      <div class="effect-left">
+      </div>
+        <div class="card-background"style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('<%= cl_image_path Company.last.teampicture.url, height: 300, width: 400, crop: :fill %>');">
+        <div class="card-btn">
+          <%= link_to "Follow", follow_path(Company.last.id), class: "btn-follow-company"%>
+        </div>
+        <div class="card-score">
+          <h3> 66% </h3>
+        </div>
+        <p class="card-description"><%= Company.last.name %></p>
+        </div>
+      <div class="effect-right">
+      </div>
+  </div>
+
+
+<br>
+<br>
+
+  <div class="company-card-validate cible">
+        <div class="card-background"style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('<%= cl_image_path Company.first.teampicture.url, height: 300, width: 400, crop: :fill %>');">
+        <div class="card-btn">
+          <%= link_to "Followed", unfollow_path(Company.last.id), class: "btn-unfollow-company unfollow-js" %>
+        </div>
+        <div class="card-score">
+          <h3> 66% </h3>
+        </div>
+        <p class="card-description"><%= Company.first.name %></p>
+        </div>
+  </div>
+
+  </div>
+
+ <!--         <div class="card-">
+        <%= cl_image_tag(Company.last.logo.url, :width=>75, :height=>75, :radius=>"max", :crop=>"fill") %>
+        </div> -->
+
+<!--     <div class="value-card-validate">
       <%= cl_image_tag(Value.last.icone.url, height: 75, width: 100, crop: :fill) %>
       <p><%= Value.last.name %></p>
       <i class="fas fa-check"></i>
@@ -26,44 +65,7 @@
       <div class="effect-right">
       </div>
     </div>
-
-  <div style="margin:100px;">
+ -->
+<!--   <div style="margin:50px;"> -->
   </div>
-
-  <div>
-
-    <%= link_to "SIGN IN", new_talent_session_path, class: "btn-standard"%>
-  </div>
-
-    <div style="margin:100px;">
-  </div>
-
-  <div>
-    <%= link_to "SIGN UP", new_talent_registration_path, class: "btn-color" %>
-  </div>
-
-     <div style="margin:100px;">
-  </div>
-
-  <div>
-    <%= link_to "Follow", new_talent_registration_path, class: "btn-follow" %>
-  </div>
-
-
-     <div style="margin:100px;">
-  </div>
-
-  <div>
-    <%= link_to "Following", new_talent_registration_path, class: "btn-followed" %>
-  </div>
-    <br>
-    <br>
-
-    <div class="value-card cible">
-      <%= cl_image_tag(Value.last.icone.url, height: 75, width: 100, crop: :fill) %>
-      <p><%= Value.last.name %></p>
-      <i class="fas fa-check"></i>
-    </div>
-
- </div>
 </div>

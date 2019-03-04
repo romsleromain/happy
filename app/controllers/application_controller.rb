@@ -14,4 +14,12 @@ class ApplicationController < ActionController::Base
   def after_sign_up_path_for(resource)
     edit_profile_path(resource)
   end
+
+  def after_sign_in_path_for(resource)
+    if resource.values.any?
+      root_path
+    else
+      edit_profile_path(resource)
+    end
+  end
 end

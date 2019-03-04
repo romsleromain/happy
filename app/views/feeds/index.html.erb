@@ -1,0 +1,29 @@
+<div class="container-feedpage">
+  <div class="container-feedcontent">
+    <div class="headers">
+      <h1 class="header-feed">Your feed</h1>
+      <h3 class="subhead-feed">Discover your followed companies news</h1>
+    </div>
+      <% @feed.each do |thing| %>
+      <div class="row-content">
+        <div class="content-logo">
+          <img class="logo-style"src="<%= thing.logo %>">
+        </div>
+        <div class="content-text">
+          <a href="<%= thing.latestnews %>" class="post-header"><%= thing.latestnews_summary %></a>
+          <p class="post-media">Media : <%= thing.latestnews_media %></p>
+        </div>
+      </div>
+      <% end %>
+  </div>
+  <div class="container-companies-managers">
+    <div class="headers">
+      <h1 class="header-feed">Your companies</h1>
+      <h3 class="subhead-feed">Weekly updates about new companies to follow</h1>
+    </div>
+     <div class="headers">
+      <h1 class="header-feed">Meet the managers</h1>
+      <h3 class="subhead-feed">Weekly updates about new managers to meet</h1>
+     </div>
+  </div>
+</div>
