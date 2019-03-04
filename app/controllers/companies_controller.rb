@@ -8,13 +8,15 @@ class CompaniesController < ApplicationController
   def follow
     @company = Company.find(params[:id])
     current_talent.follow(@company)
-    redirect_to companies_path
+    # redirect_to companies_path
+    redirect_back(fallback_location: root_path)
   end
 
   def unfollow
     @company = Company.find(params[:id])
     current_talent.stop_following(@company)
-    redirect_to companies_path
+    # redirect_to companies_path
+    redirect_back(fallback_location: root_path)
   end
 
   def show
