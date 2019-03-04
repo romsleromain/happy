@@ -9,31 +9,54 @@
   justify-content: center;
 }
 
+.left-screen {
+  flex: 0 0 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.right-screen {
+  flex: 0 0 50%;
+}
+
 .banner-content {
-  background-color: rgba(250,250,250,0.2);
-  height: 300px;
+  background-color: rgba(0,0,0,0.85);
+  border-radius: 3px;
+  height: 550px;
   width: 600px;
   display: flex;
   flex-direction:column;
   align-items: center;
   justify-content: space-around;
+  .btn-standard {
+    font-size: 20px;
+    padding: 12px 24px;
+  }
 }
 
-.banner h1 {
-  margin: 0;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
-  font-weight: bold;
+.welcome-text {
+  text-align: center;
+  max-width: 400px;
+  h1 {
+    margin: 0;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  p {
+    font-size: 24px;
+    font-weight: lighter;
+    color: white;
+    opacity: .7;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  }
 }
 
-.banner p {
-  font-size: 20px;
-  font-weight: lighter;
-  color: white;
-  opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-}
+
+
 
 .wrapper {
   background-color: $moutarde;
