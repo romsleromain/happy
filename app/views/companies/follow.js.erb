@@ -1,0 +1,86 @@
+// // const changeClassCompany = () => {
+// //   const card = document.querySelector('.company-card');
+// //   __
+// //   if (navbar) {
+// //     window.addEventListener('scroll', () => {
+// //       if (window.scrollY >= window.innerHeight) {
+// //         navbar.classList.add('navbar-wagon-white');
+// //       } else {
+// //         navbar.classList.remove('navbar-wagon-white');
+// //       }
+// //     });
+// //   }
+// // };
+
+// // export { initUpdateNavbarOnScroll };
+
+
+// // ____
+
+
+
+function changeClassCompany() {
+  const cards = document.querySelectorAll(".btn-unfollow-company");
+  console.log(cards)
+  cards.forEach(btn => {
+    btn.addEventListener("mouseover", e => {
+      e.target.innerHTML = "Unfollow"
+    })
+    btn.addEventListener("mouseleave", e => {
+      e.target.innerHTML = "Followed"
+    })
+    btn.addEventListener("click", e => {
+      card.classList.toggle('.validate');
+    })
+  })
+}
+
+export { follow }
+
+
+
+
+
+// const card = document.querySelector('.company-card');
+// card.classList.toggle('.validate');
+
+
+
+function changeClassCompany() {
+  const cards = document.querySelectorAll(".company-card");
+  console.log(cards)
+  cards.forEach(btn => {
+    btn.addEventListener("mouseover", e => {
+      e.target.innerHTML = "Unfollow"
+    })
+    btn.addEventListener("mouseleave", e => {
+      e.target.innerHTML = "Followed"
+    })
+    btn.addEventListener("click", e => {
+      card.classList.toggle('.validate');
+    })
+  })
+}
+
+export { follow }
+
+.btn-unfollow-company
+
+// ____
+
+// function follow() {
+//   const unfollow = document.querySelectorAll(".btn-unfollow-company");
+//   console.log(unfollow);
+
+//   unfollow.forEach(btn => {
+//     console.log(btn);
+//     btn.addEventListener("mouseover", e => {
+//       e.target.innerHTML = "Unfollow"
+//     })
+//     btn.addEventListener("mouseleave", e => {
+//       e.target.innerHTML = "Followed"
+//     })
+//   })
+// }
+
+// export { follow }

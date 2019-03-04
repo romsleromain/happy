@@ -33,7 +33,7 @@
             </div>
               <div class="card-background"style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('<%= cl_image_path company.teampicture.url, height: 300, width: 400, crop: :fill %>');">
               <div class="card-btn">
-                <%= link_to "Follow", follow_path(company.id), class: "btn-follow-company"%>
+                <%= link_to "Follow", follow_path(company.id), class: "btn-follow-company", id: "follow-btn-#{company.id}"%>
               </div>
               <div class="card-score">
                 <h3> <%= company.rating_score(current_talent) if current_talent %> % </h3>

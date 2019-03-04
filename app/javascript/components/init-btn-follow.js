@@ -3,7 +3,6 @@ function follow() {
   console.log(unfollow);
 
   unfollow.forEach(btn => {
-    console.log(btn);
     btn.addEventListener("mouseover", e => {
       e.target.innerHTML = "Unfollow"
     })
