@@ -13,10 +13,9 @@ Rails.application.configure do
   config.eager_load = true
 
   config.action_mailer.delivery_method     = :postmark
-  config.action_mailer.postmark_settings   = { api_key: ENV['00cb991c-dc11-4709-b66c-292672db7c27'] }
+  config.action_mailer.postmark_settings   = { api_key: ENV['POSTMARK_API_KEY'] }
   config.action_mailer.default_url_options = { host: "http://www.happy-values.fun/" }
   # or your custom domain name eg. "www.yourdomain.com"
-end
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false

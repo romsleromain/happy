@@ -7,5 +7,6 @@ namespace :company do
     # end
     # patern classique : NewsfeedJob.perform_later (pour heroku)
     puts "Task done."
+  end
 end
 
