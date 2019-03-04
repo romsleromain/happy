@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  resources :feeds, only: :index
+
   devise_for :talents
   root to: 'pages#home'
 
@@ -17,5 +20,4 @@ Rails.application.routes.draw do
   authenticate :talent, lambda { |u| u.admin } do
     mount Sidekiq::Web => '/sidekiq'
   end
-
 end
