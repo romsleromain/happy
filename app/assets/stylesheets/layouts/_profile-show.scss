@@ -13,10 +13,46 @@
   max-width: 350px;
   text-align:left;
   margin-left: 30px;
+  i {
+    font-size: 38px;
+    color: rgba(10, 10, 10, 0.6);
+    &:hover {
+      color: rgba(10, 10, 10, 0.9);
+    }
+  }
+
 }
 
 .values-list {
   display: flex;
   text-align: center;
   justify-content: center;
+  margin-top: 15px;
 }
+
+.company-value-ranked {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.company-values-match {
+  flex: 0 0 50%;
+  display : flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.CTA {
+  padding-top:30px;
+  padding-bottom:30px;
+  .btn-standard {
+    font-size: 22px;
+    padding: 8px 20px;
+  }
+}
+
+
+
+
+

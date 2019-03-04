@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'feeds/index'
+  resources :feeds, only: :index
   devise_for :talents
   root to: 'pages#home'
 
@@ -12,6 +12,4 @@ Rails.application.routes.draw do
   get 'sandbox', to: 'pages#sandbox', as: :sandbox
   get 'companies/follow/:id', to: 'companies#follow', as: :follow
   get 'companies/unfollow/:id', to: 'companies#unfollow', as: :unfollow
-
-
 end
