@@ -9,12 +9,12 @@ class Talent < ApplicationRecord
   has_many :values, through: :talent_values
   belongs_to :position, optional: true
   acts_as_follower
-  after_create :send_welcome_email
+  # after_create :send_welcome_email
 
-  private
+  # private
 
-  def send_welcome_email
-    TalentMailer.welcome(self).deliver_now
-  end
+  # def send_welcome_email
+  #   TalentMailer.welcome(self).deliver_now
+  # end
 
 end
