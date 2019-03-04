@@ -3,7 +3,8 @@ class TalentMailerPreview < ActionMailer::Preview
 
   # Preview this email at http://localhost:3000/rails/mailers/talent_mailer/welcome
   def welcome
-    TalentMailer.welcome
+    talent = Talent.first
+    TalentMailer.welcome(talent)
   end
 
 end

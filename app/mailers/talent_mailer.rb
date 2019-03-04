@@ -5,9 +5,10 @@ class TalentMailer < ApplicationMailer
   #
   #   en.talent_mailer.welcome.subject
   #
-  def welcome
-    @greeting = "Hi"
+  def welcome(talent)
+    @talent = talent
+    @greeting = "#{@talent.first_name}, welcome to Happy, the platform to find your next move !"
 
-    mail to: "to@example.org"
+    mail to: @talent.email, subject: "You've subscribed to Happy !"
   end
 end
