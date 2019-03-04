@@ -5,15 +5,17 @@
       <h3 class="subhead-feed">Discover your followed companies news</h1>
     </div>
       <% @feed.each do |thing| %>
-      <div class="row-content">
-        <div class="content-logo">
-          <img class="logo-style"src="<%= thing.logo %>">
+        <% if current_talent.following?(thing) %>
+        <div class="row-content">
+          <div class="content-logo">
+            <img class="logo-style"src="<%= thing.logo %>">
+          </div>
+          <div class="content-text">
+            <a href="<%= thing.latestnews %>" class="post-header"><%= thing.latestnews_summary %></a>
+            <p class="post-media">Media : <%= thing.latestnews_media %></p>
+          </div>
         </div>
-        <div class="content-text">
-          <a href="<%= thing.latestnews %>" class="post-header"><%= thing.latestnews_summary %></a>
-          <p class="post-media">Media : <%= thing.latestnews_media %></p>
-        </div>
-      </div>
+        <% end %>
       <% end %>
   </div>
   <div class="container-companies-managers">
