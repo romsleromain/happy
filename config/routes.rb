@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   resources :companies, only: [:show, :index]
 
+  resources :job_offers, only: [:show, :destroy]
+
   get 'connexion', to: 'pages#connexion', as: :connexion
   # get 'feed', to: 'pages#feed', as: :feed
   get 'sandbox', to: 'pages#sandbox', as: :sandbox
