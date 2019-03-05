@@ -312,6 +312,35 @@ project_manager= JobOffer.create(
     company: qonto
     )
 
+full_stack= JobOffer.create(
+    name: "Full-stack developer",
+    description: "We are looking for a hands-on Engineer with a successful experience
+    in developing, releasing and maintaining web applications in a fast-growing environment.
+    Technical challenges motivate you, you have a roll up your sleeves attitude.",
+    remote_photomanager_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363164/managers_photos/Alex_pro_qonto.jpg",
+    manager_name: "Ghislain de Fontenay",
+    manager_linkedin: "https://www.linkedin.com/in/ghislain-de-fontenay-458297b8/?originalSubdomain=fr",
+    position: developer,
+    company: payfit
+    )
+
+
+product_owner= JobOffer.create(
+    name: "Product owner",
+    description: "What we need:
+    Master’s degree or equivalent
+    3+ years of experience in a consulting firm or as a project manager in a startup
+    Proactive problem solver: you are not afraid to find solutions for every problem
+    Ability to synthesize complex information
+    Great rigor in the execution and the follow up of missions",
+    remote_photomanager_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363164/managers_photos/Alex_pro_qonto.jpg",
+    manager_name: "Josef Bovet",
+    manager_linkedin: "https://www.linkedin.com/in/josef-bovet-b6370751/",
+    position: product_owner,
+    company: tiller
+    )
+
+
 puts 'Creating company_values'
 
 alan_valeur_1 = CompanyValue.create(company_id: alan.id, value_id: curious.id)
