@@ -50,7 +50,8 @@
   }
 }
 
-.company-card.cible:hover, .company-card.value-card.validate.cible {
+//changed
+.company-card.value-card.validate.cible {
   .effect-left{
     top: 0px;
     left: 0px;
@@ -67,6 +68,23 @@
   }
 }
 
+.company-card.cible:hover {
+  .effect-left{
+    top: -10px;
+    left: -10px;
+    padding-bottom: 30%;
+    width: 30%;
+    height: 0;
+  }
+  .effect-right{
+    bottom: -10px;
+    right: -10px;
+    height: 0;
+    padding-bottom: 30%;
+    width: 30%;
+  }
+}
+//until here
 
 .card-btn {
   position: absolute;
