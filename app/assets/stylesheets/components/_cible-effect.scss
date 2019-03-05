@@ -47,8 +47,14 @@
 }
 
 input[type=checkbox]:checked+label.cible  {
-  background-color: $moutarde;
+  background-color: white;
   box-shadow: 2px 2px 10px rgba(242, 232, 197, 1);
+  p {
+      color: black;
+  }
+  i {
+    color: black;
+  }
 }
 
 

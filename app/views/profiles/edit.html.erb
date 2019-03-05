@@ -1,3 +1,64 @@
+<div class="login-layout">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80);">
+    <div class="left-screen">
+      <div class="banner-content">
+        <%= image_tag "logo.png", height: 80, class: "logo"%>
+        <div class="banner-edit-profile">
+          <div class="login-elements">
+            <%= simple_form_for @profile, url: profile_path do |f| %>
+              <!-- Inject categories here -->
+              <div class="login-step-1">
+                <p>Please select your 3 core values</p>
+                <div class="form-group">
+                  <input type="hidden" name="post[value_ids][]" value="">
+
+                  <div class="value-choices">
+                    <% Value.all.each do |value| %>
+                      <input type="checkbox" class="hidden" value="<%= value.id %>" name="talent[value_ids][]" id="talent_value_ids_<%= value.id %>">
+                      <label class="value-card cible" for="talent_value_ids_<%= value.id %>">
+                        <div class="effect-left"></div>
+                        <%= cl_image_tag(value.icone.url, height: 25, width: 33, crop: :fill ) %>
+                        <p><%= value.name %></p>
+                        <i class="fas fa-check"></i>
+                        <div class="effect-right"></div>
+                      </label>
+                    <% end %>
+                   </div>
+
+                </div>
+                <button type="button" id="nextstep" class="btn-standard">
+                    NEXT
+                </button>
+              </div>
+              <div class="login-step-2">
+                  <div class="namesirname">
+                    <%= f.input :first_name, placeholder: "Patricio" %>
+                    <%= f.input :last_name, placeholder: "Perez" %>
+                  </div>
+                  <%= f.association :position, collection: Position.all, prompt: "current position?" %>
+                  <%= f.input :url_linkedin, placeholder: "Linkedin profile" %>
+                  <%= f.input :experience, placeholder: "6 years" %>
+                  <div class="avatarbutton">
+                    <%= f.input :avatar %>
+                    <%= f.input :avatar_cache, as: :hidden %>
+                    <%= f.submit "Save", class: "btn-standard"  %>
+                  </div>
+                <% end %>
+
+              </div>
+              <!-- Inject categories here -->
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="right-screen">
+    </div>
+  </div>
+</div>
+
+
 <div class="wrapper">
   <div style="padding-top:100px;"></div>
   <h1>Welcome to Happy !</h1>
@@ -18,7 +79,7 @@
                   <input type="checkbox" class="hidden" value="<%= value.id %>" name="talent[value_ids][]" id="talent_value_ids_<%= value.id %>">
                   <label class="value-card cible" for="talent_value_ids_<%= value.id %>">
                     <div class="effect-left"></div>
-                    <%= cl_image_tag(value.icone.url, height: 75, width: 100, crop: :fill) %>
+                    <%= cl_image_tag(value.icone.url, height: 75, width: 100, crop: :fill, :color=>"lightblue") %>
                     <p><%= value.name %></p>
                     <i class="fas fa-check"></i>
                     <div class="effect-right"></div>

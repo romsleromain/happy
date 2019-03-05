@@ -6,3 +6,9 @@ follow();
 
 import { initUpdateNavbarOnScroll } from '../components/navbar';
 initUpdateNavbarOnScroll();
+
+import { initNextStep } from '../components/nextstep';
+if (document.getElementById('nextstep')) {
+  initNextStep();
+}
+

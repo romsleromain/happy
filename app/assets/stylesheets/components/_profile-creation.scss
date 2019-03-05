@@ -5,7 +5,6 @@
   }
 }
 
-
 .form-profile-creation {
   background: white;
   margin-top: 10px;
@@ -36,28 +35,166 @@
   // justify-content: space-between;
   flex-wrap: wrap;
   margin: 20px 0;
+  .value-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    width: 80px;
+    height: 110px;
+    // border: 1px dotted black;
+    padding: 10px;
+    border-radius: 4px;
+    // box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.5s ease;
+    p {
+      font-size: 12px;
+      color: white;
+      transition: border 0.4s ease;
+      transition: box-shadow 0.5s ease;
+      transition: background-color 0.1s ease;
+    }
+    i {
+      font-size: 12px;
+      color: white;
+    }
+    cursor: pointer;
+    .effect-left {
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      border-left: 1.5px solid white;
+      border-top: 1.5px solid white;
+      height: 0;
+      padding-bottom: 30%;
+      width: 30%;
+      z-index: 0;
+      transition: all 0.4s ease-out;
+    }
+    .effect-right {
+      position: absolute;
+      bottom: -5px;
+      right: -5px;
+      border-right: 1.5px solid white;
+      border-bottom: 1.5px solid white;
+      height: 0;
+      padding-bottom: 30%;
+      width: 30%;
+      z-index: 0;
+      transition: all 0.4s ease-out;
+    }
+  }
 }
 
-.value-card {
-  margin: 20px;
-}
 
 
 
 input[type=text]::placeholder{
-  color: rgba(71, 69, 62, 0.2);
+  color: rgba(250, 250, 250, 0.2);
   font-style: italic;
+  font-size: 24px;
+  font-weight: 300;
 }
 
 input[type=url]::placeholder{
-  color: rgba(71, 69, 62, 0.2);
+  color: rgba(250, 250, 250, 0.2);
   font-style: italic;
+  font-size: 24px;
+  font-weight: 300;
 }
 
-.form-control {
-  color: black;
+input[type=email]::placeholder{
+  color: rgba(250, 250, 250, 0.2);
+  font-style: italic;
+  font-size: 24px;
+  font-weight: 300;
 }
 
+input[type=password]::placeholder{
+  color: rgba(250, 250, 250, 0.2);
+  font-style: italic;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.form-control-label {
+  color: white;
+  font-size: 24px;
+  font-weight: 400;
+  abbr {
+    font-size: 16px;
+    text-decoration: underline;
+  }
+}
+
+.file.optional label{
+  color: white;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+
+.step-2 {
+  margin-top: 60px;
+  cursor: none;
+  text-decoration: none;
+}
+
+.form-group {
+  .form-text {
+    color: rgba(250, 250, 250, 0.2);
+    font-style: italic;
+    font-weight: 300;
+  }
+}
+
+
+.banner-edit-profile {
+  height: 400px;
+  // background-color: blue;
+  overflow: hidden;
+  // position: relative;
+  .login-elements {
+    // position: absolute;
+    margin-top: 0;
+    transition: all 0.4s ease-out;
+  }
+}
+
+.login-elements.scrolled {
+  margin-top: -400px;
+}
+
+.login-step-1 {
+  height: 400px;
+  text-align:center;
+}
+
+.login-step-2 {
+  height: 400px;
+  .form-group {
+    margin-bottom: 8px;
+  }
+}
+
+.namesirname {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.avatarbutton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-control.select.optional {
+  color: rgba(250, 250, 250, 0.2);
+  font-style: italic;
+  font-size: 24px;
+  font-weight: 300;
+}
 
 
 // .value-choice {
@@ -77,8 +214,3 @@ input[type=url]::placeholder{
 //   opacity: 1;
 //   }
 // }
-
-
-.step-2 {
-  margin-top: 60px;
-}
