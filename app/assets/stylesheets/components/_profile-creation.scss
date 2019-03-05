@@ -31,13 +31,14 @@
 
 // Checkboxes design
 .value-choices {
-  display: flex;
+  // display: flex;
   // justify-content: space-between;
-  flex-wrap: wrap;
+  // flex-direction: column;
+  // flex-wrap: wrap;
   margin: 20px 0;
   .value-card {
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
     align-items: center;
     margin: 10px;
     width: 80px;

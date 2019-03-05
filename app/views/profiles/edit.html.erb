@@ -16,12 +16,14 @@
                     <% Value.all.each do |value| %>
                       <input type="checkbox" class="hidden" value="<%= value.id %>" name="talent[value_ids][]" id="talent_value_ids_<%= value.id %>">
                       <label class="value-card cible" for="talent_value_ids_<%= value.id %>">
-                        <div class="effect-left"></div>
-                        <%= cl_image_tag(value.icone.url, height: 25, width: 33, crop: :fill ) %>
-                        <p><%= value.name %></p>
-                        <i class="fas fa-check"></i>
-                        <div class="effect-right"></div>
+                        <div class="one-value">
+                          <div class="effect-left"></div>
+                          <%= cl_image_tag(value.icone.url, height: 25, width: 33, crop: :fill ) %>
+                         <!--  <i class="fas fa-check"></i> -->
+                          <div class="effect-right"></div>
+                        </div>
                       </label>
+                      <p><%= value.name %></p>
                     <% end %>
                    </div>
 
