@@ -1,29 +1,54 @@
 <div class="container-feedpage">
-  <div class="container-feedcontent">
-    <div class="headers">
-      <h1 class="header-feed">Your feed</h1>
-      <h3 class="subhead-feed">Discover your followed companies news</h1>
-    </div>
-      <% @feed.each do |thing| %>
-      <div class="row-content">
-        <div class="content-logo">
-          <img class="logo-style"src="<%= thing.logo %>">
-        </div>
-        <div class="content-text">
-          <a href="<%= thing.latestnews %>" class="post-header"><%= thing.latestnews_summary %></a>
-          <p class="post-media">Media : <%= thing.latestnews_media %></p>
-        </div>
-      </div>
-      <% end %>
-  </div>
   <div class="container-companies-managers">
     <div class="headers">
-      <h1 class="header-feed">Your companies</h1>
-      <h3 class="subhead-feed">Weekly updates about new companies to follow</h1>
+      <h1 class="header-feed">Your matching job offers</h1>
+      <h4 class="subhead-feed">Discover the companies looking for your profile</h1>
     </div>
      <div class="headers">
-      <h1 class="header-feed">Meet the managers</h1>
-      <h3 class="subhead-feed">Weekly updates about new managers to meet</h1>
+      <h1>New matching companies</h1>
+      <h4>Expand your network by following these suggestions</h1>
+        <% @feed.each do |company| %>
+        <div class="col-lg-12 companies-feed">
+          <% if current_talent.following?(company) == false %>
+            <div class="company-card cible">
+                <div class="effect-left">
+                </div>
+                  <div class="card-background"style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('<%= cl_image_path company.teampicture.url, height: 300, width: 400, crop: :fill %>');">
+                  <div class="card-btn">
+                    <%= link_to "Follow", follow_path(company.id, source: :feeds), class: "btn-follow-company"%>
+                  </div>
+                  <div class="card-score">
+                    <h3> <%= company.rating_score(current_talent) if current_talent %> % </h3>
+                  </div>
+                  <p class="card-description"><%= company.name %></p>
+                  </div>
+                <div class="effect-right">
+                </div>
+            </div>
+            <br>
+          <% end %>
+        </div>
+        <% end %>
      </div>
   </div>
+  <div class="container-feedcontent">
+    <div class="headers">
+      <h1>Your feed</h1>
+      <h4>Discover your followed companies news</h1>
+    </div>
+      <% @feed.each do |thing| %>
+        <% if current_talent.following?(thing) %>
+        <div class="row-content">
+          <div class="content-logo">
+            <img class="logo-feed"src="<%= thing.logo %>">
+          </div>
+          <div class="content-text">
+            <a href="<%= thing.latestnews %>" class="post-header" target="_blank"><%= thing.latestnews_summary %></a>
+            <p class="post-media">Media : <%= thing.latestnews_media %></p>
+          </div>
+        </div>
+        <% end %>
+      <% end %>
+  </div>
+
 </div>

@@ -24,10 +24,14 @@ class CompaniesController < ApplicationController
   end
 
   def show
+    @company = Company.find(params[:id])
   end
 
   private
 
+  def redirection_path
+    params[:source] == "feeds" ? feeds_index_path : companies_path
+  end
   # def company_params
   #   params.require(:company).permit(:)
   # end
