@@ -7,6 +7,40 @@
      <div class="headers">
       <h1>New matching companies</h1>
       <h3>Expand your network by following these suggestions</h1>
+        <% @feed.each do |company| %>
+        <div class="col-lg-12 companies-feed">
+          <% if current_talent.following?(company) == false %>
+            <div class="company-card-validate cible">
+                <div class="card-background-validate"style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('<%= cl_image_path company.teampicture.url, height: 300, width: 400, crop: :fill %>');">
+                <div class="card-btn">
+                    <%= link_to "Followed", unfollow_path(company.id), class: "btn-unfollow-company", id: "unfollow-btn-#{company.id}"%>
+                </div>
+                <div class="card-score">
+                  <h3> <%= company.rating_score(current_talent) if current_talent %> % </h3>
+                </div>
+                  <p class="card-description"><%= company.name %></p>
+                </div>
+            </div>
+          <% else %>
+            <div class="company-card cible">
+                <div class="effect-left">
+                </div>
+                  <div class="card-background"style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('<%= cl_image_path company.teampicture.url, height: 300, width: 400, crop: :fill %>');">
+                  <div class="card-btn">
+                    <%= link_to "Follow", follow_path(company.id), class: "btn-follow-company"%>
+                  </div>
+                  <div class="card-score">
+                    <h3> <%= company.rating_score(current_talent) if current_talent %> % </h3>
+                  </div>
+                  <p class="card-description"><%= company.name %></p>
+                  </div>
+                <div class="effect-right">
+                </div>
+            </div>
+            <br>
+          <% end %>
+        </div>
+        <% end %>
      </div>
   </div>
   <div class="container-feedcontent">
