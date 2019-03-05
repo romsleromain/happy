@@ -2,9 +2,11 @@
   <% JobOffer.all.each do |job| %>
     <div class="job-card">
       <div class="first-level">
+        <br>
+         <div class="job-info text-center">
+        <h1><%= job.manager_name %></h1> <a href="<%= job.manager_linkedin %>"target="_blank" ><i class="fab fa-linkedin"></i></a>
         <img src="<%= cl_image_path job.photomanager.url %>" class="avatar">
-        <div class="job-info text-center">
-          <h1><%= job.manager_name %></h1>
+
           <h2>@<%= job.company.name %></h2>
         </div>
       </div>

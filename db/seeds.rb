@@ -278,7 +278,7 @@ corporate_sales= JobOffer.create(
     )
 
 full_stack= JobOffer.create(
-    name: "Full-stack developer Growth",
+    name: "Full-stack developer",
     description: "You have 1+ year of experience in web development.
     You have a solid Foundation of front-end development fundamentals (HTML5/CSS3/JavaScript)
     You’re proficient in responsive design and smooth web animations
