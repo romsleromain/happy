@@ -1,0 +1,12 @@
+function changeCardCompany(partial) {
+  const id = '<%= "company_card_#{@company.id}" %>'
+  console.log(id);
+  const card = document.getElementById(id);
+  console.log(card);
+  card.innerHTML = partial;
+};
+
+changeCardCompany('<%= j render "unfollowcard", company: @company %>');
+
+
+

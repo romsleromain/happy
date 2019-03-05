@@ -1,5 +1,6 @@
 class ProfilesController < ApplicationController
 
+
   def show
     @profile = current_talent
   end
@@ -23,6 +24,7 @@ class ProfilesController < ApplicationController
     end
 
     if @profile.update(talent_params)
+      # TalentMailer.welcome(@profile).deliver_now
       redirect_to profile_path(@profile)
     else
       render :edit

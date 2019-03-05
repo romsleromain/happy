@@ -1,11 +1,111 @@
-.job-offer-card {
-
+.jobs-container {
+  display: flex;
+  height: calc(100vh - 50px);
+  justify-content: center;
+  align-items: center;
 }
 
-.job-offer-card:hover {
-
+.job-card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 265px;
+  justify-content: center;
+  border: 2px solid black;
+  margin: 0 40px;
 }
 
-.job-offer-card-validate {
-
+.first-level {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.85);
+  height: 65%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  h1 {
+    color: white;
+    font-size: 18px;
+    font-weight: bolder;
+  }
+  h2 {
+    color: white;
+    font-size: 16px;
+    font-weight: lighter;
+    padding-bottom: 20px;
+    margin-top: 5px;
+  }
 }
+
+.second-level {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #F4E8C1;
+  height: 35%;
+  padding: 20px;
+  p {
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 12px;
+    font-weight: lighter;
+  }
+  h1 {
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 16px;
+    font-weight: bolder;
+  }
+}
+
+// .job-card {
+//   display: flex;
+//   flex-direction: column;
+//   width: 200px;
+//   height: 265px;
+//   // border: 1px dotted black;
+//   padding: 10px;
+//   border-radius: 4px;
+//   // box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+//   transition: box-shadow 0.5s ease;
+//   p {
+//     transition: border 0.4s ease;
+//     transition: box-shadow 0.5s ease;
+//     transition: background-color 0.1s ease;
+//   }
+//   cursor: pointer;
+// }
+
+// .job-card:hover {
+//   // box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+//   p {
+//     // background-color: $moutarde;
+//     border: 1px rgb(10, 10, 10);
+//     // box-shadow: 1px 1px 5px;
+//     border-radius: 4px;
+//   }
+// }
+
+
+// // .value-card.active {
+// //   display: flex;
+// //   flex-direction: column;
+// //   width: 120px;
+// //   height: 150px;
+// //   border: 1px solid black;
+// //   padding: 10px;
+// //   border-radius: 4px;
+// //   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+// //   background-color: $moutarde;
+// // }
+
+// .value-card-validate {
+//   display: flex;
+//   flex-direction: column;
+//   width: 120px;
+//   height: 150px;
+//   border: 1px solid black;
+//   padding: 10px;
+//   border-radius: 4px;
+//   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+//   background-color: $moutarde;
+// }

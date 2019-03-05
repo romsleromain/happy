@@ -1,59 +1,28 @@
-
 <div class="container">
-
 <br>
 <br>
 <br>
+  <h1> My companies </h1>
+  <p>Follow the companies sharing your values</p>
 
-  <h1> Follow  </h1>
-  <p>the companies you're matching with</p>
-
-
-  <h3> <%= link_to "Go to my feeds", feeds_index_path, class: "btn-color" %></h3>
-
-<br>
-<br>
   <div class="row">
 
     <% @companies.each do |company| %>
-    <div class="col-lg-6">
       <% if current_talent.following?(company) %>
-        <div class="company-card-validate cible">
-              <div class="card-background-validate"style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('<%= cl_image_path company.teampicture.url, height: 300, width: 400, crop: :fill %>');">
-              <div class="card-btn">
-                <%= link_to "Followed", unfollow_path(company.id, source: :companies), class: "btn-unfollow-company", id: "unfollow-btn-#{company.id}"%>
-              </div>
-              <div class="card-score">
-                <h3> <%= company.rating_score(current_talent) if current_talent %> % </h3>
-              </div>
-              <p class="card-description"><%= company.name %></p>
-              </div>
+        <div id='<%= "company_card_#{company.id}" %>'>
+          <%= render 'followcard', company: company %>
         </div>
       <% else %>
-        <div class="company-card cible">
-            <div class="effect-left">
-            </div>
-              <div class="card-background"style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('<%= cl_image_path company.teampicture.url, height: 300, width: 400, crop: :fill %>');">
-              <div class="card-btn">
-                <%= link_to "Follow", follow_path(company.id, source: :companies), class: "btn-follow-company"%>
-              </div>
-              <div class="card-score">
-                <h3> <%= company.rating_score(current_talent) if current_talent %> % </h3>
-              </div>
-              <p class="card-description"><%= company.name %></p>
-              </div>
-            <div class="effect-right">
-            </div>
+        <div id='<%= "company_card_#{company.id}" %>'>
+          <%= render 'unfollowcard', company: company %>
         </div>
-        <br>
       <% end %>
-    </div>
     <% end %>
-
-
   </div>
 
-
+  <div >
+    <%= link_to "Validate my choices", feeds_path, class: "btn-float" %>
+  </div>
 
 </div>
 
