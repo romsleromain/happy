@@ -1,0 +1,58 @@
+<div class="jobs-container">
+  <% JobOffer.all.each do |job| %>
+    <div class="job-card">
+      <div class="first-level">
+        <img src="<%= cl_image_path job.photomanager.url %>" class="avatar">
+        <div class="job-info text-center">
+          <h1><%= job.manager_name %></h1>
+          <h2>@<%= job.company.name %></h2>
+        </div>
+      </div>
+      <div class="second-level">
+        <div class="job-info text-center">
+          <p>Looks for</p>
+          <h1><%= job.name %></h1>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
+
+
+
+
+<!-- <div class="wrapper">
+  <div style="padding-top:100px;"></div>
+  <h1>Find your next move!</h1>
+  <div class="container">
+  </div>
+  </div>
+
+
+
+  <br>
+  <br>
+
+    <div class="values-list">
+          <% JobOffer.all.each do |job| %>
+          <div class="job-card cible">
+          <div class="effect-left"></div>
+
+          <div class="avatar" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('<%= cl_image_path job.photomanager.url, height: 50, width: 40, crop: :fill %>');">
+            </div>
+
+          <p><%= job.company.name %></p>
+
+
+             <p><%= job.name %></p>
+          <div class="effect-right"></div>
+          <div class="card-btn">
+          <%= link_to "Apply"%>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+ -->

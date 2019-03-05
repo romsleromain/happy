@@ -56,6 +56,9 @@ good = Company.create(
     description: "Good gout is a brand dedicated to babyfood: natural, high-quality products that are rigorously tested and provide a full
     and well-balanced meal",
     remote_logo_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201312/Happy/gout_good.png",
+    latestnews: "https://www.lsa-conso.fr/info-lsa-nutrition-infantile-good-gout-rachete-par-le-groupe-hongkongais-h-h,298411",
+    latestnews_summary: "LSA : Good Gout bought by Honkongese H&H",
+    latestnews_media: "Article",
     remote_teampicture_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363032/team_image_company/good_gout_team.jpg"
   )
 
@@ -68,6 +71,9 @@ wynd = Company.create(
     and cash-in (registering and charging orders according to the different channels) allows retailers to have a coherence of tools and data between
     the digital and the physical world to increase their margins. ",
     remote_logo_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201312/Happy/wynd.png",
+    latestnews: "https://www.rudebaguette.com/2019/01/wynd-leve-72-millions-euros/",
+    latestnews_summary: "Rude Baguette : Wynd is going international",
+    latestnews_media: "Article",
     remote_teampicture_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363033/team_image_company/wynd_team.jpg"
   )
 
@@ -79,6 +85,9 @@ mangopay = Company.create(
     Unlike traditional payment solutions, MANGOPAY provides its customers with a developer-friendly API and a white-label
     solution that can be seamlessly integrated in your design. ",
     remote_logo_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201312/Happy/mangopay.png",
+    latestnews: "https://www.generationxx.fr/les-invitees-du-podcast/celinelazorthes",
+    latestnews_summary: "Generation XX : Mangopay CEO talks about woman leadership",
+    latestnews_media: "Podcast",
     remote_teampicture_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363032/team_image_company/team_mangopay.jpg"
   )
 
@@ -90,6 +99,9 @@ foxintelligence = Company.create(
     from hundreds of merchants and thousands of brands e-receipts. We provide the most reliable insights available for e-commerce
     while helping consumers save both time and money.",
     remote_logo_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201312/Happy/fox.png",
+    latestnews: "https://www.frenchweb.fr/fw-radar-foxintelligence-de-la-data-pour-les-e-commercants/299728",
+    latestnews_summary: "FrenchWeb : FoxIntelligence, data for online retailers",
+    latestnews_media: "Interview",
     remote_teampicture_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363032/team_image_company/foxintelligence_team.jpg"
   )
 
@@ -99,6 +111,9 @@ qonto= Company.create(
     category: "start up",
     description: "Qonto is the leading neobank for SME and freelancers.",
     remote_logo_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201312/Happy/qonto.png",
+    latestnews: "https://www.lepoint.fr/partenaires/alexandre-prot-pourquoi-j-ai-fonde-qonto-la-neobanque-dont-je-revais-en-tant-qu-entrepreneur-31-01-2019-2290397_3662.php",
+    latestnews_summary: "Le Point : Why I founded Qonto ?",
+    latestnews_media: "Interview",
     remote_teampicture_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363033/team_image_company/team_qonto.jpg"
   )
 
@@ -111,6 +126,9 @@ lime = Company.create(
     we aim to reduce dependence on personal automobiles for short distance transportation and leave future generations
     with a cleaner, healthier planet.",
     remote_logo_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201312/Happy/lime.png",
+    latestnews: "https://www.presse-citron.net/trottinettes-lime-sont-plus-plus-mises-avant-google-maps/",
+    latestnews_summary: "Presse-citron : Google maps now shows Lime scooters",
+    latestnews_media: "Article",
     remote_teampicture_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363032/team_image_company/lime_team.jpg"
   )
 
@@ -120,6 +138,9 @@ tiller = Company.create(
     category: "start up",
     description: "Tiller Systems is a cloud-based iPad point of sale (POS) software company headquartered in Paris, France.",
     remote_logo_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201312/Happy/tiller.png",
+    latestnews: "https://www.snacking.fr/news-3819-FoodTech---LaFourchette-et-Tiller-partenaires-pour-la-gestion-des-reservations-en-ligne.php",
+    latestnews_summary: "Snacking : Tiller partners with laFourchette",
+    latestnews_media: "Article",
     remote_teampicture_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363032/team_image_company/tiller_team.jpg"
   )
 
@@ -130,6 +151,9 @@ payfit= Company.create(
     category: "start up",
     description: "Payfit allows small and medium enterprises to easily and quickly pay their employees.",
     remote_logo_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201312/Happy/payfit.jpg",
+    latestnews: "https://www.frenchweb.fr/comment-payfit-veut-simplifier-la-gestion-de-la-paie-dans-les-entreprises/323424",
+    latestnews_summary: "FrenchWeb : How PayFit simplifies HR life",
+    latestnews_media: "Video",
     remote_teampicture_url: "http://res.cloudinary.com/romscloud/image/upload/v1551373688/team_image_company/payfit_team.jpg"
   )
 

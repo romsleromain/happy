@@ -1,2 +1,76 @@
-<h1>Companies#show</h1>
-<p>Find me in app/views/companies/show.html.erb</p>
+<div class="container-show">
+
+  <div class="row-company">
+
+    <div class="row-infos">
+  <!--     <div class="company-logo"> -->
+        <img class="logo-style"src="<%= @company.logo %>">
+  <!--     </div> -->
+      <div class="company-name-score">
+        <h1>@<%= @company.name %></h1>
+        <h2>Matching: <%= @company.rating_score(current_talent) %></h2>
+      </div>
+    </div>
+    <div class="row-values">
+      <% @company.values.each do |value|%>
+      <div class="valuebox">
+       <div><%= cl_image_tag(value.icone.url, height: 75, width: 100, crop: :fill) %></div>
+       <p><%= value.name %></p>
+      </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="container-infos">
+
+    <div class="container-description-map">
+      <div class="company-description">
+        <h1>About the company</h1>
+        <p><%= @company.description %></p>
+        <img src="<%= @company.teampicture %>">
+      </div>
+      <div class="company-location">
+        <h1><%= @company.name %> latest news</h1>
+        <p><%= @company.latestnews_summary %></p>
+      </div>
+    </div>
+    <div class="container-job-mg">
+      <div class="managers">
+        <h1>Meet the manager</h1>
+        <div class="manager-box">
+
+          <div class="manager-picbox">
+            <img class="manager-pic"src="https://voi.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fprismamedia_people.2F2017.2F06.2F30.2Ffd1ac233-153b-4d82-8307-aafeec9a54b4.2Ejpeg/380x380/quality/80/eddie-murphy.jpg">
+          </div>
+
+          <div class="manager-content">
+            <h1>Eddy Murphy</h1>
+            <h2>Head of Sales</h2>
+            <a href="https://www.linkedin.com/in/eddie-murphy-a7271815/?originalSubdomain=ie" target="_blank" >Linkedin Profile</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="jobs">
+        <h1>Matching opportunities</h1>
+        <div class="row-job">
+          <div class="job-box">
+            <img src="https://voi.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fprismamedia_people.2F2017.2F06.2F30.2Ffd1ac233-153b-4d82-8307-aafeec9a54b4.2Ejpeg/380x380/quality/80/eddie-murphy.jpg">
+            <div class="job-infos">
+              <h1>Eddy</h1>
+              <h2>Head of Sales @Alan</h2>
+            </div>
+            <div class="job-salary">
+              <p>Sales representative</p>
+              <p>40-60k</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
