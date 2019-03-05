@@ -8,13 +8,13 @@ class CompaniesController < ApplicationController
   def follow
     @company = Company.find(params[:id])
     current_talent.follow(@company)
-    redirect_to companies_path
+    redirect_to redirection_path
   end
 
   def unfollow
     @company = Company.find(params[:id])
     current_talent.stop_following(@company)
-    redirect_to companies_path
+    redirect_to redirection_path
   end
 
   def show
@@ -23,6 +23,9 @@ class CompaniesController < ApplicationController
 
   private
 
+  def redirection_path
+    params[:source] == "feeds" ? feeds_index_path : companies_path
+  end
   # def company_params
   #   params.require(:company).permit(:)
   # end
