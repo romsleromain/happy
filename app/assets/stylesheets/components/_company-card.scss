@@ -11,13 +11,13 @@
   display: flex;
   flex: 1 1 auto;
   padding: 10px;
-  margin: 6px;
+  margin: 30px 0px;
   border-radius: 1px;
   transition: all 0.3s ease;
   background-color: #FBFAF8;
   flex-direction: column;
-  width: 400px;
-  height: 200px;
+  width: 500px;
+  height: 250px;
   padding: 1px;
   border-radius: 4px;
   transition: box-shadow 0.5s ease;
@@ -27,7 +27,7 @@
     transition: background-color 0.1s ease;
   }
   .card-background {
-    height: 200px;
+    height: 250px;
     background-size: cover;
     color: white;
     position: relative;
@@ -37,13 +37,13 @@
 .company-card.validate {
   display: flex;
   flex-direction: column;
-  width: 400px;
-  height: 200px;
+  width: 500px;
+  height: 250px;
   border: 0px solid black;
   padding: 1px;
   background-color: $moutarde;
   .card-background {
-    height: 180px;
+    height: 2400px;
     background-size: cover;
     color: white;
     position: relative;
