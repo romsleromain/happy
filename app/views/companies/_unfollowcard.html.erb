@@ -1,12 +1,38 @@
+<% company_array = [] %>
+  <% current_talent.values.each do |value| %>
+    <% CompanyValue.all.each do |companyvalue| %>
+      <% if companyvalue.value_id == value.id %>
+      <% company_array << [Company.find(companyvalue.company_id), value] %>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <% counts = Hash.new(0) %>
+  <% list_values = Hash.new{ |h, k| h[k] = [] } %>
+  <% company_array.each do |company| %>
+    <% counts[company[0]] += 1 %>
+    <% list_values[company[0]] << company[1] %>
+  <% end %>
+
+  <% counts = counts.sort_by {|k,v| v}.reverse.to_h %>
+
+
+
+
 <div class="col-lg-6">
   <div class="company-card cible">
     <div class="effect-left"></div>
-    <div class="card-background" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('<%= cl_image_path company.teampicture.url, height: 300, width: 400, crop: :fill %>');">
+    <div class="card-background" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.2)), url('<%= cl_image_path company.teampicture.url, height: 300, width: 400, crop: :fill %>');">
       <%= link_to "Follow", follow_path(company.id), class: "btn-follow-company card-btn", id: "follow-btn-#{company.id}", remote: true %>
-      <div class="card-score">
-        <h3> <%= company.rating_score(current_talent) if current_talent %> % </h3>
+      <div class="card-value-all">
+        <% list_values[company].each do |valeur| %>
+          <div class="card-value">
+            <%= cl_image_tag(valeur.icone.url, height: 75, width: 100, crop: :fill) %>
+          </div>
+        <% end %>
+
       </div>
-      <p class="card-description"><%= company.name %></p>
+      <p class="card-name"><%= company.name %></p>
     </div>
     <div class="effect-right"></div>
   </div>

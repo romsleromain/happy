@@ -96,7 +96,7 @@
 }
 
 .btn-follow-company {
-  background-color: #F4E8C1;
+  background-color: #39f890;
   color:  white;
   font-family: Avenir;
   margin: 20px;
@@ -107,14 +107,12 @@
   padding: 8px 16px;
   opacity: 0,8;
   transition: opacity 0.3s ease;
-  border-radius: 5px;
+  border-radius: 2px;
   line-height: 24px;
   cursor: pointer;
-  // border-style: solid;
-  // border-width: 1px;
   &:hover {
     text-decoration: none;
-    background-color: #40F99B;
+    background-color: $moutarde;
     color: white;
     opacity: 1;
     font-weight: bold;
