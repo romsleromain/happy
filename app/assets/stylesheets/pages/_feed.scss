@@ -1,20 +1,21 @@
 .container-feedpage {
   display: flex;
   margin: 50px;
+  height: 100vh;
 }
 
 .container-feedcontent {
   display: flex;
   flex-direction: column;
   width: 50%;
-  border-right: 2px solid black;
   padding: 30px;
+  padding-left: 50px;
 }
 
 .container-companies-managers {
   padding: 30px;
-  padding-left: 50px;
   width: 50%;
+  border-right: 2px solid black;
 }
 
 .feedcontent {
@@ -24,37 +25,27 @@
 
 .row-content {
   display: flex;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
+  background-color: white;
 }
 
-.logo-style {
-  width: 90px;
-  border-radius: 40%;
+.logo-feed {
+  width: 100px;
+  height: 70px;
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-  border: white 1px solid;
 }
 
 .content-text {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   text-align: left;
   margin-left: 10px;
   margin-right: 10px;
 }
 
-.header-feed {
-  font-size: 48px;
-
-}
-
-.subhead-feed {
-  font-size: 24px;
-  font-weight: lighter;
-
-}
 
 .post-header {
+  font-size: 14px !important;
   font-weight: bolder;
   color: black;
 }
@@ -62,8 +53,16 @@
 .post-media {
   font-weight: lighter;
   color: grey;
+  font-size: 12px !important;
 }
 
 .headers {
   margin-bottom: 50px;
+  h1 {
+  font-size: 36px;
+  }
+  h3 {
+  font-size: 18px;
+  font-weight: lighter;
+  }
 }
