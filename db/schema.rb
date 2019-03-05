@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_28_171712) do
+ActiveRecord::Schema.define(version: 2019_02_28_184216) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -119,6 +119,7 @@ ActiveRecord::Schema.define(version: 2019_02_28_171712) do
     t.string "experience"
     t.string "url_linkedin"
     t.bigint "position_id"
+    t.boolean "admin", default: true
     t.index ["email"], name: "index_talents_on_email", unique: true
     t.index ["position_id"], name: "index_talents_on_position_id"
     t.index ["reset_password_token"], name: "index_talents_on_reset_password_token", unique: true
