@@ -1,0 +1,11 @@
+<div class="col-lg-6">
+  <div class="company-card validate cible">
+    <div class="card-background" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('<%= cl_image_path company.teampicture.url, height: 300, width: 400, crop: :fill %>');">
+      <%= link_to "Followed", unfollow_path(company.id), class: "btn-unfollow-company card-btn", id: "unfollow-btn-#{company.id}", remote: true %>
+      <div class="card-score">
+        <h3> <%= company.rating_score(current_talent) if current_talent %> % </h3>
+      </div>
+      <p class="card-description"><%= company.name %></p>
+    </div>
+  </div>
+</div>

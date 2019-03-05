@@ -1,3 +1,26 @@
+.btn-float {
+  position: fixed;
+  bottom: 40px;
+  right: 60px;
+  text-decoration: none;
+  background-color: rgba(0,0,0,0.8);
+  border-radius: 4px;
+  color: white;
+  height: 50px;
+  width: 209px;
+  text-align: center;
+  padding-top: 13px;
+  z-index: 15;
+  justify-content: center;
+  transition: all 0.4s ease-out;
+  &:hover{
+   text-decoration: none;
+   color: $moutarde;
+   background-color: rgba(0,0,0,1);
+  }
+}
+
+
 .btn-standard {
   background-color: white;
   color:  #000000;
@@ -170,3 +193,5 @@
     font-weight: bold;
   }
 }
+
+

@@ -3,10 +3,8 @@
   flex-direction: column;
   width: 120px;
   height: 165px;
-  // border: 1px dotted black;
   padding: 10px;
   border-radius: 4px;
-  // box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.5s ease;
   p {
     transition: border 0.4s ease;
@@ -17,27 +15,11 @@
 }
 
 .value-card:hover {
-  // box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
   p {
-    // background-color: $moutarde;
     border: 1px rgb(10, 10, 10);
-    // box-shadow: 1px 1px 5px;
     border-radius: 4px;
   }
 }
-
-
-// .value-card.active {
-//   display: flex;
-//   flex-direction: column;
-//   width: 120px;
-//   height: 150px;
-//   border: 1px solid black;
-//   padding: 10px;
-//   border-radius: 4px;
-//   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-//   background-color: $moutarde;
-// }
 
 .value-card-validate {
   display: flex;
