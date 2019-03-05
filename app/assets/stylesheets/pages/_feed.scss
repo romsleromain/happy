@@ -7,15 +7,14 @@
 .container-feedcontent {
   display: flex;
   flex-direction: column;
-  width: 50%;
-  padding: 30px;
-  padding-left: 50px;
+  width: 30%;
+  background-color: white;
+  box-shadow: 1px 1px 12px #555;
+  overflow: scroll;
 }
 
 .container-companies-managers {
-  padding: 30px;
-  width: 50%;
-  border-right: 2px solid black;
+  width: 70%;
   overflow: scroll;
 }
 
@@ -62,15 +61,97 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
+  margin-top
   h1 {
-  font-size: 36px;
+  font-size: 32px !important;
   }
   h4 {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: lighter;
   }
 }
 
+.header-feed {
+  font-size: 32px;
+}
+
 .companies-feed {
-  margin-top: 20px;
+  align-items: center;
+}
+
+.jobs-container-feed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.job-card-feed {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 270px;
+  justify-content: center;
+  margin: 0 40px;
+  box-shadow: 1px 1px 12px #555;
+}
+
+.job-card-feed:hover {
+  box-shadow: 8px 8px 12px #aaa;
+}
+
+.first-level-feed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.85);
+  height: 65%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  h1 {
+    color: white;
+    font-size: 12px;
+    font-weight: bolder;
+  }
+  h2 {
+    color: white;
+    font-size: 14px;
+    font-weight: lighter;
+    padding-bottom: 20px;
+    margin-top: 5px;
+  }
+}
+
+.second-level-feed {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #F4E8C1;
+  height: 35%;
+  padding: 20px;
+  p {
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 12px;
+  }
+  h1 {
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 14px;
+    font-weight: bolder;
+  }
+}
+
+.header-job {
+  height: 20%;
+  background-color: black;
+  color: white;
+  padding-left: 10px;
+}
+
+.row-content-global {
+  height: 80%;
+}
+
+.job-info-feed {
+
 }
