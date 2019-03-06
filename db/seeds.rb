@@ -297,14 +297,7 @@ full_stack= JobOffer.create(
 
 project_manager= JobOffer.create(
     name: "Project Manager",
-    description: "what we need:
-    Master’s degree or equivalent
-    3+ years of experience in a consulting firm or as a project manager in a startup
-    Proactive problem solver: you are not afraid to find solutions for every problem
-    Ability to synthesize complex information
-    Great rigor in the execution and the follow up of missions
-    Outstanding communication and interpersonal skills: you are a team player
-    You speak both French and English",
+    description: "Outstanding communication and interpersonal skills: you are a team player",
     remote_photomanager_url: "http://res.cloudinary.com/romscloud/image/upload/v1551374559/managers_photos/germain_tonning_qonto.jpg",
     manager_name: "Germain Michou-Tonning",
     manager_linkedin: "https://www.linkedin.com/in/germain-michou-tonning/",
@@ -314,9 +307,7 @@ project_manager= JobOffer.create(
 
 full_stack= JobOffer.create(
     name: "Full-stack developer",
-    description: "We are looking for a hands-on Engineer with a successful experience
-    in developing, releasing and maintaining web applications in a fast-growing environment.
-    Technical challenges motivate you, you have a roll up your sleeves attitude.",
+    description: "We are looking for a hands-on Engineer with a successful experience.",
     remote_photomanager_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363164/managers_photos/Alex_pro_qonto.jpg",
     manager_name: "Ghislain de Fontenay",
     manager_linkedin: "https://www.linkedin.com/in/ghislain-de-fontenay-458297b8/?originalSubdomain=fr",
@@ -327,12 +318,7 @@ full_stack= JobOffer.create(
 
 product_owner= JobOffer.create(
     name: "Product owner",
-    description: "What we need:
-    Master’s degree or equivalent
-    3+ years of experience in a consulting firm or as a project manager in a startup
-    Proactive problem solver: you are not afraid to find solutions for every problem
-    Ability to synthesize complex information
-    Great rigor in the execution and the follow up of missions",
+    description: "Ability to synthesize complex information",
     remote_photomanager_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363164/managers_photos/Alex_pro_qonto.jpg",
     manager_name: "Josef Bovet",
     manager_linkedin: "https://www.linkedin.com/in/josef-bovet-b6370751/",
@@ -342,15 +328,7 @@ product_owner= JobOffer.create(
 
 legal_advisor= JobOffer.create(
     name: "Legal advisor",
-    description: "You have at least 1 year experience as legal counsel
-    You have a significant sense of autonomy to anticipate mid-term client evolutions
-    and short-term expectations
-    You have a background in business law with experiences in labour/employment law and
-    some knowledge in corporate law
-    You are a problem solver and rigorous
-    You have excellent verbal and written communication skills in French
-    and English
-    You’re a product lover",
+    description: "You are a problem solver and rigorous",
     remote_photomanager_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363164/managers_photos/Alex_pro_qonto.jpg",
     manager_name: "Florian Fournier",
     manager_linkedin: "https://www.linkedin.com/in/florian-fournier-b093a2aa/?originalSubdomain=fr",
@@ -360,12 +338,7 @@ legal_advisor= JobOffer.create(
 
 country_manager= JobOffer.create(
     name: "Country manager Italy",
-    description: "Business + entrepreneur profile who wants to manage a new product from
-    scratch for his country
-    No programming knowledge required but a strong appetite and passion for tech issues
-    Strong analytical mindTaste for the intellectual challenge
-    Rigorous, curious and innovative spirit
-    Want to be part of an amazing fast-growing and intense adventure",
+    description: "Want to be part of an amazing fast-growing and intense adventure?",
     remote_photomanager_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363164/managers_photos/Alex_pro_qonto.jpg",
     manager_name: "Florian Fournier",
     manager_linkedin: "https://www.linkedin.com/in/florian-fournier-b093a2aa/?originalSubdomain=fr",
@@ -375,11 +348,7 @@ country_manager= JobOffer.create(
 
 talent_recruiter= JobOffer.create(
     name: "VP Employer Success",
-    description: "Build, lead, and scale a world-class customer success team to take
-    care of our B2B customer base ranging from HR and Tech Executives to team managers
-    within both CAC-40 companies (and Fortune 1000 companies) and small businesses.
-    Set both the short-term and long-term vision for Employer Success at OpenClassrooms
-    by analyzing the current state and assessing where we have opportunity to improve,
+    description: "Here the opportunity to improve,
     expand, and innovate",
     remote_photomanager_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363164/managers_photos/Alex_pro_qonto.jpg",
     manager_name: "Xavier Molinie",
@@ -390,12 +359,7 @@ talent_recruiter= JobOffer.create(
 
 business_developper= JobOffer.create(
     name: "Business Developer",
-    description: "Build, lead, and scale a world-class customer success team to take
-    care of our B2B customer base ranging from HR and Tech Executives to team managers
-    within both CAC-40 companies (and Fortune 1000 companies) and small businesses.
-    Set both the short-term and long-term vision for Employer Success at OpenClassrooms
-    by analyzing the current state and assessing where we have opportunity to improve,
-    expand, and innovate",
+    description: "Build, lead, and scale a world-class customer success team",
     remote_photomanager_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363164/managers_photos/Alex_pro_qonto.jpg",
     manager_name: "Mathieu Bernard",
     manager_linkedin: "https://www.linkedin.com/in/mathieu-bernard-62a33546/?originalSubdomain=fr",
@@ -421,6 +385,21 @@ openclassrooms_valeur_1 = CompanyValue.create(company_id: openclassrooms.id, val
 openclassrooms_valeur_2 = CompanyValue.create(company_id: openclassrooms.id, value_id: curious.id)
 openclassrooms_valeur_3 = CompanyValue.create(company_id: openclassrooms.id, value_id: entrepreneurship.id)
 
+lime_valeur_1 = CompanyValue.create(company_id: payfit.id, value_id: caring.id)
+lime_valeur_2 = CompanyValue.create(company_id: payfit.id, value_id: performance.id)
+lime_valeur_3 = CompanyValue.create(company_id: payfit.id, value_id: leadership.id)
+
+wynd_valeur_1 = CompanyValue.create(company_id: payfit.id, value_id: curious.id)
+wynd_valeur_2 = CompanyValue.create(company_id: payfit.id, value_id: caring.id)
+wynd_valeur_3 = CompanyValue.create(company_id: payfit.id, value_id: creativity.id)
+
+mangopay_valeur_1 = CompanyValue.create(company_id: payfit.id, value_id: curious.id)
+mangopay_valeur_2 = CompanyValue.create(company_id: payfit.id, value_id: caring.id)
+mangopay_valeur_3 = CompanyValue.create(company_id: payfit.id, value_id: ecofriendly.id)
+
+foxintelligence_valeur_1 = CompanyValue.create(company_id: payfit.id, value_id: entrepreneurship.id)
+foxintelligence_valeur_2 = CompanyValue.create(company_id: payfit.id, value_id: caring.id)
+foxintelligence_valeur_3 = CompanyValue.create(company_id: payfit.id, value_id: ecofriendly.id)
 
 puts 'Finished !'
 
