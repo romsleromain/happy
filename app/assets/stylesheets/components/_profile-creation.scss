@@ -32,23 +32,24 @@
 // Checkboxes design
 .value-choices {
   display: flex;
-  // justify-content: space-between;
+  flex-direction: column;
   flex-wrap: wrap;
-  margin: 20px 0;
+  margin: 0;
+  height: 330px;
   .value-card {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 10px;
-    width: 80px;
-    height: 110px;
+    // width: 80px;
+    // height: 110px;
     // border: 1px dotted black;
     padding: 10px;
     border-radius: 4px;
     // box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.5s ease;
     p {
-      font-size: 12px;
+      font-size: 16px;
       color: white;
       transition: border 0.4s ease;
       transition: box-shadow 0.5s ease;
@@ -168,6 +169,9 @@ input[type=password]::placeholder{
 .login-step-1 {
   height: 400px;
   text-align:center;
+  p {
+    margin: 0;
+  }
 }
 
 .login-step-2 {
@@ -198,6 +202,83 @@ input[type=password]::placeholder{
   font-size: 24px;
   font-weight: 300;
 }
+
+
+.value-carte {
+  display:flex;
+  align-items: center;
+  justify-content: flex-start;
+  p {
+    font-size: 16px;
+    color: white;
+    padding-left: 15px;
+  }
+}
+
+
+// .wrapper {
+//   .value-choices-test {
+//   // display: flex;
+//   // justify-content: space-between;
+//   // flex-wrap: wrap;
+//   margin: 20px 0;
+//   .value-card-test {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     margin: 10px;
+//     width: 80px;
+//     height: 110px;
+//     // border: 1px dotted black;
+//     padding: 10px;
+//     border-radius: 4px;
+//     // box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+//     transition: box-shadow 0.5s ease;
+//     p {
+//       font-size: 12px;
+//       color: white;
+//       transition: border 0.4s ease;
+//       transition: box-shadow 0.5s ease;
+//       transition: background-color 0.1s ease;
+//     }
+//     i {
+//       font-size: 12px;
+//       color: white;
+//     }
+//     cursor: pointer;
+//     .effect-left-test {
+//       position: absolute;
+//       top: -5px;
+//       left: -5px;
+//       border-left: 1.5px solid white;
+//       border-top: 1.5px solid white;
+//       height: 0;
+//       padding-bottom: 30%;
+//       width: 30%;
+//       z-index: 0;
+//       transition: all 0.4s ease-out;
+//     }
+//     .effect-right-test {
+//       position: absolute;
+//       bottom: -5px;
+//       right: -5px;
+//       border-right: 1.5px solid white;
+//       border-bottom: 1.5px solid white;
+//       height: 0;
+//       padding-bottom: 30%;
+//       width: 30%;
+//       z-index: 0;
+//       transition: all 0.4s ease-out;
+//       }
+//     }
+//   }
+// }
+
+// .value-icon {
+//   display:flex;
+//   align-items: center;
+//   justify-content: center;
+// }
 
 
 // .value-choice {
