@@ -18,7 +18,7 @@
                       <input type="checkbox" class="hidden" value="<%= value.id %>" name="talent[value_ids][]" id="talent_value_ids_<%= value.id %>">
                       <label class="value-card cible" for="talent_value_ids_<%= value.id %>">
                         <div class="effect-left"></div>
-                        <%= cl_image_tag(value.icone.url, height: 25, width: 33, crop: :fill ) %>
+                        <%= cl_image_tag(value.icone.url, height: 25, width: 20, crop: :fill ) %>
                         <div class="effect-right"></div>
                       </label>
                       <p><%= value.name %></p>
