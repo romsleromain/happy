@@ -1,3 +1,19 @@
 #sweet-alert-demo {
 
 }
+
+.swal-overlay {
+  background-color: rgba(0,0,0,0.7);
+}
+
+// .swal-modal {
+//   background-color: rgba(244,232,193,0.9);
+// }
+
+.swal-title {
+  margin: 119px;
+  font-size: 22px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.21);
+  margin-bottom: 28px;
+  background-color: rgba(244,232,193,0.9);
+}
