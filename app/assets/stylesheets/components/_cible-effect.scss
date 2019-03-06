@@ -53,12 +53,16 @@
 
 input[type=checkbox]:checked+label.cible  {
   background-color: white;
-  box-shadow: 2px 2px 10px rgba(242, 232, 197, 1);
+  box-shadow: 1px 1px 5px rgba(242, 232, 197, 1);
   p {
-      color: black;
+    color: black;
   }
   i {
     color: black;
+  }
+  img {
+    // filter: grayscale(100%);
+    filter: grayscale(300%) brightness(0%);
   }
 }
 
