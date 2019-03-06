@@ -5,9 +5,32 @@
   <h1> My companies </h1>
   <p>Follow the companies sharing your values</p>
 
-  <div class="row">
+<!-- <div>
+  <img src="../assets/images/creativity.svg" alt="">
+</div> -->
+<br>
+<br>
 
-    <% @companies.each do |company| %>
+  <div class="row">
+  <% company_array = [] %>
+  <% current_talent.values.each do |value| %>
+    <% CompanyValue.all.each do |companyvalue| %>
+      <% if companyvalue.value_id == value.id %>
+      <% company_array << [Company.find(companyvalue.company_id), value] %>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <% counts = Hash.new(0) %>
+    <% list_values = Hash.new{ |h, k| h[k] = [] } %>
+    <% company_array.each do |company| %>
+      <% counts[company[0]] += 1 %>
+      <% list_values[company[0]] << company[1] %>
+    <% end %>
+
+    <% counts = counts.sort_by {|k,v| v}.reverse.to_h %>
+
+    <% counts.each do |company, y|  %>
       <% if current_talent.following?(company) %>
         <div id='<%= "company_card_#{company.id}" %>'>
           <%= render 'followcard', company: company %>
@@ -25,4 +48,6 @@
   </div>
 
 </div>
+
+
 

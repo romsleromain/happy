@@ -7,6 +7,48 @@
 }
 
 
+.company-card.validate {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 250px;
+  border: 0px solid black;
+  padding: 1px;
+  background-color: $moutarde;
+  .card-background {
+    height: 2400px;
+    background-size: cover;
+    color: white;
+    position: relative;
+  }
+  .effect-left{
+    top: -10px;
+    left: -10px;
+    padding-bottom: 30%;
+    width: 30%;
+    height: 0;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+  }
+  .effect-right{
+    bottom: -10px;
+    right: -10px;
+    height: 0;
+    padding-bottom: 30%;
+    width: 30%;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+  }
+  .card-name {
+    position: absolute;
+    bottom: 20px;
+    left: 18px;
+    z-index: 10;
+    font-size: 34px;
+    font-weight: bold;
+  }
+}
+
 .company-card {
   display: flex;
   flex: 1 1 auto;
@@ -34,62 +76,98 @@
   }
 }
 
-.company-card.validate {
+//changed
+// .company-card.value-card.validate.cible {
+//   .effect-left{
+//     top: 0px;
+//     left: 0px;
+//     padding-bottom: 0;
+//     width: 100%;
+//     height: 100%;
+//   }
+//   .effect-right{
+//     bottom: 0px;
+//     right: 0px;
+//     padding-bottom: 0;
+//     width: 100%;
+//     height: 100%;
+//   }
+// }
+
+//until here
+
+.card-value-all {
+  position: absolute;
   display: flex;
-  flex-direction: column;
-  width: 500px;
-  height: 250px;
-  border: 0px solid black;
-  padding: 1px;
-  background-color: $moutarde;
-  .card-background {
-    height: 2400px;
-    background-size: cover;
-    color: white;
-    position: relative;
-  }
+  justify-content: space-around;
+  top: 18px;
+  right: 38px;
+  z-index: 10;
+  color: $moutarde;
+
 }
 
-.company-card.cible:hover, .company-card.value-card.validate.cible {
-  .effect-left{
-    top: 0px;
-    left: 0px;
-    padding-bottom: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .effect-right{
-    bottom: 0px;
-    right: 0px;
-    padding-bottom: 0;
-    width: 100%;
-    height: 100%;
-  }
+.card-value {
+  margin: 0px 2px;
 }
 
+.card-name {
+  position: absolute;
+  bottom: 20px;
+  left: 18px;
+  z-index: 10;
+  font-size: 34px;
+  font-weight: bold;
+}
 
 .card-btn {
   position: absolute;
-  bottom: 20px;
-  left: 10px;
-  z-index: 10;
-}
-
-.card-score {
-  position: absolute;
-  bottom: 5px;
+  bottom: 8px;
   right: 12px;
+  z-index: 15;
   h3 {
     font-style: bold;
     font-size: 57px;
   }
-  color: $moutarde;
 }
 
 .card-description {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  font-size: 20px;
+  width: 100%;
+  height: 100%;
+  font-size: 15px;
+  padding: 53px;
+  padding-top: 21px;
+  z-index: 11;
+  background-color: rgba(0,0,0,0.7);
+  transition: all 0.5s ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.company-card{
+  .card-description {
+    opacity: 0;
+  }
+}
+
+.company-card.cible:hover {
+  .effect-left{
+    top: -10px;
+    left: -10px;
+    padding-bottom: 30%;
+    width: 30%;
+    height: 0;
+  }
+  .effect-right{
+    bottom: -10px;
+    right: -10px;
+    height: 0;
+    padding-bottom: 30%;
+    width: 30%;
+  }
+  .card-description{
+    opacity: 1;
+  }
+}
