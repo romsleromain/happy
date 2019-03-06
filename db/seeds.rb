@@ -161,53 +161,53 @@ puts 'Creating values...'
 
 leadership = Value.create(
     name: "Leadership",
-    remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201225/Happy/leadership.svg"
+    remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/c_scale,co_rgb:F4E8C1,e_colorize:100,f_png,h_75,w_50/v1551201225/Happy/leadership.svg"
   )
 
 innovation = Value.create(
     name: "Innovation",
-    remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201225/Happy/innovation.svg"
+    remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/c_scale,co_rgb:F4E8C1,e_colorize:100,f_png,h_75,w_50/v1551201225/Happy/innovation.svg"
   )
 
 security = Value.create(
     name: "Security",
-    remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201225/Happy/security.svg"
+    remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/c_scale,co_rgb:F4E8C1,e_colorize:100,f_png,h_75,w_50/v1551201225/Happy/security.svg"
   )
 
 performance = Value.create(
     name: "Performance",
-    remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201224/Happy/Performance.svg"
+    remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/c_scale,co_rgb:F4E8C1,e_colorize:100,f_png,h_75,w_50/v1551201224/Happy/Performance.svg"
   )
 
 ecofriendly = Value.create(
     name: "Eco-friendly",
-    remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201223/Happy/eco-friendly.svg"
+    remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/c_scale,co_rgb:F4E8C1,e_colorize:100,f_png,h_75,w_50/v1551201223/Happy/eco-friendly.svg"
   )
 
 entrepreneurship = Value.create(
     name: "Entrepreneurship",
-    remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201223/Happy/entrepreneurship.svg"
+    remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/c_scale,co_rgb:F4E8C1,e_colorize:100,f_png,h_75,w_50/v1551201223/Happy/entrepreneurship.svg"
   )
 
 creativity = Value.create(
     name: "Creativity",
-    remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201223/Happy/creativity.svg"
+    remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/c_scale,co_rgb:F4E8C1,e_colorize:100,f_png,h_75,w_50/v1551201223/Happy/creativity.svg"
   )
 
 caring = Value.create(
     name: "Caring",
-    remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201222/Happy/caring.svg"
+    remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/c_scale,co_rgb:F4E8C1,e_colorize:100,f_png,h_75,w_50/v1551201222/Happy/caring.svg"
   )
 
 
 autonomy = Value.create(
     name: "Autonomy",
-    remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201223/Happy/autonomy.svg"
+    remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/c_scale,co_rgb:F4E8C1,e_colorize:100,f_png,h_75,w_50/v1551201223/Happy/autonomy.svg"
   )
 
 curious = Value.create(
     name: "Curious",
-    remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/v1551201223/Happy/curious.svg"
+    remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/c_scale,co_rgb:F4E8C1,e_colorize:100,f_png,h_75,w_50/v1551201223/Happy/curious.svg"
   )
 
 puts 'Creating positions...'

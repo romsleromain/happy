@@ -17,8 +17,6 @@
   <% counts = counts.sort_by {|k,v| v}.reverse.to_h %>
 
 
-
-
 <div class="col-lg-6">
   <div class="company-card cible">
     <div class="effect-left"></div>
@@ -27,13 +25,17 @@
       <div class="card-value-all">
         <% list_values[company].each do |valeur| %>
           <div class="card-value">
-            <%= cl_image_tag(valeur.icone.url, height: 75, width: 100, crop: :fill) %>
+            <%= cl_image_tag(valeur.icone.url, height: 75, width: 50, crop: :fill) %>
           </div>
         <% end %>
-
       </div>
       <p class="card-name"><%= company.name %></p>
+      <div class="card-description">
+        <p><%= company.description %></p>
+      </div>
     </div>
     <div class="effect-right"></div>
   </div>
 </div>
+
+
