@@ -340,6 +340,68 @@ product_owner= JobOffer.create(
     company: tiller
     )
 
+legal_advisor= JobOffer.create(
+    name: "Legal advisor",
+    description: "You have at least 1 year experience as legal counsel
+    You have a significant sense of autonomy to anticipate mid-term client evolutions
+    and short-term expectations
+    You have a background in business law with experiences in labour/employment law and
+    some knowledge in corporate law
+    You are a problem solver and rigorous
+    You have excellent verbal and written communication skills in French
+    and English
+    You’re a product lover",
+    remote_photomanager_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363164/managers_photos/Alex_pro_qonto.jpg",
+    manager_name: "Florian Fournier",
+    manager_linkedin: "https://www.linkedin.com/in/florian-fournier-b093a2aa/?originalSubdomain=fr",
+    position: legal_advisor,
+    company: payfit
+    )
+
+country_manager= JobOffer.create(
+    name: "Country manager Italy",
+    description: "Business + entrepreneur profile who wants to manage a new product from
+    scratch for his country
+    No programming knowledge required but a strong appetite and passion for tech issues
+    Strong analytical mindTaste for the intellectual challenge
+    Rigorous, curious and innovative spirit
+    Want to be part of an amazing fast-growing and intense adventure",
+    remote_photomanager_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363164/managers_photos/Alex_pro_qonto.jpg",
+    manager_name: "Florian Fournier",
+    manager_linkedin: "https://www.linkedin.com/in/florian-fournier-b093a2aa/?originalSubdomain=fr",
+    position: country_manager,
+    company: payfit
+    )
+
+talent_recruiter= JobOffer.create(
+    name: "VP Employer Success",
+    description: "Build, lead, and scale a world-class customer success team to take
+    care of our B2B customer base ranging from HR and Tech Executives to team managers
+    within both CAC-40 companies (and Fortune 1000 companies) and small businesses.
+    Set both the short-term and long-term vision for Employer Success at OpenClassrooms
+    by analyzing the current state and assessing where we have opportunity to improve,
+    expand, and innovate",
+    remote_photomanager_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363164/managers_photos/Alex_pro_qonto.jpg",
+    manager_name: "Xavier Molinie",
+    manager_linkedin: "https://www.linkedin.com/in/xavier-molinie-3b9844/?originalSubdomain=fr",
+    position: talent_recruiter,
+    company: openclassrooms
+    )
+
+business_developper= JobOffer.create(
+    name: "Business Developer",
+    description: "Build, lead, and scale a world-class customer success team to take
+    care of our B2B customer base ranging from HR and Tech Executives to team managers
+    within both CAC-40 companies (and Fortune 1000 companies) and small businesses.
+    Set both the short-term and long-term vision for Employer Success at OpenClassrooms
+    by analyzing the current state and assessing where we have opportunity to improve,
+    expand, and innovate",
+    remote_photomanager_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363164/managers_photos/Alex_pro_qonto.jpg",
+    manager_name: "Mathieu Bernard",
+    manager_linkedin: "https://www.linkedin.com/in/mathieu-bernard-62a33546/?originalSubdomain=fr",
+    position: business_developper,
+    company: payfit
+    )
 
 puts 'Creating company_values'
 
