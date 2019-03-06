@@ -9,7 +9,11 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
-  <body>
+  <% my_class = "" %>
+  <% if controller_name == "profiles" && action_name == "show" %>
+  <% my_class = "body-test" %>
+  <% end  %>
+  <body class='<%= my_class %>'>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <%= yield %>

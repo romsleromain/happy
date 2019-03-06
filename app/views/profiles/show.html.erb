@@ -1,4 +1,104 @@
-<div class="wrapper">
+<!-- <div class="banner-test" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80);">
+
+ <div class="banner-content-test">
+    <%= image_tag "logo.png", height: 80, class: "logo"%>
+    <div class="welcome-text">
+      <h1>Find your happy place</h1>
+      <p>HAPPY helps you to find the company sharing your values</p>
+    </div>
+    <a href="#all-companies" class="btn-standard">SEE ALL COMPANIES</a>
+  </div>
+
+
+</div> -->
+
+<div class="wrapper-test">
+    <h2> My Matches </h2>
+      <div class="row">
+        <% company_array = [] %>
+        <% @profile.values.each do |value| %>
+          <% CompanyValue.all.each do |companyvalue| %>
+            <% if companyvalue.value_id == value.id %>
+            <% company_array << [Company.find(companyvalue.company_id).name, value] %>
+            <% end %>
+          <% end %>
+        <% end %>
+        <% counts = Hash.new(0) %>
+        <% list_values = Hash.new{ |h, k| h[k] = [] } %>
+        <% company_array.each do |company| %>
+          <% counts[company[0]] += 1 %>
+          <% list_values[company[0]] << company[1] %>
+        <% end %>
+
+        <% counts = counts.sort_by {|k,v| v}.reverse.to_h %>
+
+        <% counts.each do |x, y|  %>
+        <% current_company = Company.find_by(name: x) %>
+          <div class="col-xs-12">
+
+              <div class="company-value-ranked">
+                <% if current_talent.following?(current_company) %>
+                  <div class="company-card-validate cible">
+                    <div class="card-background-validate"style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('<%= cl_image_path current_company.teampicture.url, height: 300, width: 400, crop: :fill %>');">
+                      <div class="card-btn">
+                        <%= link_to "Followed", unfollow_path(current_company.id), class: "btn-unfollow-company", id: "unfollow-btn-#{current_company.id}"%>
+                      </div>
+                      <div class="card-score">
+                        <% if y == 3 %>
+                        <h3> <%= ((y.to_f / 3)*100).to_i  %> % </h3>
+                        <% elsif y == 2 %>
+                        <h3> <%= ((y.to_f / 3)*100).to_i  %> % </h3>
+                        <% elsif y == 1 %>
+                        <h3> <%= ((y.to_f / 3)*100).to_i  %> % </h3>
+                        <% end %>
+                      </div>
+                      <p class="card-description"><%= current_company.name %></p>
+                    </div>
+                  </div>
+                <% else %>
+                  <div class="company-card cible">
+                    <div class="effect-left"></div>
+                      <div class="card-background"style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('<%= cl_image_path current_company.teampicture.url, height: 300, width: 400, crop: :fill %>');">
+                      <div class="card-btn">
+                        <%= link_to "Follow", follow_path(current_company.id), class: "btn-follow-company"%>
+                      </div>
+                      <div class="card-score">
+                        <% if y == 3 %>
+                        <h3> <%= ((y.to_f / 3)*100).to_i  %> % </h3>
+                        <% elsif y == 2 %>
+                        <h3> <%= ((y.to_f / 3)*100).to_i  %> % </h3>
+                        <% elsif y == 1 %>
+                        <h3> <%= ((y.to_f / 3)*100).to_i  %> % </h3>
+                        <% end %>
+                      </div>
+                      <p class="card-description"><%= current_company.name %></p>
+                      </div>
+                    <div class="effect-right"></div>
+                  </div>
+                <% end %>
+                <div class="company-values-match">
+                  <% list_values[x].each do |n| %>
+                    <div class="value-card cible">
+                      <div class="effect-left"></div>
+                      <%= cl_image_tag(n.icone.url, height: 75, width: 100, crop: :fill) %>
+                      <p><%= n.name %></p>
+                      <i class="fas fa-check"></i>
+                      <div class="effect-right"></div>
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+
+
+          </div>
+
+        <% end  %>
+
+      </div>
+  </div>
+
+
+<!-- <div class="wrapper">
   <div style="padding-top:100px;"></div>
   <h1>Your profile is ready!</h1>
   <div class="container">
@@ -11,9 +111,9 @@
       </div>
     </div>
     <div class="values-list">
-      <% @profile.values.each do |value| %>
+      <% @profile.values.each do |value| %> -->
         <!-- <input type="checkbox" class="hidden" value="<%= value.id %>" name="talent[value_ids][]" id="talent_value_ids_<%= value.id %>"> -->
-        <div class="value-card cible">
+        <!-- <div class="value-card cible">
           <div class="effect-left"></div>
           <%= cl_image_tag(value.icone.url, height: 75, width: 100, crop: :fill) %>
           <p><%= value.name %></p>
@@ -113,7 +213,7 @@
   <div class="CTA">
     <%= link_to "Go to my Feed", feeds_path, class: "btn-standard" %>
   </div>
-
+ -->
 
 </div>
 
