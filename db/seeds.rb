@@ -40,8 +40,7 @@ openclassrooms = Company.create(
     category: "start up",
     description: "OpenClassrooms is an online education platform for vocational training, providing courses in IT, technology, entrepreneurship, and digital skills.
     Courses are conducted fully online, through a mix of video resources, online reading, real-life projects and individual mentoring sessions.
-    Founded in 2013 by Pierre Dubuc and Mathieu Nebra, OpenClassrooms now has 2.5 million Companys worldwide and offers courses in English, French and Spanish.
-    The company's mission is to ‘make education accessible",
+    Founded in 2013 by Pierre Dubuc and Mathieu Nebra, OpenClassrooms now has 2.5 million Companys worldwide and offers courses in English, French and Spanish.",
     remote_logo_url: "https://res.cloudinary.com/romscloud/image/upload/v1551872631/HAPPY-NEW-LOGO/OCR.png",
     latestnews: "https://www.linformaticien.com/actualites/id/50296/openclassrooms-l-e-learning-non-elitiste-a-la-conquete-du-monde.aspx",
     latestnews_summary: "OpenClassRooms ready to conquer the world with opensource",
@@ -68,8 +67,8 @@ wynd = Company.create(
     category: "start up",
     description: "Wynd is the platform for reducing the gap between the digital world and the physical point of sale.
     Our double expertise on the logistic component (moving the stock, deploying new services and customer journeys quickly)
-    and cash-in (registering and charging orders according to the different channels) allows retailers to have a coherence of tools and data between
-    the digital and the physical world to increase their margins. ",
+    and cash-in (registering and charging orders) allows retailers to have a coherence of tools and data between
+    the digital and the physical.",
     remote_logo_url: "https://res.cloudinary.com/romscloud/image/upload/v1551872631/HAPPY-NEW-LOGO/WYND.png",
     latestnews: "https://www.rudebaguette.com/2019/01/wynd-leve-72-millions-euros/",
     latestnews_summary: "Wynd is going international",
@@ -84,7 +83,7 @@ mangopay = Company.create(
     description: "MANGOPAY is an end-to-end payment solution for Marketplaces, Crowdfunding and Fintech platforms.
     Unlike traditional payment solutions, MANGOPAY provides its customers with a developer-friendly API and a white-label
     solution that can be seamlessly integrated in your design. ",
-    remote_logo_url: "https://res.cloudinary.com/romscloud/image/upload/v1551872848/zlccwpk2adecrlvgiuzr.png",
+    remote_logo_url: "https://res.cloudinary.com/romscloud/image/upload/v1551883268/ltsnsb537gsmshhuaxyt.png",
     latestnews: "https://www.generationxx.fr/les-invitees-du-podcast/celinelazorthes",
     latestnews_summary: "Mangopay CEO talks about woman leadership",
     latestnews_media: "Podcast",

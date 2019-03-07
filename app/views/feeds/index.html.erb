@@ -36,7 +36,24 @@
           <h4>Follow these new companies</h1>
         </div>
         <div class="companies-cards">
-          <% @feed.each do |company| %>
+          <div class="companies-feed">
+            <div class="col-lg-12">
+              <% @companies.each do |company|  %>
+                <% if current_talent.following?(company) %>
+                  <div id='<%= "company_card_#{company.id}" %>'>
+                    <%= render '../views/companies/followcard', company: company %>
+                  </div>
+                <% else %>
+                  <div id='<%= "company_card_#{company.id}" %>'>
+                    <%= render '../views/companies/unfollowcard', company: company %>
+                  </div>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+
+
+<!--           <% @feed.each do |company| %>
           <div class="companies-feed">
             <div class="col-lg-12">
               <% if current_talent.following?(company) == false %>
@@ -59,7 +76,8 @@
               <% end %>
             </div>
           </div>
-          <% end %>
+          <% end %> -->
+
         </div>
        </div>
     </div>
