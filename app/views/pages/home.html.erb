@@ -21,7 +21,7 @@
     <p>Follow the companies sharing your values</p>
 
     <div class="row">
-      <% Company.all.each do |company|  %>
+      <% Company.all.first(4).each do |company|  %>
       <div class="col-lg-6">
         <div class="company-card cible">
           <div class="effect-left"></div>
