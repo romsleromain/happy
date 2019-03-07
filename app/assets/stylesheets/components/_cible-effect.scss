@@ -13,7 +13,7 @@
   width: 100%;
   height: 100%;
   z-index: 0;
-  transition: all 0.4s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .effect-right {
@@ -26,7 +26,7 @@
   width: 100%;
   height: 100%;
   z-index: 0;
-  transition: all 0.4s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .value-card.cible:hover, .value-card.value-card-validate.cible, input[type=checkbox]:checked+label.cible  {
@@ -53,7 +53,7 @@
 
 input[type=checkbox]:checked+label.cible  {
   background-color: white;
-  box-shadow: 1px 1px 5px rgba(242, 232, 197, 1);
+  // box-shadow: 1px 1px 5px rgba(242, 232, 197, 1);
   p {
     color: black;
   }

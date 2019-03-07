@@ -461,6 +461,14 @@ foxintelligence_valeur_1 = CompanyValue.create(company_id: foxintelligence.id, v
 foxintelligence_valeur_2 = CompanyValue.create(company_id: foxintelligence.id, value_id: caring.id)
 foxintelligence_valeur_3 = CompanyValue.create(company_id: foxintelligence.id, value_id: ecofriendly.id)
 
+payfit_valeur_1 = CompanyValue.create(company_id: payfit.id, value_id: creativity.id)
+payfit_valeur_2 = CompanyValue.create(company_id: payfit.id, value_id: caring.id)
+payfit_valeur_3 = CompanyValue.create(company_id: payfit.id, value_id: autonomy.id)
+
+tiller_valeur_1 = CompanyValue.create(company_id: tiller.id, value_id: security.id)
+tiller_valeur_2 = CompanyValue.create(company_id: tiller.id, value_id: performance.id)
+tiller_valeur_3 = CompanyValue.create(company_id: tiller.id, value_id: leadership.id)
+
 
 puts 'Finished !'
 

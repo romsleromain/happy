@@ -5,10 +5,11 @@ import { follow } from "../components/init-btn-follow.js";
 follow();
 
 import { initUpdateNavbarOnScroll } from '../components/navbar';
+const navbar = document.querySelector('.navbar-wagon');
 if (document.getElementById('home')) {
   initUpdateNavbarOnScroll();
 } else {
-  initUpdateNavbarOnScroll(100);
+  navbar.classList.add('navbar-wagon-black');
 }
 
 

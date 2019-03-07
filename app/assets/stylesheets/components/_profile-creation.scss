@@ -70,7 +70,7 @@
       padding-bottom: 30%;
       width: 30%;
       z-index: 0;
-      transition: all 0.4s ease-out;
+      transition: all 0.1s ease-out;
     }
     .effect-right {
       position: absolute;
@@ -82,7 +82,7 @@
       padding-bottom: 30%;
       width: 30%;
       z-index: 0;
-      transition: all 0.4s ease-out;
+      transition: all 0.1s ease-out;
     }
   }
   .value-card.cible:hover, .value-card.value-card-validate.cible, input[type=checkbox]:checked+label.cible  {

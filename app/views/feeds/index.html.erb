@@ -9,7 +9,7 @@
               <div class="job-card-feed">
                 <div class="first-level-feed">
                   <div class="hidden-des">
-                    <p>"We are looking for an experienced PM about online payments into B2B sector, you have to be funny."</p>
+                    <p>"<%= job.description %>"</p>
                   </div>
                   <img src="<%= cl_image_path job.photomanager.url %>" class="avatar avatar-feed">
                   <div class="job-info-feed text-center">
@@ -59,16 +59,18 @@
        </div>
     </div>
     <div class="container-feedcontent">
+
       <div class="headers header-job" style="text-align: center;">
         <h1 class="header-feed">Lastest news</h1>
         <h4>Stay updated</h1>
+
       </div>
       <div class="row-content-global">
         <% @feed.each do |thing| %>
           <% if current_talent.following?(thing) %>
             <div class="row-content">
               <div class="content-logo">
-                <p>@<%= thing.name %></p>
+                <p><%= thing.name %></p>
 <!--                 <img class="logo-feed"src="<%= thing.logo %>"> -->
               </div>
               <div class="content-text">
