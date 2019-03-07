@@ -3,8 +3,8 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+#   movies = Movie.create!([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   Character.create!(name: 'Luke', movie: movies.first)
 
 puts 'Cleaning database...'
 TalentValue.destroy_all
@@ -69,7 +69,7 @@ alan = Company.create!(
   )
 
 
-openclassrooms = Company.create(
+openclassrooms = Company.create!(
     name: "Openclassrooms",
     industry: "education",
     category: "start up",
@@ -83,7 +83,7 @@ openclassrooms = Company.create(
     remote_teampicture_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363032/team_image_company/openclassrooms_team.jpg"
   )
 
-good = Company.create(
+good = Company.create!(
     name: "Good gout",
     industry: "food",
     category: "start up",
@@ -96,7 +96,7 @@ good = Company.create(
     remote_teampicture_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363032/team_image_company/good_gout_team.jpg"
   )
 
-wynd = Company.create(
+wynd = Company.create!(
     name: "Wynd",
     industry: "ecommerce",
     category: "start up",
@@ -111,7 +111,7 @@ wynd = Company.create(
     remote_teampicture_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363033/team_image_company/wynd_team.jpg"
   )
 
-mangopay = Company.create(
+mangopay = Company.create!(
     name: "Mangopay",
     industry: "fintech",
     category: "Plus de 50 salariés",
@@ -125,7 +125,7 @@ mangopay = Company.create(
     remote_teampicture_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363032/team_image_company/team_mangopay.jpg"
   )
 
-foxintelligence = Company.create(
+foxintelligence = Company.create!(
     name: "Foxintelligence",
     industry: "big data",
     category: "start up",
@@ -139,7 +139,7 @@ foxintelligence = Company.create(
     remote_teampicture_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363032/team_image_company/foxintelligence_team.jpg"
   )
 
-qonto= Company.create(
+qonto= Company.create!(
     name: "Qonto",
     industry: "fintech",
     category: "start up",
@@ -151,7 +151,7 @@ qonto= Company.create(
     remote_teampicture_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363033/team_image_company/team_qonto.jpg"
   )
 
-lime = Company.create(
+lime = Company.create!(
     name: "Lime",
     industry: "mobility",
     category: "start up",
@@ -166,7 +166,7 @@ lime = Company.create(
     remote_teampicture_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363032/team_image_company/lime_team.jpg"
   )
 
-tiller = Company.create(
+tiller = Company.create!(
     name: "Tiller system",
     industry: "tech",
     category: "start up",
@@ -179,7 +179,7 @@ tiller = Company.create(
   )
 
 
-payfit= Company.create(
+payfit= Company.create!(
     name: "Payfit",
     industry: "legaltech",
     category: "start up",
@@ -193,53 +193,53 @@ payfit= Company.create(
 
 puts 'Creating values...'
 
-leadership = Value.create(
+leadership = Value.create!(
     name: "Leadership",
     remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/c_scale,co_rgb:F4E8C1,e_colorize:100,f_png,h_75,w_50/v1551201225/Happy/leadership.svg"
   )
 
-innovation = Value.create(
+innovation = Value.create!(
     name: "Innovation",
     remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/c_scale,co_rgb:F4E8C1,e_colorize:100,f_png,h_75,w_50/v1551201225/Happy/innovation.svg"
   )
 
-security = Value.create(
+security = Value.create!(
     name: "Security",
     remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/c_scale,co_rgb:F4E8C1,e_colorize:100,f_png,h_75,w_50/v1551201225/Happy/security.svg"
   )
 
-performance = Value.create(
+performance = Value.create!(
     name: "Performance",
     remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/c_scale,co_rgb:F4E8C1,e_colorize:100,f_png,h_75,w_50/v1551201224/Happy/Performance.svg"
   )
 
-ecofriendly = Value.create(
+ecofriendly = Value.create!(
     name: "Eco-friendly",
     remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/c_scale,co_rgb:F4E8C1,e_colorize:100,f_png,h_75,w_50/v1551201223/Happy/eco-friendly.svg"
   )
 
-entrepreneurship = Value.create(
+entrepreneurship = Value.create!(
     name: "Entrepreneurship",
     remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/c_scale,co_rgb:F4E8C1,e_colorize:100,f_png,h_75,w_50/v1551201223/Happy/entrepreneurship.svg"
   )
 
-creativity = Value.create(
+creativity = Value.create!(
     name: "Creativity",
     remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/c_scale,co_rgb:F4E8C1,e_colorize:100,f_png,h_75,w_50/v1551201223/Happy/creativity.svg"
   )
 
-caring = Value.create(
+caring = Value.create!(
     name: "Caring",
     remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/c_scale,co_rgb:F4E8C1,e_colorize:100,f_png,h_75,w_50/v1551201222/Happy/caring.svg"
   )
 
 
-autonomy = Value.create(
+autonomy = Value.create!(
     name: "Autonomy",
     remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/c_scale,co_rgb:F4E8C1,e_colorize:100,f_png,h_75,w_50/v1551201223/Happy/autonomy.svg"
   )
 
-curious = Value.create(
+curious = Value.create!(
     name: "Curious",
     remote_icone_url: "http://res.cloudinary.com/romscloud/image/upload/c_scale,co_rgb:F4E8C1,e_colorize:100,f_png,h_75,w_50/v1551201223/Happy/curious.svg"
   )
@@ -250,60 +250,52 @@ puts 'Creating positions...'
     name: "Corporate sales"
     )
 
-  developer= Position.create(
-    name: "developer"
+  developer= Position.create!(
+    name: "Developer"
     )
 
-  project_manager= Position.create(
+  project_manager= Position.create!(
     name: "Project manager"
     )
 
-  product_owner= Position.create(
+  product_owner= Position.create!(
     name: "Product owner"
     )
 
-  business_developper= Position.create(
+  business_developper= Position.create!(
     name: "Business developper"
     )
 
-  talent_recruiter= Position.create(
+  talent_recruiter= Position.create!(
     name: "Talent recruiter"
     )
 
-  country_manager= Position.create(
+  country_manager= Position.create!(
     name: "Country manager"
     )
 
-  legal_advisor= Position.create(
+  legal_advisor= Position.create!(
     name: "Legal advisor"
     )
 
-  datascientist= Position.create(
+  datascientist= Position.create!(
     name: "Datascientist"
     )
 
-  customer_success= Position.create(
+  customer_success= Position.create!(
     name: "Customer success"
     )
 
-  partnership= Position.create(
-    name: "partnership"
+  partnership= Position.create!(
+    name: "Partnership"
     )
 
 
 puts 'Creating job offers...'
 
-corporate_sales= JobOffer.create(
+JobOffer.create!(
     name: "Corporate sales",
-    description: "You will be a good fit to join the Sales team at Alan if you:
-    - Have significant previous experience in a Sales role
-    - Have strong written & verbal communication skills (English & French)
-    - Are highly organized with exceptional follow-up skills
-    - Have empathy and are passionate about understanding and solving prospects' problems
-    - Have the ability to collaborate in a fast-paced team
-    - Have a desire to learn fast and make an impact from day 1
-
-    Everything else is a plus. We care about having a diversity of experiences and backgrounds in our team.",
+    description: "We care about having a diversity of experiences and backgrounds in our team.",
     remote_photomanager_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363163/managers_photos/Bertrand_Robert_alan.jpg",
     manager_name: "Bertrand Robert",
     manager_linkedin: "https://www.linkedin.com/in/bertrandrobert/?originalSubdomain=fr",
@@ -311,17 +303,9 @@ corporate_sales= JobOffer.create(
     company: alan
     )
 
-full_stack= JobOffer.create(
+JobOffer.create!(
     name: "Full-stack developer",
-    description: "You have 1+ year of experience in web development.
-    You have a solid Foundation of front-end development fundamentals (HTML5/CSS3/JavaScript)
-    You’re proficient in responsive design and smooth web animations
-    You have experience with Git
-    You understand industry best practices (SEO, performance, maintainability…)
-    You are a curious, well organized and open minded developer
-    You are pragmatic and solution-oriented
-    You want to build and work on a website visited by hundred of thousands users and improve it every day
-    Basic knowledge in backend frameworks such as Symfony, Django or Rails and MVC architecture are highly recommended.",
+    description: "Join us if you are a curious, well organized and open minded developer",
     remote_photomanager_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363164/managers_photos/Alex_pro_qonto.jpg",
     manager_name: "Alexandre Prot",
     manager_linkedin: "https://www.linkedin.com/in/aprot/?originalSubdomain=fr",
@@ -329,7 +313,7 @@ full_stack= JobOffer.create(
     company: qonto
     )
 
-project_manager= JobOffer.create(
+JobOffer.create!(
     name: "Project Manager",
     description: "Outstanding communication and interpersonal skills: you are a team player",
     remote_photomanager_url: "http://res.cloudinary.com/romscloud/image/upload/v1551374559/managers_photos/germain_tonning_qonto.jpg",
@@ -339,7 +323,7 @@ project_manager= JobOffer.create(
     company: qonto
     )
 
-full_stack= JobOffer.create(
+JobOffer.create!(
     name: "Full-stack developer",
     description: "We are looking for a hands-on Engineer with a successful experience.",
     remote_photomanager_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363164/managers_photos/Alex_pro_qonto.jpg",
@@ -350,17 +334,8 @@ full_stack= JobOffer.create(
     )
 
 
-product_owner= JobOffer.create(
-    name: "Product owner",
-    description: "Ability to synthesize complex information",
-    remote_photomanager_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363164/managers_photos/Alex_pro_qonto.jpg",
-    manager_name: "Josef Bovet",
-    manager_linkedin: "https://www.linkedin.com/in/josef-bovet-b6370751/",
-    position: product_owner,
-    company: tiller
-    )
 
-legal_advisor= JobOffer.create(
+JobOffer.create!(
     name: "Legal advisor",
     description: "You are a problem solver and rigorous",
     remote_photomanager_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363164/managers_photos/Alex_pro_qonto.jpg",
@@ -370,7 +345,7 @@ legal_advisor= JobOffer.create(
     company: payfit
     )
 
-country_manager= JobOffer.create(
+JobOffer.create!(
     name: "Country manager Italy",
     description: "Want to be part of an amazing fast-growing and intense adventure?",
     remote_photomanager_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363164/managers_photos/Alex_pro_qonto.jpg",
@@ -380,7 +355,7 @@ country_manager= JobOffer.create(
     company: payfit
     )
 
-talent_recruiter= JobOffer.create(
+JobOffer.create!(
     name: "VP Employer Success",
     description: "Here the opportunity to improve,
     expand, and innovate",
@@ -391,7 +366,7 @@ talent_recruiter= JobOffer.create(
     company: openclassrooms
     )
 
-business_developper= JobOffer.create(
+JobOffer.create!(
     name: "Business Developer",
     description: "Build, lead, and scale a world-class customer success team",
     remote_photomanager_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363164/managers_photos/Alex_pro_qonto.jpg",
@@ -401,23 +376,74 @@ business_developper= JobOffer.create(
     company: payfit
     )
 
+JobOffer.create!(
+    name: "Business Developer",
+    description: "Join a fast-growing company",
+    remote_photomanager_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363164/managers_photos/Alex_pro_qonto.jpg",
+    manager_name: "Laurent Sarfati",
+    manager_linkedin: "https://www.linkedin.com/in/laurentsarfati/?originalSubdomain=fr",
+    position: business_developper,
+    company: qonto
+    )
+
+JobOffer.create!(
+    name: "Business Developer",
+    description: "Join an innovative Edtech",
+    remote_photomanager_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363164/managers_photos/Alex_pro_qonto.jpg",
+    manager_name: "Edouard Ormancey",
+    manager_linkedin: "https://www.linkedin.com/in/edormancey/?originalSubdomain=fr",
+    position: business_developper,
+    company: openclassrooms
+    )
+
+JobOffer.create!(
+    name: "Product owner",
+    description: "Join a fast-growing Edtech",
+    remote_photomanager_url: "https://res.cloudinary.com/romscloud/image/upload/v1551960893/managers_photos/Edouard_ormancey-Openclassroom_1.jpg",
+    manager_name: "Edouard Ormancey",
+    manager_linkedin: "https://www.linkedin.com/in/josef-bovet-b6370751/",
+    position: product_owner,
+    company: openclassrooms
+    )
+
+JobOffer.create!(
+    name: "Product owner",
+    description: "Join an innotive Fintech",
+    remote_photomanager_url: "https://res.cloudinary.com/romscloud/image/upload/v1551960893/managers_photos/Laurent_Sarfati-_qonto.jpg",
+    manager_name: "Laurent Sarfati",
+    manager_linkedin: "https://www.linkedin.com/in/laurentsarfati/?originalSubdomain=fr",
+    position: product_owner,
+    company: qonto
+    )
+
+JobOffer.create!(
+    name: "Product owner",
+    description: "Ability to synthesize complex information",
+    remote_photomanager_url: "https://res.cloudinary.com/romscloud/image/upload/v1551960893/managers_photos/Josef_Bovet_tiller.jpg",
+    manager_name: "Josef Bovet",
+    manager_linkedin: "https://www.linkedin.com/in/josef-bovet-b6370751/",
+    position: product_owner,
+    company: tiller
+    )
+
 puts 'Creating company_values'
 
-alan_valeur_1 = CompanyValue.create(company_id: alan.id, value_id: curious.id)
-alan_valeur_2 = CompanyValue.create(company_id: alan.id, value_id: autonomy.id)
-alan_valeur_3 = CompanyValue.create(company_id: alan.id, value_id: performance.id)
+alan_valeur_1 = CompanyValue.create!(company_id: alan.id, value_id: curious.id)
+alan_valeur_2 = CompanyValue.create!(company_id: alan.id, value_id: autonomy.id)
+alan_valeur_3 = CompanyValue.create!(company_id: alan.id, value_id: performance.id)
 
-qonto_valeur_1 = CompanyValue.create(company_id: qonto.id, value_id: performance.id)
-qonto_valeur_2 = CompanyValue.create(company_id: qonto.id, value_id: leadership.id)
-qonto_valeur_3 = CompanyValue.create(company_id: qonto.id, value_id: security.id)
+qonto_valeur_1 = CompanyValue.create!(company_id: qonto.id, value_id: performance.id)
+qonto_valeur_2 = CompanyValue.create!(company_id: qonto.id, value_id: leadership.id)
+qonto_valeur_3 = CompanyValue.create!(company_id: qonto.id, value_id: security.id)
 
-good_valeur_1 = CompanyValue.create(company_id: good.id, value_id: creativity.id)
-good_valeur_2 = CompanyValue.create(company_id: good.id, value_id: caring.id)
-good_valeur_3 = CompanyValue.create(company_id: good.id, value_id: ecofriendly.id)
+good_valeur_1 = CompanyValue.create!(company_id: good.id, value_id: creativity.id)
+good_valeur_2 = CompanyValue.create!(company_id: good.id, value_id: caring.id)
+good_valeur_3 = CompanyValue.create!(company_id: good.id, value_id: ecofriendly.id)
 
-openclassrooms_valeur_1 = CompanyValue.create(company_id: openclassrooms.id, value_id: creativity.id)
-openclassrooms_valeur_2 = CompanyValue.create(company_id: openclassrooms.id, value_id: curious.id)
-openclassrooms_valeur_3 = CompanyValue.create(company_id: openclassrooms.id, value_id: entrepreneurship.id)
+openclassrooms_valeur_1 = CompanyValue.create!(company_id: openclassrooms.id, value_id: creativity.id)
+openclassrooms_valeur_2 = CompanyValue.create!(company_id: openclassrooms.id, value_id: curious.id)
+openclassrooms_valeur_3 = CompanyValue.create!(company_id: openclassrooms.id, value_id: entrepreneurship.id)
+
 
 lime_valeur_1 = CompanyValue.create(company_id: lime.id, value_id: caring.id)
 lime_valeur_2 = CompanyValue.create(company_id: lime.id, value_id: performance.id)
@@ -434,6 +460,7 @@ mangopay_valeur_3 = CompanyValue.create(company_id: mangopay.id, value_id: ecofr
 foxintelligence_valeur_1 = CompanyValue.create(company_id: foxintelligence.id, value_id: entrepreneurship.id)
 foxintelligence_valeur_2 = CompanyValue.create(company_id: foxintelligence.id, value_id: caring.id)
 foxintelligence_valeur_3 = CompanyValue.create(company_id: foxintelligence.id, value_id: ecofriendly.id)
+
 
 puts 'Finished !'
 
