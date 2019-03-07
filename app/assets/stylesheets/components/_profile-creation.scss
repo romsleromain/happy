@@ -113,34 +113,34 @@
 input[type=text]::placeholder{
   color: rgba(250, 250, 250, 0.2);
   font-style: italic;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 300;
 }
 
 input[type=url]::placeholder{
   color: rgba(250, 250, 250, 0.2);
   font-style: italic;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 300;
 }
 
 input[type=email]::placeholder{
   color: rgba(250, 250, 250, 0.2);
   font-style: italic;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 300;
 }
 
 input[type=password]::placeholder{
   color: rgba(250, 250, 250, 0.2);
   font-style: italic;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 300;
 }
 
 .form-control-label {
   color: white;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
   abbr {
     font-size: 16px;
@@ -188,9 +188,19 @@ input[type=password]::placeholder{
 
 .login-step-1 {
   height: 400px;
-  text-align:center;
-  p {
-    margin: 0;
+  // text-align:center;
+  .form-group {
+  height:300px;
+  }
+  #paragraphe {
+    margin-bottom: 10px;
+    color: white;
+
+    font-style: italic ;
+    font-weight: 300;
+  }
+  button {
+    margin-left: 40%;
   }
 }
 
@@ -219,7 +229,7 @@ input[type=password]::placeholder{
 .form-control.select.optional {
   color: rgba(250, 250, 250, 0.2);
   font-style: italic;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 300;
 }
 
@@ -228,7 +238,7 @@ input[type=password]::placeholder{
   display:flex;
   align-items: center;
   justify-content: flex-start;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   p {
     font-size: 16px;
     color: white;

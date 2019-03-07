@@ -15,6 +15,41 @@ Value.destroy_all
 Company.destroy_all
 Position.destroy_all
 
+
+require 'open-uri'
+require 'nokogiri'
+
+puts 'Srapping companies...'
+
+file_path = Rails.root.join('db/scrap-welcome.html')
+html_doc = Nokogiri::HTML(File.read(file_path))
+
+# puts html_doc
+# html_doc.css('.ais-Hits-item').each do |element|
+#   name = element.search('.hWdDKc').text
+#   puts name
+  # category = element.search('.fRsKtv').first.text
+  # puts category
+  # remote_logo_url = element.search('.hyOoza').attribute('src').value
+  # puts remote_logo_url
+  # # nom = name.downcase.split.join("-")
+  # nom = element.search('a').attribute('href').value
+  # puts nom
+  # link_page = "https://www.welcometothejungle.co/companies/#{nom}"
+  # link_page_file = open(link_page).read
+  # link_page_doc = Nokogiri::HTML(link_page_file)
+  # puts link_page_doc
+  # remote_teampicture_url = element.at_css('.cJzorI')
+  # puts remote_teampicture_url
+
+
+  # puts element.text.strip
+  # puts element.attribute('href').value
+# end
+
+
+
+
 puts 'Creating companies...'
 
 alan = Company.create!(
@@ -77,19 +112,19 @@ wynd = Company.create(
     remote_teampicture_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363033/team_image_company/wynd_team.jpg"
   )
 
-mangopay = Company.create(
-    name: "Mangopay",
-    industry: "fintech",
-    category: "Plus de 50 salariés",
-    description: "MANGOPAY is an end-to-end payment solution for Marketplaces, Crowdfunding and Fintech platforms.
-    Unlike traditional payment solutions, MANGOPAY provides its customers with a developer-friendly API and a white-label
-    solution that can be seamlessly integrated in your design. ",
-    remote_logo_url: "https://res.cloudinary.com/romscloud/image/upload/v1551872848/zlccwpk2adecrlvgiuzr.png",
-    latestnews: "https://www.generationxx.fr/les-invitees-du-podcast/celinelazorthes",
-    latestnews_summary: "Generation XX : Mangopay CEO talks about woman leadership",
-    latestnews_media: "Podcast",
-    remote_teampicture_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363032/team_image_company/team_mangopay.jpg"
-  )
+# mangopay = Company.create(
+#     name: "Mangopay",
+#     industry: "fintech",
+#     category: "Plus de 50 salariés",
+#     description: "MANGOPAY is an end-to-end payment solution for Marketplaces, Crowdfunding and Fintech platforms.
+#     Unlike traditional payment solutions, MANGOPAY provides its customers with a developer-friendly API and a white-label
+#     solution that can be seamlessly integrated in your design. ",
+#     remote_logo_url: "https://res.cloudinary.com/romscloud/image/upload/v1551872848/zlccwpk2adecrlvgiuzr.png",
+#     latestnews: "https://www.generationxx.fr/les-invitees-du-podcast/celinelazorthes",
+#     latestnews_summary: "Generation XX : Mangopay CEO talks about woman leadership",
+#     latestnews_media: "Podcast",
+#     remote_teampicture_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363032/team_image_company/team_mangopay.jpg"
+#   )
 
 foxintelligence = Company.create(
     name: "Foxintelligence",
