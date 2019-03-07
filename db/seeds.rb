@@ -419,21 +419,21 @@ openclassrooms_valeur_1 = CompanyValue.create(company_id: openclassrooms.id, val
 openclassrooms_valeur_2 = CompanyValue.create(company_id: openclassrooms.id, value_id: curious.id)
 openclassrooms_valeur_3 = CompanyValue.create(company_id: openclassrooms.id, value_id: entrepreneurship.id)
 
-lime_valeur_1 = CompanyValue.create(company_id: payfit.id, value_id: caring.id)
-lime_valeur_2 = CompanyValue.create(company_id: payfit.id, value_id: performance.id)
-lime_valeur_3 = CompanyValue.create(company_id: payfit.id, value_id: leadership.id)
+lime_valeur_1 = CompanyValue.create(company_id: lime.id, value_id: caring.id)
+lime_valeur_2 = CompanyValue.create(company_id: lime.id, value_id: performance.id)
+lime_valeur_3 = CompanyValue.create(company_id: lime.id, value_id: leadership.id)
 
-wynd_valeur_1 = CompanyValue.create(company_id: payfit.id, value_id: curious.id)
-wynd_valeur_2 = CompanyValue.create(company_id: payfit.id, value_id: caring.id)
-wynd_valeur_3 = CompanyValue.create(company_id: payfit.id, value_id: creativity.id)
+wynd_valeur_1 = CompanyValue.create(company_id: wynd.id, value_id: curious.id)
+wynd_valeur_2 = CompanyValue.create(company_id: wynd.id, value_id: caring.id)
+wynd_valeur_3 = CompanyValue.create(company_id: wynd.id, value_id: creativity.id)
 
-mangopay_valeur_1 = CompanyValue.create(company_id: payfit.id, value_id: curious.id)
-mangopay_valeur_2 = CompanyValue.create(company_id: payfit.id, value_id: caring.id)
-mangopay_valeur_3 = CompanyValue.create(company_id: payfit.id, value_id: ecofriendly.id)
+mangopay_valeur_1 = CompanyValue.create(company_id: mangopay.id, value_id: curious.id)
+mangopay_valeur_2 = CompanyValue.create(company_id: mangopay.id, value_id: caring.id)
+mangopay_valeur_3 = CompanyValue.create(company_id: mangopay.id, value_id: ecofriendly.id)
 
-foxintelligence_valeur_1 = CompanyValue.create(company_id: payfit.id, value_id: entrepreneurship.id)
-foxintelligence_valeur_2 = CompanyValue.create(company_id: payfit.id, value_id: caring.id)
-foxintelligence_valeur_3 = CompanyValue.create(company_id: payfit.id, value_id: ecofriendly.id)
+foxintelligence_valeur_1 = CompanyValue.create(company_id: foxintelligence.id, value_id: entrepreneurship.id)
+foxintelligence_valeur_2 = CompanyValue.create(company_id: foxintelligence.id, value_id: caring.id)
+foxintelligence_valeur_3 = CompanyValue.create(company_id: foxintelligence.id, value_id: ecofriendly.id)
 
 puts 'Finished !'
 

@@ -2,10 +2,11 @@
 
   <div class="container-test">
 
-    <h1> My companies </h1>
+    <h1> All companies </h1>
     <p>Follow the companies sharing your values</p>
 
     <div class="row">
+      <!--
       <% company_array = [] %>
       <% current_talent.values.each do |value| %>
         <% CompanyValue.all.each do |companyvalue| %>
@@ -23,7 +24,9 @@
       <% end %>
 
       <% counts = counts.sort_by {|k,v| v}.reverse.to_h %>
-      <% counts.each do |company, y|  %>
+      <% counts.each do |company, y|  %> -->
+
+      <% Company.all.each do |company| %>
       <div class="col-lg-6">
         <% if current_talent.following?(company) %>
           <div id='<%= "company_card_#{company.id}" %>'>
@@ -36,10 +39,11 @@
         <% end %>
       </div>
       <% end %>
+      <% end %>
     </div>
 
     <div >
-      <%= link_to "Validate my choices", feeds_path, class: "btn-float" %>
+      <%= link_to "Go to my feed", feeds_path, class: "btn-float" %>
     </div>
 
   </div>
