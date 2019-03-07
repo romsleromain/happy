@@ -251,7 +251,7 @@ puts 'Creating positions...'
     )
 
   developer= Position.create!(
-    name: "developer"
+    name: "Developer"
     )
 
   project_manager= Position.create!(
@@ -287,7 +287,7 @@ puts 'Creating positions...'
     )
 
   partnership= Position.create!(
-    name: "partnership"
+    name: "Partnership"
     )
 
 
