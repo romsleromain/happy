@@ -1,54 +1,83 @@
-<div class="container-feedpage">
-  <div class="container-companies-managers">
-    <div class="headers">
-      <h1 class="header-feed">Your matching job offers</h1>
-      <h4 class="subhead-feed">Discover the companies looking for your profile</h1>
-    </div>
-     <div class="headers">
-      <h1>New matching companies</h1>
-      <h4>Expand your network by following these suggestions</h1>
-        <% @feed.each do |company| %>
-        <div class="col-lg-12 companies-feed">
-          <% if current_talent.following?(company) == false %>
-            <div class="company-card cible">
-                <div class="effect-left">
+<div class="main-container">
+  <div class="container-feedpage">
+    <div class="container-companies-managers">
+      <div class="headers">
+        <h1 class="header-feed">Meet the managers looking for your profile</h1>
+        <h4 class="subhead-feed">Your matching job offers</h1>
+          <div class="jobs-container-feed">
+            <% @job_offers.each do |job| %>
+              <div class="job-card-feed">
+                <div class="first-level-feed">
+                  <div class="hidden-des">
+                    <p>"We are looking for an experienced PM about online payments into B2B sector, you have to be funny."</p>
+                  </div>
+                  <img src="<%= cl_image_path job.photomanager.url %>" class="avatar avatar-feed">
+                  <div class="job-info-feed text-center">
+                    <div class="infos">
+                      <h1><%= job.manager_name %></h1>
+                      <h2>@<%= job.company.name %></h2>
+                    </div>
+                  </div>
                 </div>
-                  <div class="card-background"style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('<%= cl_image_path company.teampicture.url, height: 300, width: 400, crop: :fill %>');">
-                  <div class="card-btn">
-                    <%= link_to "Follow", follow_path(company.id, source: :feeds), class: "btn-follow-company"%>
+                <div class="second-level-feed">
+                  <div class="job-info text-center">
+                    <p>is hiring a</p>
+                    <h1><%= job.name %></h1>
                   </div>
-                  <div class="card-score">
-                    <h3> <%= company.rating_score(current_talent) if current_talent %> % </h3>
-                  </div>
-                  <p class="card-description"><%= company.name %></p>
-                  </div>
-                <div class="effect-right">
-                </div>
-            </div>
-            <br>
-          <% end %>
-        </div>
-        <% end %>
-     </div>
-  </div>
-  <div class="container-feedcontent">
-    <div class="headers">
-      <h1>Your feed</h1>
-      <h4>Discover your followed companies news</h1>
-    </div>
-      <% @feed.each do |thing| %>
-        <% if current_talent.following?(thing) %>
-        <div class="row-content">
-          <div class="content-logo">
-            <img class="logo-feed"src="<%= thing.logo %>">
-          </div>
-          <div class="content-text">
-            <a href="<%= thing.latestnews %>" class="post-header" target="_blank"><%= thing.latestnews_summary %></a>
-            <p class="post-media">Media : <%= thing.latestnews_media %></p>
-          </div>
-        </div>
-        <% end %>
-      <% end %>
-  </div>
 
+                </div>
+              </div>
+            <% end %>
+          </div>
+      </div>
+       <div class="headers-companies">
+        <div class="headers-text header-network">
+          <h1 class="header-feed">Expand your network</h1>
+          <h4>Follow these new companies</h1>
+        </div>
+        <div class="companies-cards">
+          <div class="companies-feed">
+            <div class="col-lg-12">
+              <% @companies.each do |company|  %>
+                <% if current_talent.following?(company) %>
+                  <div id='<%= "company_card_#{company.id}" %>'>
+                    <%= render '../views/companies/followcard', company: company %>
+                  </div>
+                <% else %>
+                  <div id='<%= "company_card_#{company.id}" %>'>
+                    <%= render '../views/companies/unfollowcard', company: company %>
+                  </div>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+       </div>
+    </div>
+    <div class="container-feedcontent">
+      <div class="headers header-job" style="text-align: center;">
+        <h1 class="header-feed">Your feed</h1>
+        <h4>Followed companies news</h1>
+      </div>
+      <div class="row-content-global">
+        <% @feed.each do |thing| %>
+          <% if current_talent.following?(thing) %>
+            <div class="row-content">
+              <div class="content-logo">
+                <img class="logo-feed"src="<%= thing.logo %>">
+              </div>
+              <div class="content-text">
+                <p><%= thing.latestnews_summary %></p>
+                <p class="post-media">Type : <%= thing.latestnews_media %></p>
+                <div class="readit">
+                  <a href="<%= thing.latestnews %>" class="read-it" target="_blank">Read it</a>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
 </div>

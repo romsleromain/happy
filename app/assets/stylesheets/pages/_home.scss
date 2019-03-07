@@ -73,6 +73,40 @@ html {
   scroll-behavior: smooth;
 }
 
+.m-top-40px {
+    margin-top: 40px;
+}
+
+.wrapper-support {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+  padding: 15px;
+}
+
+.support{
+  text-align: center;
+}
+
+.sponsors {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.logo-sponsors{
+  height: 120px;
+  margin: 0 30px;
+  text-align: center;
+  vertical-align: middle;
+  box-sizing: border-box;
+  align-items: center;
+}
+
 // .panel {
 //   width: 100%;
 //   height: 500px;
