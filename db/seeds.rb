@@ -334,15 +334,6 @@ JobOffer.create!(
     )
 
 
-JobOffer.create!(
-    name: "Product owner",
-    description: "Ability to synthesize complex information",
-    remote_photomanager_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363164/managers_photos/Alex_pro_qonto.jpg",
-    manager_name: "Josef Bovet",
-    manager_linkedin: "https://www.linkedin.com/in/josef-bovet-b6370751/",
-    position: product_owner,
-    company: tiller
-    )
 
 JobOffer.create!(
     name: "Legal advisor",
@@ -408,7 +399,7 @@ JobOffer.create!(
 JobOffer.create!(
     name: "Product owner",
     description: "Join a fast-growing Edtech",
-    remote_photomanager_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363164/managers_photos/Alex_pro_qonto.jpg",
+    remote_photomanager_url: "https://res.cloudinary.com/romscloud/image/upload/v1551960893/managers_photos/Edouard_ormancey-Openclassroom_1.jpg",
     manager_name: "Edouard Ormancey",
     manager_linkedin: "https://www.linkedin.com/in/josef-bovet-b6370751/",
     position: product_owner,
@@ -418,11 +409,21 @@ JobOffer.create!(
 JobOffer.create!(
     name: "Product owner",
     description: "Join an innotive Fintech",
-    remote_photomanager_url: "http://res.cloudinary.com/romscloud/image/upload/v1551363164/managers_photos/Alex_pro_qonto.jpg",
+    remote_photomanager_url: "https://res.cloudinary.com/romscloud/image/upload/v1551960893/managers_photos/Laurent_Sarfati-_qonto.jpg",
     manager_name: "Laurent Sarfati",
     manager_linkedin: "https://www.linkedin.com/in/laurentsarfati/?originalSubdomain=fr",
     position: product_owner,
     company: qonto
+    )
+
+JobOffer.create!(
+    name: "Product owner",
+    description: "Ability to synthesize complex information",
+    remote_photomanager_url: "https://res.cloudinary.com/romscloud/image/upload/v1551960893/managers_photos/Josef_Bovet_tiller.jpg",
+    manager_name: "Josef Bovet",
+    manager_linkedin: "https://www.linkedin.com/in/josef-bovet-b6370751/",
+    position: product_owner,
+    company: tiller
     )
 
 puts 'Creating company_values'
