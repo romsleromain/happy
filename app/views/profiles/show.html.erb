@@ -1,28 +1,44 @@
 <div class="wrapper-test">
   <div class="grand-container">
-    <!-- <div class="container-test">
-      <div class="basic-infos">
-        <%= cl_image_tag @profile.avatar, width: 150, height: 150, :radius=>"max" %>
-        <div class="basic-infos-text">
-          <h3><%= @profile.first_name%> <%= @profile.last_name%></h3>
-          <p><%= @profile.position.name%> - Experience : <%= @profile.experience%> </p>
-          <a href=<%= @profile.url_linkedin%> target="_blank" ><i class="fab fa-linkedin"></i></a>
+    <div class="container-test-1">
+      <div class="profile-infos">
+        <%= cl_image_tag @profile.avatar, width: 150, height: 150  %>
+        <div class="basic-infos">
+          <div class="basic-infos-text">
+            <h3><%= @profile.first_name%> <%= @profile.last_name%></h3>
+            <p><%= @profile.position.name%> - Experience : <%= @profile.experience%> </p>
+            <a href=<%= @profile.url_linkedin%> target="_blank" ><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="values-list">
+          <% @profile.values.each do |value| %>
+            <div class="value-carte-1">
+              <input type="checkbox" class="hidden" value="<%= value.id %>" name="talent[value_ids][]" id="talent_value_ids_<%= value.id %>">
+              <div class="value-card cible">
+                <div class="effect-left"></div>
+                <%= cl_image_tag(value.icone.url, height: 75, width: 100, crop: :fill) %>
+                <div class="effect-right"></div>
+              </div>
+              <p><%= value.name %></p>
+            </div>
+
+            <!-- <div class="value-carte">
+              <input type="checkbox" class="hidden" value="<%= value.id %>" name="talent[value_ids][]" id="talent_value_ids_<%= value.id %>">
+              <label class="value-card cible" for="talent_value_ids_<%= value.id %>">
+                <div class="effect-left"></div>
+                <%= cl_image_tag(value.icone.url, height: 35, width: 25, crop: :fill ) %>
+                <div class="effect-right"></div>
+              </label>
+              <p><%= value.name %></p>
+            </div> -->
+
+
+
+          <% end %>
         </div>
       </div>
-      <div class="values-list">
-        <% @profile.values.each do |value| %>
-          <input type="checkbox" class="hidden" value="<%= value.id %>" name="talent[value_ids][]" id="talent_value_ids_<%= value.id %>">
-          <div class="value-card cible">
-            <div class="effect-left"></div>
-            <%= cl_image_tag(value.icone.url, height: 75, width: 100, crop: :fill) %>
-            <p><%= value.name %></p>
-            <i class="fas fa-check"></i>
-            <div class="effect-right"></div>
-          </div>
-        <% end %>
-      </div>
-    </div> -->
-    <div class="container-test">
+    </div>
+    <div class="container-test-2">
       <h2> My Matches </h2>
       <div class="row">
         <% company_array = [] %>
