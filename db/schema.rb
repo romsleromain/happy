@@ -23,10 +23,10 @@ ActiveRecord::Schema.define(version: 2019_02_28_184216) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "teampicture"
     t.string "latestnews"
     t.string "latestnews_summary"
     t.string "latestnews_media"
+    t.string "teampicture"
   end
 
   create_table "company_practices", force: :cascade do |t|

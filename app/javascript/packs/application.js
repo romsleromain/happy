@@ -34,22 +34,22 @@ initSweetalert2('#sweet-alert-demo2', {
 });
 
 contactManager('#contact', {
-  title: "Contact manager ?",
-  text: "Send a direct message to the manager",
+  title: "Ask for a chat !",
+  text: "Tell me why would you like to work with us",
   content: {
     element: "input",
     attributes: {
-      placeholder: "Hello, your company is amazing, please hire me !",
+      placeholder: "Our values match, let's work together",
     },
   },
   buttons: {
-    cancel: "exit",
+    cancel: "Exit",
     text: "Send my message!",
     closeModal: false,
   }
 }, (value) => {
   if (value) {
-    swal("Your message has been sent !", {
+    swal("Thanks ! We'll come back to you ASAP !", {
       icon: "success"
     });
   }

@@ -84,7 +84,7 @@ mangopay = Company.create(
     description: "MANGOPAY is an end-to-end payment solution for Marketplaces, Crowdfunding and Fintech platforms.
     Unlike traditional payment solutions, MANGOPAY provides its customers with a developer-friendly API and a white-label
     solution that can be seamlessly integrated in your design. ",
-    remote_logo_url: "https://res.cloudinary.com/romscloud/image/upload/v1551872848/zlccwpk2adecrlvgiuzr.png",
+    remote_logo_url: "https://res.cloudinary.com/romscloud/image/upload/v1551883268/ltsnsb537gsmshhuaxyt.png",
     latestnews: "https://www.generationxx.fr/les-invitees-du-podcast/celinelazorthes",
     latestnews_summary: "Mangopay CEO talks about woman leadership",
     latestnews_media: "Podcast",

@@ -20,6 +20,10 @@
                   </div>
                 </div>
                 <div class="second-level-feed">
+                  <div class="hidden-btn">
+                    <!-- hidden-btn -->
+                    <button class="ask-btn" id="contact">Ask for a chat</button>
+                  </div>
                   <div class="job-info text-center">
                     <p>is hiring a</p>
                     <h1><%= job.name %></h1>
@@ -73,7 +77,8 @@
           <% if current_talent.following?(thing) %>
             <div class="row-content">
               <div class="content-logo">
-                <img class="logo-feed"src="<%= thing.logo %>">
+                <p>@<%= thing.name %></p>
+<!--                 <img class="logo-feed"src="<%= thing.logo %>"> -->
               </div>
               <div class="content-text">
                 <p><%= thing.latestnews_summary %></p>
