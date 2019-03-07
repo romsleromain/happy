@@ -44,6 +44,7 @@
         <% counts = counts.sort_by {|k,v| v}.reverse.to_h %>
 
         <% counts.each do |company, y|  %>
+        <div class="col-lg-6">
           <% if current_talent.following?(company) %>
             <div id='<%= "company_card_#{company.id}" %>'>
               <%= render '../views/companies/followcard', company: company %>
@@ -53,6 +54,7 @@
               <%= render '../views/companies/unfollowcard', company: company %>
             </div>
           <% end %>
+        </div>
         <% end %>
       </div>
     </div>
