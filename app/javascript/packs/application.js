@@ -5,7 +5,12 @@ import { follow } from "../components/init-btn-follow.js";
 follow();
 
 import { initUpdateNavbarOnScroll } from '../components/navbar';
-initUpdateNavbarOnScroll();
+if (document.getElementById('home')) {
+  initUpdateNavbarOnScroll();
+} else {
+  initUpdateNavbarOnScroll(100);
+}
+
 
 import { initNextStep } from '../components/nextstep';
 if (document.getElementById('nextstep')) {

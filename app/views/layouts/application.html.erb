@@ -24,6 +24,9 @@
   <% if (controller_name == "companies" && action_name == "index") %>
     <% my_class = "body-test" %>
   <% end  %>
+  <% if (controller_name == "feeds" && action_name == "index") %>
+    <% my_class = "body-test" %>
+  <% end  %>
 
   <body class='<%= my_class %>'>
     <%= render 'shared/navbar' %>

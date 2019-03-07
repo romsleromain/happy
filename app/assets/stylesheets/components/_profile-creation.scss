@@ -214,6 +214,15 @@ input[type=password]::placeholder{
   }
 }
 
+abbr[title="required"]{
+  display: none;
+}
+
+small.form-text.text-muted {
+  display: none;
+}
+
+
 .namesirname {
   display: flex;
   align-items: center;
