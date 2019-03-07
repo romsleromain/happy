@@ -12,3 +12,26 @@ if (document.getElementById('nextstep')) {
   initNextStep();
 }
 
+import { contactManager } from '../plugins/init_sweetalert';
+
+contactManager('#contact', {
+  title: "Contact manager ?",
+  text: "Send a direct message to the manager",
+  content: {
+    element: "input",
+    attributes: {
+      placeholder: "Hello, your company is amazing, please hire me !",
+    },
+  },
+  buttons: {
+    cancel: "exit",
+    text: "Send my message!",
+    closeModal: false,
+  }
+}, (value) => {
+  if (value) {
+    swal("Your message has been sent !", {
+      icon: "success"
+    });
+  }
+});

@@ -16,9 +16,57 @@
 
 
 <div class="wrapper">
+<!--   <div class="container-test"> -->
   <div class="container panel" id="all-companies">
+    <p>Follow the companies showing values</p>
+
     <div class="row">
-      <% Company.all.each do |company| %>
+      <% Company.all.each do |company|  %>
+      <div class="col-lg-6">
+        <div class="company-card cible">
+          <div class="effect-left"></div>
+          <div class="card-background" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.1)), url('<%= cl_image_path company.teampicture.url, height: 300, width: 400, crop: :fill %>');">
+            <%= link_to "Follow", new_talent_registration_path, class: "btn-follow-company card-btn" %>
+            <div class="card-value-all">
+              <% company.values.each do |valeur| %>
+                <div class="card-value">
+                  <%= cl_image_tag(valeur.icone.url, height: 75, width: 50, crop: :fill) %>
+                </div>
+              <% end %>
+            </div>
+            <p class="card-name"><%= company.name %></p>
+            <div class="card-description">
+              <p><%= company.description %></p>
+            </div>
+          </div>
+          <div class="effect-right"></div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+old stuff -->
+<!--
+<div class="wrapper">
+  <div class="container panel" id="all-companies">
+    <div class="row"> -->
+<!--       <% Company.all.each do |company| %>
       <div class="col-lg-6">
           <div class="company-card cible">
               <div class="effect-left">
@@ -34,10 +82,10 @@
           </div>
           <br>
       </div>
-      <% end %>
-    </div>
+      <% end %> -->
+<!--     </div>
   </div>
-</div>
+</div> -->
 
 </div>
 <div class="wrapper-support">

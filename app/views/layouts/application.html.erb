@@ -3,22 +3,37 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Happy</title>
+    <meta property="og:title" content="Happy : Find your next move"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:description" content="Happy is the only job plaftorm that matches your profile with companies sharing the same values than yours."/>
+     <meta property="og:site_name" content="Happy : find your next move"/> 
+    <meta property="og:url" content="http://www.happy-values.fun"/>
+    <meta property="og:image" content="https://res.cloudinary.com/romscloud/image/upload/v1551881794/ogimage.jpg"/>
+    <meta property="fb:admins" content="facebook_user_id"/>
+    <title> Happy : Find your next move </title>
+    <%= favicon_link_tag 'hstandard.ico' %>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <% my_class = "" %>
-  <% if controller_name == "profiles" && action_name == "show" %>
-  <% my_class = "body-test" %>
+  <% if (controller_name == "profiles" && action_name == "show") %>
+    <% my_class = "body-test" %>
+  <% end  %>
+  <% if (controller_name == "companies" && action_name == "index") %>
+    <% my_class = "body-test" %>
   <% end  %>
   <body class='<%= my_class %>'>
     <%= render 'shared/navbar' %>
-    <%= render 'shared/flashes' %>
+    <%#= render 'shared/flashes' %>
     <%= yield %>
     <%= render 'shared/footer' %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>
 </html>
+
+
+
+
