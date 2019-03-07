@@ -15,6 +15,41 @@ Value.destroy_all
 Company.destroy_all
 Position.destroy_all
 
+
+require 'open-uri'
+require 'nokogiri'
+
+puts 'Srapping companies...'
+
+file_path = Rails.root.join('db/scrap-welcome.html')
+html_doc = Nokogiri::HTML(File.read(file_path))
+
+# puts html_doc
+# html_doc.css('.ais-Hits-item').each do |element|
+#   name = element.search('.hWdDKc').text
+#   puts name
+  # category = element.search('.fRsKtv').first.text
+  # puts category
+  # remote_logo_url = element.search('.hyOoza').attribute('src').value
+  # puts remote_logo_url
+  # # nom = name.downcase.split.join("-")
+  # nom = element.search('a').attribute('href').value
+  # puts nom
+  # link_page = "https://www.welcometothejungle.co/companies/#{nom}"
+  # link_page_file = open(link_page).read
+  # link_page_doc = Nokogiri::HTML(link_page_file)
+  # puts link_page_doc
+  # remote_teampicture_url = element.at_css('.cJzorI')
+  # puts remote_teampicture_url
+
+
+  # puts element.text.strip
+  # puts element.attribute('href').value
+# end
+
+
+
+
 puts 'Creating companies...'
 
 alan = Company.create!(
