@@ -59,14 +59,29 @@
 
 
 .wrapper {
-  background-color: $moutarde;
+  background: -webkit-linear-gradient(to top, rgb(242, 232, 197), rgba(250, 250, 250, 1));  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, rgb(242, 232, 197), rgba(250, 250, 250, 1)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
   li {
     list-style: none;
   }
 }
 
-.container {
-  background-color: white;
+#all-companies.container {
+  margin: 0;
+}
+
+
+#all-companies.container.panel {
+  // background-color: white;
+    background: transparent !important ;
+}
+
+#all-companies h2 {
+  color: rgb(51, 51, 51);
 }
 
 html {
