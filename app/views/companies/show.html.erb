@@ -14,7 +14,7 @@
     <div class="row-values">
       <% @company.values.each do |value|%>
       <div class="valuebox">
-       <div><%= cl_image_tag(value.icone.url, height: 75, width: 100, crop: :fill) %></div>
+       <div><%= cl_image_tag("Happy/#{value.name}.svg", height: 75, width: 100, crop: :fill, class: "valeur-svg-blanc") %></div>
        <p><%= value.name %></p>
       </div>
       <% end %>

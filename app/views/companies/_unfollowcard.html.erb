@@ -24,7 +24,8 @@
       <div class="card-value-all">
         <% list_values[company].each do |valeur| %>
           <div class="card-value">
-            <%= cl_image_tag(valeur.icone.url, height: 75, width: 50, crop: :fill) %>
+            <%#= cl_image_tag(valeur.icone.url, height: 75, width: 50, crop: :fill) %>
+            <%= cl_image_tag("Happy/#{valeur.name}.svg", height: 75, width: 50, crop: :fill, class: "valeur-svg-color") %>
           </div>
         <% end %>
       </div>

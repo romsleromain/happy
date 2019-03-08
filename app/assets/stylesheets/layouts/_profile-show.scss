@@ -1,8 +1,10 @@
 
 .body-test {
 
-  background-image: linear-gradient(rgba(250,250,250,0.2),rgba(250,250,250,0.2)),url(https://image.freepik.com/free-photo/close-up-blank-old-concrete-wall_23-2147856094.jpg);
-
+  // background-image: linear-gradient(rgba(250,250,250,0.2),rgba(250,250,250,0.2)),url(https://image.freepik.com/free-photo/close-up-blank-old-concrete-wall_23-2147856094.jpg);
+  background: #fceabb; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #fceabb, #f8b500); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f3e5b9, #f3e5b9);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -182,7 +184,7 @@
   }
   img {
     // filter: grayscale(100%);
-    filter: grayscale(300%) brightness(300%);
+    // filter: grayscale(300%) brightness(300%);
   }
 }
 

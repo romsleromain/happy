@@ -16,7 +16,7 @@
               <input type="checkbox" class="hidden" value="<%= value.id %>" name="talent[value_ids][]" id="talent_value_ids_<%= value.id %>">
               <div class="value-card cible">
                 <div class="effect-gauche"></div>
-                <%= cl_image_tag(value.icone.url, height: 50, width: 33, crop: :fill) %>
+                <%= cl_image_tag("Happy/#{value.name}.svg", height: 50, width: 33, crop: :fill, class: "valeur-svg-blanc") %>
                 <div class="effect-droite"></div>
               </div>
               <p><%= value.name %></p>
