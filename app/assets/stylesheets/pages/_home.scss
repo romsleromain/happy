@@ -108,6 +108,50 @@ html {
   -webkit-filter: grayscale(100%);
 }
 
+.first-row {
+ width: auto;
+ padding: 55px;
+ background-color: black;
+}
+.second-row {
+ display: flex;
+ flex-direction: column;
+}
+.title {
+ justify-content: center;
+ text-align: center;
+ h1 {
+   font-size: 32px;
+   color: #F4E8C1;
+   font-weight: bolder;
+ }
+ h2 {
+ font-size: 24px;
+ color: #F4E8C1;
+ font-weight: lighter;
+ }
+}
+.values-box {
+ display: flex;
+ justify-content: space-around;
+ padding: 10px;
+ padding-bottom: 35px;
+ padding-top: 35px;
+}
+#valuestylz {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ padding: 10px;
+ h2 {
+   font-size: 24px !important;
+   color: #F4E8C1;
+   font-weight: lighter;
+ }
+}
+
+
 // .panel {
 //   width: 100%;
 //   height: 500px;
