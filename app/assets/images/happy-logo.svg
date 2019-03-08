@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="HAPPY" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 1578.4 968.1" style="enable-background:new 0 0 1578.4 968.1;" xml:space="preserve">
+<style type="text/css">
+  .st0{fill:#FFFFFF;}
+  .st1{fill:none;stroke:#F4E8C1;stroke-width:38;stroke-miterlimit:10;}
+</style>
+<g id="lettres">
+  <path id="H" class="st0" d="M413,396.5v174.9h-32.5v-75H290v75h-32.5V396.5H290v72.2h90.5v-72.2L413,396.5L413,396.5z"/>
+  <path id="A" class="st0" d="M616.5,531H529l-17.2,40.5h-33.5L557,396.6h32l79,174.9h-34L616.5,531z M605.7,505.5l-33-76.5
+    L540,505.5H605.7z"/>
+  <path id="P1" class="st0" d="M879.6,458.7c0,38.5-28.5,62.2-74.5,62.2h-39.5v50.5h-32.5V396.5h72
+    C851.1,396.5,879.6,420,879.6,458.7z M846.9,458.7c0-22-14.7-34.7-43.2-34.7h-38v69.5h38C832.1,493.5,846.9,480.7,846.9,458.7z"/>
+  <path id="P2" class="st0" d="M1101.5,458.7c0,38.5-28.5,62.2-74.5,62.2h-39.5v50.5H955V396.5h72
+    C1073,396.5,1101.5,420,1101.5,458.7z M1068.8,458.7c0-22-14.7-34.7-43.2-34.7h-38v69.5h38C1054.1,493.5,1068.8,480.7,1068.8,458.7
+    z"/>
+  <path id="Y" class="st0" d="M1252.5,509.7v61.7H1220v-61.2l-68.7-113.7h34.7l51.2,85.2l51.7-85.2h32L1252.5,509.7z"/>
+</g>
+<g id="traits">
+  <g id="top-bottom">
+    <line id="top" class="st1" x1="548.7" y1="311" x2="1029.6" y2="310.6">
+    <animateTransform
+    attributeName='transform'
+    type="translate"
+    from="0"
+    to="-450"
+    begin="0s"
+    dur="1s"
+    repeatCount="10"
+    fill="freeze"
+    />
+    </line>
+    <line id="bottom" class="st1" x1="548.7" y1="657.5" x2="1029.6" y2="657.1">
+    <animateTransform
+    attributeName='transform'
+    type="translate"
+    from="0"
+    to="450"
+    begin="0s"
+    dur="1s"
+    repeatCount="10"
+    fill="freeze"
+    />
+    </line>
+  </g>
+  <g id="left-right">
+    <line id="left" class="st1" x1="80.2" y1="331.3" x2="80.7" y2="636.8">
+    <animateTransform
+    attributeName='transform'
+    type="translate"
+    from="0 0"
+    to="0 -40"
+    begin="0s"
+    dur="0.4s"
+    repeatCount="1"
+    fill="freeze"
+    />
+    </line>
+    <line id="right" class="st1" x1="1493.7" y1="331.3" x2="1494.2" y2="636.8">
+    <animateTransform
+    attributeName='transform'
+    type="translate"
+    from="0 0"
+    to="0 40"
+    begin="0s"
+    dur="0.4s"
+    repeatCount="1"
+    fill="freeze"
+    />
+    </line>
+  </g>
+</g>
+</svg>

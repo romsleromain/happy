@@ -2,10 +2,10 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80);">
   <div class="left-screen">
     <div class="banner-content">
-      <%= image_tag "logo.png", height: 80, class: "logo"%>
+      <%= image_tag "happy-logo.svg", height: 80, class: "logo"%>
       <div class="welcome-text">
         <h1>Find your next move</h1>
-        <p> Let's look for companies that share your values</p>
+        <p> Identify companies that share your values</p>
       </div>
       <a href="#all-companies" class="btn-standard">SEE ALL COMPANIES</a>
     </div>
@@ -43,7 +43,8 @@
 <div class="wrapper" id="home">
 <!--   <div class="container-test"> -->
   <div class="container panel" id="all-companies">
-    <p>Follow the companies sharing your values</p>
+
+    <p>Follow and get updates from your favorite companies</p>
     <div class="row">
       <% Company.all.first(4).each do |company|  %>
       <div class="col-lg-6">
@@ -111,6 +112,38 @@ old stuff -->
 <!--     </div>
   </div>
 </div> -->
+
+</div>
+<div class="wrapper-support">
+    <h2>Meet our happy users</h2>
+  <div class="sponsors">
+    <div class="sponsor">
+      <div>
+        <h2 class= "testimony-quote">"The first platform to put values at the center of job hunting"
+        </h2>
+      </div>
+      <%= image_tag "nora.png", class: "avatar" %>
+      <h4>Nora</h4>
+    </div>
+    <div class="sponsor">
+       <h2 class= "testimony-quote">"People you work with and values you work for are more important than your job"
+        </h2>
+      <%= image_tag "Mat.jpg", class: "avatar" %>
+      <h4>Mathieu</h4>
+      <div>
+      </div>
+    </div>
+    <div class="sponsor">
+       <h2 class= "testimony-quote">"Thanks to Happy I found my dream job"
+        </h2>
+      <%= image_tag "romain.jpeg", class: "avatar" %>
+      <h4>Romain</h4>
+      <div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 
 </div>
 <div class="wrapper-support">
