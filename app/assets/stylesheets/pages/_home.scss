@@ -119,16 +119,27 @@ html {
 .testimony{
   text-align: center;
   color: #0E1554;
+  flex: 1 1 300px;
+  margin: 30px 0px;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 3%;
+  text-align: center;
 }
 
 .testimony-quote{
     flex: 0 0 50%;
-    color: #0E1554;
+    color: #000000;
     font-weight: lighter;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.6;
     display: flex;
     align-items: center;
+    text-align: center;
+    padding: 25px 50px;
+    h2{
+      margin-bottom: 90px;
+    }
 }
 
 .testimony-author{
@@ -138,11 +149,15 @@ html {
   margin-bottom: 50px;
 }
 
-.sponsors-photo{
 
+.sponsor {
+  text-align: center;
+  margin-bottom: -55px;
+  h4{
+    font-size: 15px;
+    color: #000000;
+  }
 }
-
-
 
 // .panel {
 //   width: 100%;
