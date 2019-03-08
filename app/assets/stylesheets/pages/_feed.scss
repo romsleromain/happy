@@ -10,8 +10,7 @@
 
 .container-feedpage {
   display: flex;
-  margin-top: 70px;
-  height: 100vh;
+  margin-top: 50px;
   justify-content: center;
 }
 
@@ -22,15 +21,17 @@
 }
 
 .headers {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 50px;
-  height: 60%;
-  background-color: rgba(0, 0, 0, 0.8);
-  justify-content: flex-start;
-  align-items: center;
-  color: white;
-  border-radius: 2px;
+ /* display: flex; */
+ /* flex-direction: column; */
+ margin-bottom: 50px;
+ /* height: 60%; */
+ background-color: rgba(0,0,0,0.8);
+ /* justify-content: flex-start; */
+ /* align-items: center; */
+ color: white;
+ border-radius: 2px;
+ padding-bottom: 20px;
+ padding-top: 20px;
   h1 {
   font-size: 32px;
   }
@@ -239,6 +240,7 @@
   font-weight: bold;
   color: white;
   padding: 0px;
+  font-size: 15px;
 }
 
 .content-text {

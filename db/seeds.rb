@@ -398,7 +398,7 @@ JobOffer.create!(
 
 JobOffer.create!(
     name: "Product owner",
-    description: "Join a fast-growing Edtech",
+    description: "We need someone curious & we love Le Wagon Alumni",
     remote_photomanager_url: "https://res.cloudinary.com/romscloud/image/upload/v1551960893/managers_photos/Edouard_ormancey-Openclassroom_1.jpg",
     manager_name: "Edouard Ormancey",
     manager_linkedin: "https://www.linkedin.com/in/josef-bovet-b6370751/",
