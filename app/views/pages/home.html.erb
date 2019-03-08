@@ -2,7 +2,7 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80);">
   <div class="left-screen">
     <div class="banner-content">
-      <%= image_tag "logo.png", height: 80, class: "logo"%>
+      <%= image_tag "happy-logo.svg", height: 150, class: "logo"%>
       <div class="welcome-text">
         <h1>Find your next move</h1>
         <p> Identify companies that share your values</p>
@@ -14,12 +14,37 @@
   </div>
 </div>
 
+<div class="first-row">
+
+ <div class="second-row">
+   <div class="title">
+     <h1>Which core values do you live by ?</h1>
+   </div>
+   <div class="values-box">
+     <div id="valuestylz">
+       <h2>Entrepreneurship</h2>
+       <%= cl_image_tag("Happy/entrepreneurship.svg", height: 100, width: 75, crop: :fill, class: "valeur-svg-color") %>
+     </div>
+     <div id="valuestylz">
+       <h2>Innovation</h2>
+       <%= cl_image_tag("Happy/innovation.svg", height: 100, width: 75, crop: :fill, class: "valeur-svg-color") %>
+     </div>
+     <div id="valuestylz">
+       <h2>Curiosity</h2>
+       <%= cl_image_tag("Happy/curious.svg", height: 100, width: 75, crop: :fill, class: "valeur-svg-color") %>
+     </div>
+   </div>
+   <div class="title">
+     <h2>Reach out companies that share yours !</h2>
+   </div>
+ </div>
+</div>
 
 <div class="wrapper" id="home">
 <!--   <div class="container-test"> -->
   <div class="container panel" id="all-companies">
-    <p>Follow and get updates from your favorite companies</p>
 
+    <p>Follow and get updates from your favorite companies</p>
     <div class="row">
       <% Company.all.first(4).each do |company|  %>
       <div class="col-lg-6">
@@ -30,7 +55,8 @@
             <div class="card-value-all">
               <% company.values.each do |valeur| %>
                 <div class="card-value">
-                  <%= cl_image_tag(valeur.icone.url, height: 75, width: 50, crop: :fill) %>
+                  <%= cl_image_tag("Happy/#{valeur.name}.svg", height: 75, width: 50, crop: :fill, class: "valeur-svg-color") %>
+                  <%#= cl_image_tag(valeur.icone.url, height: 75, width: 50, crop: :fill) %>
                 </div>
               <% end %>
             </div>
@@ -89,23 +115,34 @@ old stuff -->
 
 </div>
 <div class="wrapper-support">
-  <div class= "support">
     <h2>Meet our happy users</h2>
-  </div>
-  <div class="flex flex-wrap">
-    <div class="testimony"></div>
-      <div class='sponsors'>
-        <h1 class="testimony-quote">"The first platform to put values at the center of job hunting"</h1>
+  <div class="sponsors">
+    <div class="sponsor">
+      <div>
+        <h2 class= "testimony-quote">"The first platform to put values at the center of job hunting"
+        </h2>
       </div>
-        </div>
-      </h3>
-    <div class= "testimony-author">
-        <div class='sponsors-photo'>
-    <%= image_tag "Nora.jpg", class: "avatar" %>
-       </div>
+      <%= image_tag "nora.png", class: "avatar" %>
+      <h4>Nora</h4>
     </div>
+    <div class="sponsor">
+       <h2 class= "testimony-quote">"People you work with and values you work for are more important than your job"
+        </h2>
+      <%= image_tag "Mat.jpg", class: "avatar" %>
+      <h4>Mathieu</h4>
+      <div>
+      </div>
+    </div>
+    <div class="sponsor">
+       <h2 class= "testimony-quote">"Thanks to Happy I found my dream job"
+        </h2>
+      <%= image_tag "romain.jpeg", class: "avatar" %>
+      <h4>Romain</h4>
+      <div>
+      </div>
     </div>
   </div>
+</div>
 </div>
 
 </div>
