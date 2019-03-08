@@ -167,7 +167,7 @@ lime = Company.create!(
   )
 
 tiller = Company.create!(
-    name: "Tiller system",
+    name: "Tiller Systems",
     industry: "tech",
     category: "start up",
     description: "Tiller Systems is a cloud-based iPad point of sale (POS) software company headquartered in Paris, France.",
